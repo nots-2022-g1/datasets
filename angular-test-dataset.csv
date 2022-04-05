@@ -12372,7 +12372,6 @@ learindex,git_commit_message,classification
 12370,ngmodule fixed doc for ngmoduleentrycomponents docsngmodule corrected the wording of the documentation of entrycomponents fixed some minor grammar issue docsngmodule remove redundant componentfactory mention docsngmodule restore componentfactorycomponentresolver link ,docs
 12371,developermd fix typo on test section ,docs
 12372,facade remove datewrapper ,refactor
-12373,offline compiler fix expected output ,text
 12374,astserializer fix serializing void tag ,test
 12375,xlif fix x ctype name fix see ,fix
 12376,in carriage return in serialized file ,style
@@ -14449,7 +14448,6 @@ learindex,git_commit_message,classification
 14448,core export dev mode api in dart close ,fix
 14449,benchmark fix tracing category to work with dartium close ,fix
 14450,core unload component when individually disposed ,fix
-14451,renderer make glyph not an svg element this is required because of a conflict with an internal project this will go away soon a we are working on a proper svg support ,patch
 14452,build reorder bundling step close ,fix
 14453,test fix public api test failure when no support of symbolfor observable is the token used in rxjs to define symbolobservable close ,chore
 14454,core renam ambientdirectives and ambientpipes into platformdirectives and platformpipes after discussing it we decided that platform is a better prefix for directive available everywhere in the app breaking change ambientdirectives platformdirectives ambientpipes platformpipes close ,feat
@@ -14570,7 +14568,6 @@ learindex,git_commit_message,classification
 14569,build avoid publishing dart file to npm repo close close ,chore
 14570,applicationcommon fix typo and improves doc for bootstrap close ,docs
 14571,webworker dont send message when the buffer is empty close ,fix
-14572,directive fixed the mistake of leading number the leading number with a dot and space in the markdown will be compiled to ol li the and in the doc mistakenly add a new line before the cause a misunderstand by the markdown engine close ,typo
 14573,core document ngfor close ,docs
 14574,changelog update change log to alpha ,chore
 14575,pipe integrate review feedback close ,refactor
@@ -16047,7 +16044,7 @@ learindex,git_commit_message,classification
 16046,shadowcss add test for keyframe rule ,test
 16047,regexpwrapper implement a test method ,feat
 16048,render t ’ ify test ,refactor
-16049,spy support spyobject in typescript a well allow implement a a decorator implement empty nosuchmethod ,fixed
+16049,spy support spyobject in typescript a well allow implement a a decorator implement empty nosuchmethod ,fix
 16050,docgen fixed a typo that wa breaking dgeni ,docs
 16051,di fix missing export for dgeni docgen ,docs
 16052,render reexport render and export directiveresolver close ,feat
@@ -16425,7 +16422,7 @@ learindex,git_commit_message,classification
 16424,view reimplemented property setter using change detection ,feat
 16425,angular export querylist in angularcore close ,fix
 16426,piperegistry improve error message close ,refactor
-16427,lexer remove unused operator close ,refacor
+16427,lexer remove unused operator close ,refactor
 16428,annotation fix casing in view annotation fix the casing to match key name exposed for templateurl in view annotation close ,docs
 16429,parser support and operator close close ,feat
 16430,listwrapper follow j semantics ,fix
