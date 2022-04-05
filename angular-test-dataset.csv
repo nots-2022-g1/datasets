@@ -1,4 +1,4 @@
-index,git_commit_message,classification
+learindex,git_commit_message,classification
 0,compiler fix deprecation warning jasmine log a warning when there a describe with no test these change fix one such case in the compiler that happens when the test are run against window pr close ,test
 1,docsinfra upgrade cli command doc source to aaebf updating angularmaster from clibuildsmaster relevant change in commit range modified helpbuildjson helpgeneratejson pr close ,build
 2,form property renaming safe code this fix property renaming related issue in advanced closure compiler optimization pr close ,fix
@@ -11717,7 +11717,7 @@ index,git_commit_message,classification
 11715,common remove isdate from facade ,refactor
 11716,contributing fix typo ,docs
 11717,aio remove formatting and style from dgeni template much of the formatting wa hardcoded and copied from the old anguario jade file this give u a clean start also more use ha been made of include file to make the template easier to understand and manage ,build
-11718,aio ignore exampleregion doc in keyword generation ,buid
+11718,aio ignore exampleregion doc in keyword generation ,build
 11719,core view engine support content projection part of pr close ,feat
 11720,common rename underlying ngfor class and add a type parameter note this affect the underlying class and should not affect usage deprecation the ngfor class is now deprecated use ngforoft instead important only the ngfor class is deprecated not the ngfor directive the ngfor and related directive are unaffected by this change a reference to the ngfor class generated from template will be automatically converted to reference to ngforoft without requiring any template modification trackbyfn is now deprecated use trackbyfunctiont instead migration replace direct reference to the ngfor class to ngforofany replace reference to trackbyfn to trackbyfunctionany breaking change a definition of iterablet is now required to correctly compile angular application support for iterablet is not required at runtime but a type definition iterablet must be available ngfor and now ngforoft already support iterablet at runtime with this change the type definition is updated to reflect this support migration add esiterablets to your tsconfigjson libs field part of pr close ,feat
 11721,compiler generate type parameter for generic type reference ,feat
@@ -12257,7 +12257,7 @@ index,git_commit_message,classification
 12255,compiler extract bindingparser needed so that we can parse directive host binding independent of template part of ,refactor
 12256,router export routerlinkactive w isactive property ,feat
 12257,router preserve resolve data close ,fix
-12258,router add a test showing how to handle resovle error ,tests
+12258,router add a test showing how to handle resovle error ,test
 12259,router change router not to deactivate aux route when navigating from a componentless route ,fix
 12260,router disallow component route with named outlet close ,fix
 12261,router add a test to make sure candeactivate guard are called for aux route close ,fix
@@ -12822,7 +12822,7 @@ index,git_commit_message,classification
 12820,add option method to http add option method to the http object which could be useful when using selfdescribing restful apis this close close ,feat
 12821,linker prevent pollution of empty embeddedview context fix ,fix
 12822,in remove circular dep ,refactor
-12823,digestmessage take a inmessage ,refatcor
+12823,digestmessage take a inmessage ,refactor
 12824,in drop htmlmessage and create inmessage right away ,refactor
 12825,in merge translation ,feat
 12826,in misc update ,refactor
@@ -13079,7 +13079,7 @@ index,git_commit_message,classification
 13077,browser use appmodules for bootstrap in the browser this introduces the browsermodule to be used for long form bootstrap and offline compile bootstrap appmodule module browsermodule precompile maincomponent provider … additional provider directive … additional platform directive pipe … additional platform pipe class mymodule constructorappref applicationref apprefbootstrapmaincomponent offline compile import bootstrapmodulefactory from ‘ angularplatformbrowser ’ bootstrapmodulefactorymymodulengfactory runtime compile long form import bootstrapmodule from ‘ angularplatformbrowserdynamic ’ bootstrapmodulemymodule the short form bootstrap can now creates a module on the fly given directive pipe provider precompile and module property related change make sanitizationservice securitycontext public in angularcore so that the offline compiler can resolve the token move animationdriver to platformbrowser and make it public so that the offline compiler can resolve the token breaking change short form bootstrap doe no longer allow to inject compiler internals ie everything from angularcompiler inject compiler instead to provide custom provider for the compiler create a custom compiler via browsercompilerproviders and pas that into the bootstrap method ,feat
 13078,core ensure cs parser us parsesourcespan to track ast location this commit also fix up any remaining todo comment close ,refactor
 13079,form mark control container a touched when child control are touched ,fix
-13080,datepipe passing hh to the datepipe close ,bug
+13080,datepipe passing hh to the datepipe close ,fix
 13081,router handle router outlet in ngif ,fix
 13082,router update link when query params change ,fix
 13083,router rename global redirects into absolute redirects ,docs
@@ -13243,7 +13243,7 @@ index,git_commit_message,classification
 13241,provider fix a circular dependency remove common provider ,fix
 13242,guard cancel inflight guard if one return false ,fix
 13243,router fix tslint error ,cleanup
-13244,router add test verifying that updating secondary segment using router link work ,tests
+13244,router add test verifying that updating secondary segment using router link work ,test
 13245,router rename queryparameters into queryparams ,refactor
 13246,router update routerlink to support query params and fragment ,feat
 13247,router add an app initializer to trigger initial navigation close ,fix
@@ -13295,7 +13295,7 @@ index,git_commit_message,classification
 13293,npm update tsapiguardian to v ,build
 13294,router remove router ,cleanup
 13295,cheatsheet update ngswitch syntax in the cheatsheet ,doc
-13296,datepipe date format pipe digit interpretation of minute and second close ,bug
+13296,datepipe date format pipe digit interpretation of minute and second close ,fix
 13297,changelog add note about forthcoming deprecation of parsedomadapter ,docs
 13298,perf support prod mode again after splitting the facade into multiple module enabling prod mode for code had no effect for the compiler also in a change between rc and rc we created the compilerconfig via a provider with usevalue and not via a usefactory which read the prod mode too early close close close ,fix
 13299,datepipe numeric string support ,feat
@@ -13743,7 +13743,6 @@ index,git_commit_message,classification
 13741,typescript update to nightly to workaround we must remove the readonly keyword from generated dts file this solution will not scale but will probably buy enough time to require our user move to a beta close ,feat
 13742,travis enable the typescriptnext build fix ,chore
 13743,build ignore dart warning the name … is shown but not used see close ,fix
-13744,format revert choreformat update to latest formatter this reverts commit aadffddfbfdfeaa ,revert
 13745,format update to latest formatter close ,chore
 13746,transformer special case profiler ,feat
 13747,ngfor support convenience view local in ngfor close ,feat
@@ -13926,7 +13925,7 @@ index,git_commit_message,classification
 13924,router disable a flaky test ,test
 13925,travis do not cache npm module ,build
 13926,differ clean up stale identity change ref close ,fix
-13927,angularrouter make the router binding onetime this binding is never going to change so we can make it a onetime binding close ,refact
+13927,angularrouter make the router binding onetime this binding is never going to change so we can make it a onetime binding close ,refactor
 13928,angularrouter rename route service to rootrouter the singleton service that represents the top level router wa called router but this is confusing since there are actually lot of router which depend upon where you are in the dom this is similar to the situation with scope this commit clarifies this singleton by renaming it to rootrouter breaking change the router injectable service ha been renamed to rootrouter ,fix
 13929,angularrouter rename router component binding to router the current router is passed to the current component via a binding to indicate that this is an angular provided object this commit renames the binding to router breaking change the recently added binding of the current router to the current component ha been renamed from router to router so now the recommended set up for your binding in your routed component is j binding router ,fix
 13930,angularrouter support templateurl component ,fix
@@ -14926,7 +14925,7 @@ index,git_commit_message,classification
 14924,router do not export url class close ,chore
 14925,router do not export rootrouter breaking change it unlikely that any apps were explicitly referencing rootrouter but if they were they should prefer to use the routerbindings helper or the routerbindings const exported from angularrouter ,refactor
 14926,api align dartjs apis ,fix
-14927,bug reflect dart interface from superclass a well fix close ,fix
+14927,fix reflect dart interface from superclass a well fix close ,fix
 14928,npm update shrinkwrap with the missing hashfiles dependency ,build
 14929,di add missing doc close ,docs
 14930,di make keyregistry private ,cleanup
@@ -15145,7 +15144,7 @@ index,git_commit_message,classification
 15143,core remove the syntax and make all dom event bubbling breaking change before div clickoneventhandler buttonbutton div after div clickoneventhandler buttonbutton div close ,feat
 15144,packagejson remove unused esmoduleloader dependency close ,chore
 15145,gulpfilejs fix some hint issue in gulpfilejs close ,chore
-15146,router rename outlet integration spec to navigation spec the new name better reflects the behavior under test ,refector
+15146,router rename outlet integration spec to navigation spec the new name better reflects the behavior under test ,refactor
 15147,changelog update change log to alpha ,chore
 15148,package bump up the version alpha ,chore
 15149,routeregistry initialize routeparamsparams fix a bug caused by routeregistrygenerate not initializing routeparamsparams to a stringmap close ,fix
@@ -15379,7 +15378,7 @@ index,git_commit_message,classification
 15377,testability expose function getallangulartestabilities ,feat
 15378,changedetection removed the currentproto property ,perf
 15379,benchmark remove unnecessary style setter remove style setter that is no longer used necessary close ,refactor
-15380,protoviewbuilder host property binding to unknown prop when binding a host property we shouldnt try to bind to any directive property that might exist on a host element close ,tests
+15380,protoviewbuilder host property binding to unknown prop when binding a host property we shouldnt try to bind to any directive property that might exist on a host element close ,test
 15381,release release alpha ,chore
 15382,doc add viewdefinition directivemetadata to public api close ,fix
 15383,core export lifecycle at toplevel module lifecycle can now be imported via angularangular or angularcore so that end user can inject it without having to use the full source path close ,fix
@@ -15862,8 +15861,8 @@ index,git_commit_message,classification
 15860,broccoli implement diffing lodashrenderer plugin close ,chore
 15861,analzyer removed unused import ,fix
 15862,form removed old form example ,example
-15863,form added an example of using modeldriven form ,examples
-15864,form added an example of using templatedriven form ,examples
+15863,form added an example of using modeldriven form ,example
+15864,form added an example of using templatedriven form ,example
 15865,form set exportas to form for all form related directive ,feat
 15866,form export validator directive a part of formdirectives ,feat
 15867,form changed form to capture submit event and fire synthetic ngsubmit event ,feat
@@ -16510,7 +16509,6 @@ index,git_commit_message,classification
 16508,changedetection document lifecycle ,docs
 16509,darttransform correct dart analyzer warning fix numerous dart analyzer warning we had been ignoring delete unused inprogress dir ,refactor
 16510,build remove even more obsolete build config value ,chore
-16511,doc edits and addition for form and change detection ,misc
 16512,build fail the build for certain t error ,fix
 16513,build remove obsolete htmljs copyjs srcfolderinsertion ,chore
 16514,build move html copying into the broccoli task this includes all task to construct a dart tree except for formatting and reverse engineersrefactors the various copy tool for added more sanity ,feat
@@ -16599,12 +16597,11 @@ index,git_commit_message,classification
 16597,darttransform create target for serving transformed dart code allow pub buildserve to specify mode update pubbuildjs pubservejs to allow the caller to provide a mode value update setting to allow the di benchmark to be transformed to run statically ,chore
 16598,docgen dont show member heading if no member close ,chore
 16599,directive add to for directive microsyntax example ,docs
-16600,changedetection added a new set of benchmark measuring updating property ,benchmark
 16601,dart use map instead of hashmap close ,refactor
 16602,directive add inline documentation close ,doc
 16603,di allow injecting static attrs without type annotation close ,fix
 16604,vmturnzone provide a stub vmturnzone for cjs test ,test
-16605,xhr rename xhrmock to mockxhr for consistency ,reafactor
+16605,xhr rename xhrmock to mockxhr for consistency ,refactor
 16606,testbed initial implementation ,test
 16607,mocktemplateresolver allow directive overriding ,test
 16608,annotation fix some typo align doc with code close ,docs
@@ -16837,7 +16834,7 @@ index,git_commit_message,classification
 16835,styleinliner add support for urlurl format ,fix
 16836,build copy cs file ,feat
 16837,regexp expose match index in dart ,feat
-16838,form cleanup ,clean
+16838,form cleanup ,cleanup
 16839,form add optional control ,feat
 16840,form remove support for declaring form in html ,feat
 16841,form add support for validation ,feat
@@ -16894,7 +16891,7 @@ index,git_commit_message,classification
 16892,compiler add integration test for parent and ancestor ,chore
 16893,compiler make directive binding optional fix ,feat
 16894,build finally publish to rttsassert on npm ,fix
-16895,ee upgrade protractor to and remove special case for shadow dom with protractor which installs chromedriver shadow dom is supported ,tests
+16895,ee upgrade protractor to and remove special case for shadow dom with protractor which installs chromedriver shadow dom is supported ,test
 16896,type add stringmap type ,fix
 16897,application move class to the application level injector fix ,feat
 16898,changedetection add support for pipe ,feat
@@ -17150,7 +17147,6 @@ index,git_commit_message,classification
 17148,parser add support for variable binding ,feat
 17149,parser handle empty string ,fix
 17150,di add opaquetoken to di using new object a a token cause cryptic error opaquetoken class should be used instead ,feat
-17151,compiler add a benchmark measuring view instantiation in angulardart ,benchmark
 17152,viewport add initial implementation of viewport viewport is the mechanism backing template directive those directive can use the viewport to dynamically create attach and detach view ,feat
 17153,changedetection make recordrange responsible for removing iself ,refactor
 17154,changedetector fix issue with handling empty range ,fix
@@ -17205,7 +17201,7 @@ index,git_commit_message,classification
 17203,lang fix small typo ,fix
 17204,di simple typo ,docs
 17205,transpiler transform template string to triple quoted dart string ,feat
-17206,transpiler support optional argument in annotation cleanup move annotaitons out of fixturesannotations since we have the const annotation in the transpiler already ,bug
+17206,transpiler support optional argument in annotation cleanup move annotaitons out of fixturesannotations since we have the const annotation in the transpiler already ,fix
 17207,parser cleanup ,refactor
 17208,packagejson correct apache license close ,chore
 17209,transpiler class field for dart ,feat
