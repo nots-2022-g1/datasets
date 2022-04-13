@@ -1,4 +1,4 @@
-learindex,git_commit_message,classification
+Index,CommitMessage,Classification
 0,compiler fix deprecation warning jasmine log a warning when there a describe with no test these change fix one such case in the compiler that happens when the test are run against window pr close ,test
 1,docsinfra upgrade cli command doc source to aaebf updating angularmaster from clibuildsmaster relevant change in commit range modified helpbuildjson helpgeneratejson pr close ,build
 2,form property renaming safe code this fix property renaming related issue in advanced closure compiler optimization pr close ,fix
