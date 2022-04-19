@@ -1,0 +1,1608 @@
+GitCommitMessage	IsUseful	MatchedOnKeyword
+update build-sphinx.yml	False	
+fixed horisons argument	True	
+bugfix	False	
+update python-build.yaml	False	
+remove superfluous on pr	False	
+format python code with black	True	
+test model pathsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update build-sphinx.ymltest commit for build	True	
+use taskname for logger name	True	
+format python code with black	True	
+fix e266, e225	False	
+move loading of model outside of pipeline	False	
+fixed bug in prediction job loop and warning in capacity model	False	
+use db from context for every call	True	
+logging now with pj_id	False	
+configure black and flake8 (very limited linting and not restrictive)	False	
+format python code with black	True	
+mock model in unittest	False	
+format python code with black	True	
+fix _get_importance_names for linear model	True	
+ran black	False	
+create pull_request_template.md.license	False	
+update checkout reference version	False	
+update test_train_model.py	False	
+redo model_creator	True	
+format python code with black	True	
+format python code with black	True	
+implemented feedbacksigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+added way to determine hyperparams age instead of model age	True	
+fixed all unittests	False	
+update default train horizons	False	
+split objective, base and xgb specific code	False	
+implemented more feedback	False	
+fixed unit tests	False	
+add /unit	False	
+add docstring	False	
+change variable names	False	
+remove toc	True	
+fixed test_general_extract_minute_features	False	
+add sphinx_rtd_theme to newline	True	
+revert basecase instead of loadsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update for the start and end point for each peakupdate for the start and end point for each peak	True	
+add and test clear exceptionsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update openstf-dbc requirement from ~=2.1.1 to ~=2.1.2updates the requirements on [openstf-dbc](https://github.com/alliander-opensource/openstf-dbc) to permit the latest version.- [release notes](https://github.com/alliander-opensource/openstf-dbc/releases)- [commits](https://github.com/alliander-opensource/openstf-dbc/compare/v2.1.1...v2.1.2)---updated-dependencies:- dependency-name: openstf-dbcdependency-type: direct:production...signed-off-by: dependabot[bot] <support@github.com>	True	
+remove faulty checksigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+debugged code for stratification splitsingcode is now debugged using unit tests (stratification spliting)	True	
+add code quality analysis as a test	False	
+format python code with black	True	
+changed relative paths to absolute pathssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+undo wrong tab	False	
+add a unit test for feature importance logic in linear model.	True	
+extended unit tests	False	
+update codeql analysis statement	False	
+try to fix docs by removing new line	True	
+unit test operational_feature_applicator only one horizon	True	
+use model mock in unittests	False	
+fixup: format python code with black	True	
+update data.py	False	
+add kwargs handling for groupedregressor and related testssigned-off-by: benoit hardier <benoit.hardier@probayes.com>	True	
+format python code with black	True	
+bump version to 2.0.2	True	
+format python code with black	True	
+format python code with black	True	
+fixed unit tests due to bevrijdingsdag issue	True	
+error for optimizing proloaf parameters	True	
+add test and exception if model age failsstill need to look into the logging of the figures	True	
+change visuals storage location back to previous	True	
+fix wrong argument name	False	
+fix sonar coverage	True	
+added unit tests and fixed bug	False	
+format python code with black	True	
+revert "revert "bugfix #155 ktps-1572 enum hyperparam optim""	False	
+add comments to function	True	
+updated readme with working html link	False	
+fixed typo in unittest	False	
+remove unused imports	False	
+rename openstefsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+format python code with black	True	
+format python code with black	True	
+remove unused logger	False	
+added license info	False	
+black formatting applied	True	
+add test/unit	False	
+remove the '_' at the beginning of  'set_feature_importance' and fix broken tests.	False	
+fix bug	False	
+format python code with black	True	
+add specific checking to achieve coveragesigned-off-by: benoit hardier <benoit.hardier@probayes.com>	True	
+fix unit test after feature_names update	False	
+rename to test_	True	
+format python code with black	True	
+minor changes and bump to 1.7.0a3	True	
+fixup: format python code with black	True	
+feature set n = none	False	
+update setup.py	False	
+add **kwargs to predict interface	True	
+fix definition of pj dataclass and test on train_model_pipeline outputsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+update test_model_creator.py	True	
+update setup.py	False	
+format python code with black	True	
+some formating and naming changes in the pipeline and pj.	True	
+basics of the solution for formattingadapted the exception such that the exception message is equal for all pid's which trigger that exception. this will allow for the creation of a list, since the exceptions are tracked in predictionjobloop.py	True	
+passed code to black	True	
+update teams.py	False	
+add modeltype to predictionjobloop	True	
+bump openstf-dbc to 2.2.0use cleanedup openstf-dbc	True	
+finnished training pipeline	False	
+update auto-black-on-pr.yml	True	
+remove loading project config	False	
+format python code with black	True	
+add run tracy unit test	False	
+fix interface definition	False	
+switch to openstef dbc 3.1.2signed-off-by: david swinkels <david.swinkels@alliander.com>	True	
+create modelspecs in tasks\train_model.py	False	
+add license testing model	False	
+update input_data_multi_horizon_features.csv	False	
+moved visualization and metrics to metrics subpackage	True	
+format python code with black	True	
+bump version for new alpha release	True	
+update build-sphinx.yml	False	
+format python code with black	True	
+js script in the html due to pushed changes not being visible in the reference link	True	
+remove obsolete import	True	
+add some context to train_model	True	
+use capitals for readme file	True	
+removed unittest and code smells	False	
+implemented comments from previous pr	False	
+update setup.py	False	
+create build-sphinx.yml	False	
+e.g., added logging	False	
+ran black, removed unused importssigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+changed settings ide to blackchanged settings ide to black	True	
+update typehints and docstrings	False	
+create committers.md	False	
+fix unit testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+removed print statements	False	
+implemented feedback	False	
+put comment at better location	False	
+add / and github workspace brackets	False	
+update test_standard_deviation_generator.py	True	
+update readme.md	False	
+fix failing testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+reproduced error in test	False	
+fix workflow conventions	False	
+update checkout reference version	False	
+update pull_request_template.md	False	
+update doc	False	
+improved hyperparameter optimization	False	
+mock model locationsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+removed parameter checks that are already implemented in create_model.	False	
+update serializer.py	False	
+merge if	False	
+update index.rst	False	
+format python code with black	True	
+add unit test for linear model	True	
+format python code with black	True	
+format with blacksigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+format python code with black	True	
+fix failing unit testssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+fixup: format python code with black	True	
+change splitting_energy teams communication from alerts to monitoring	True	
+format python code with black	True	
+format python code with black	True	
+fix code smells	False	
+format python code with black	True	
+update incorrect variable reference	False	
+remove superfluous 'pass'	False	
+delete project_governance.mdsigned-off-by: jonas van den bogaard <3628277+jonasvdbo@users.noreply.github.com>signed-off-by: david swinkels <david.swinkels@alliander.com>	False	
+fix docs publish, replace echo by printf	False	
+fix for unit test	True	
+bump version	False	
+format python code with black	True	
+format python code with black	True	
+include main license file also in root directorythis will make sure github automatically recognize the main license and shows this in about and repo overview.	True	
+format python code with black	True	
+added tests for the dependency mechanismsigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+updated html	False	
+fix varname	False	
+improved logging with extra keysadded extra key value to the logging and the fraction of the number of values set to nan.	True	
+bump version to 2.1.1	True	
+change installation of requirements.txt	False	
+remove useless call to dispatch_features	True	
+format python code with black	True	
+fix slashes conventionsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+added license and copyrighttext	False	
+import typing	False	
+fix taskcontext unit test	False	
+move check times_in_future from basecase to task	True	
+clean up all unit tests by setting working dir to base of openstf package, getting data/trained_models in similar way, remove old data, running black and isort	True	
+format python code with black	True	
+implementation for proloaf optuna hyperparameter optimalisation	True	
+format python code with black	True	
+format python code with black	True	
+format python code with black	True	
+store trained model	True	
+update setup.py	False	
+add stored model for testssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+format python code with black	True	
+moved unittest	False	
+add comment to unittest	True	
+update mlflow versionsigned-off-by: david swinkels <david.swinkels@alliander.com>signed-off-by: signed-off-by: david swinkels david.swinkels@alliander.com <david.swinkels@alliander.com>	False	
+bump version for dependabot test	True	
+deleted unnecessay variablesdeleted unnecessay variables	False	
+update type hints	False	
+update build-sphinx.yml	False	
+black formatting	True	
+use short tracy job names	False	
+fixed minor issues	False	
+fix bug, but unit test breakssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+add unit tests and reproduce bug	False	
+add final slash	False	
+update setup.py	False	
+remove capacity prognosessigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+added more documentation	False	
+update setup.py	False	
+incorporate suggestions of jm	False	
+add e501	False	
+try to add unittest but couldnt make patching work	True	
+format python code with black	True	
+fix for review commentsfix for review comments	True	
+format python code with black	True	
+minor update, add some new lines	True	
+add copyright	False	
+format python code with black	True	
+change variable name of forecast_horizon in proloafproloaf expects horizon in hours thus divide minutes by 60 to get hours	True	
+use default train horizons during hyperparam optimalizationsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+fix order of requirements	False	
+format python code with black	True	
+explicitly test mocked model pathsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update release-drafter.yaml	False	
+add sphinx_rtd_theme on newline	False	
+fixed minor issues	False	
+implemented cosmetic changes	False	
+revert, test task context, code is actually reached	False	
+add pipeline test	False	
+first try refactoring	True	
+add breaking unit testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+change mean of skill_score to mean of load instead of mean of basecasesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+fix missing new lines	False	
+removed database calls from predict_model_sklearn in pipeline	False	
+fixed merge conflicts	False	
+update index.rst	False	
+minor change	False	
+format python code with black	True	
+moved model.general functionality to a more logical location	True	
+add license sidecar for tracy job test data	True	
+make exception more specific	False	
+solve too high complexity	True	
+add type hinting	False	
+also log 0 if no values are incorrect during validation	True	
+improved readability and more dynamic	False	
+fix tests determine_invalid_coefs()	False	
+update tasks	False	
+resolve suggestion by jan maarten	True	
+add sphinx_rtd_theme	False	
+update test/unit/tasks/test_calculate_kpi.pysigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>co-authored-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+update hyperparams task	False	
+change version to reflect it is a prerelease	True	
+update feature_request.md	False	
+applied changes related to the comments on the pr (logging, changing names, removing not necessary code)	True	
+updated docstrings	False	
+improve dostring	False	
+update test_train_predict_backtest.py	False	
+update test_general_extract_minute_features.py	False	
+unittest adaptation after merge	False	
+changed testsigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+changed iterable to sequence type hint since we use subscriptssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+fix datetime format and remove model type selection	True	
+add sanity check	False	
+add suggestion for improvementsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+simplify run_tracy	False	
+format python code with black	True	
+optimize imports	False	
+create 1.7.0 alpha release	False	
+update build-sphinx.yml	False	
+update openstef-dbc requirement from ~=3.0.0 to ~=3.0.1updates the requirements on [openstef-dbc](https://github.com/openstef/openstef-dbc) to permit the latest version.- [release notes](https://github.com/openstef/openstef-dbc/releases)- [commits](https://github.com/openstef/openstef-dbc/commits)---updated-dependencies:- dependency-name: openstef-dbcdependency-type: direct:production...signed-off-by: dependabot[bot] <support@github.com>	True	
+update test_model_creator.py	True	
+rollback requirements.txt update	False	
+update unit tests	False	
+fixed minor issues	False	
+changed code using the commentschanged code using the comments	False	
+update all testcases to use the new predictionjob	True	
+move fallback strategy constant to top	True	
+only use python 3.9 for ci/cd (for now)	True	
+added functional test to check that the default modelspecs is used.signed-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+undo deletion of modelspecs variablesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update setup.py	False	
+create buildsite.sh	False	
+format python code with black	True	
+change main name	False	
+fix bug alert to monitoring	True	
+move data files to data folder for easier packaging	True	
+delete .nojekyll	False	
+pre-release version	False	
+remove add_missing_info_prediction_jobsince the dataclass must have certain attributes we don't need this class anymore	True	
+cleanup code	False	
+remove /unit	False	
+add test functions	False	
+added possibility to save the forecasts on the train datasetssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+fix unit tests	False	
+fixed context issues	False	
+added comment with the expected keys for the prediction job	True	
+only check reuse on pr	False	
+create xgb_quantile.py	False	
+remove sonar quality gatewe will keep using format and test checks, but think that sonar quality gate can be removed for now since it is duplicate to format and test checks. later we might reconsider.signed-off-by: david swinkels <david.swinkels@alliander.com>	True	
+implemented feedback about general bridgeday feature	False	
+more clear test name	False	
+update list type and clean up feature_addersigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+update sonar-project.properties	True	
+update test_train_model.py	False	
+better test functions	False	
+update train_model_sklearn.py	False	
+feat: update readme to include lincense infoupdate of readme.md to include lincense info	True	
+add check old model age to earlier step in the pipelin	True	
+update release-drafter.yml	False	
+fix optuna logger	False	
+test solar use dictsince solar and wind prediction jobs are different we will keep them as a dict	True	
+update index.rst	False	
+fixed code smells pointed out by sonarcloud	True	
+minor commit for testing singoffsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+make task name dynamic	False	
+add optional configuration	False	
+format python code with black	True	
+cleaner exception message	False	
+update setup.pybumped to higher pre-release version	True	
+made first implementation	False	
+update test_standard_deviation_generator.py	True	
+fix more style issues	False	
+hotfix wrong variable reference	False	
+fix f821 errors (undefined name 'unittest')	False	
+fix setup.py classifiers	False	
+added cc-by-2.5.txt and mpl-2.0.txt	False	
+update proloaf.py	False	
+create makefile	False	
+ran black	False	
+use the forecasted load to calcualte quantiles in case of a fallback forecast for a quantile model	True	
+more refactoring	True	
+update test_task_context.py	False	
+update conf.py	False	
+bug fixstill needs coverage increasement/ more unit tests	False	
+modified structlog version	False	
+add unit test for training of xgb_quantile	True	
+add mlflow example run	False	
+use test data for capacity train test as well	True	
+minor change	False	
+update setup.py	False	
+add dot to name if file	True	
+update input_data_multi_horizon_features.csv	False	
+increased version number to 2.5.3	True	
+do not check sonar for dependabotwork around secret dependabot bug	True	
+updated objective with right recall to functionupdated objective with right recall to function	True	
+update model_creator.py	True	
+small improvements on readability	False	
+format python code with black	True	
+ran blacksigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+changes in order to run optuna optimalisation	True	
+fix failing unit test	False	
+added tests for the dependency mechanismsigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+format python code with black	True	
+update test_train_model_sklearn.py	False	
+add raises docstring	False	
+update setup.py	False	
+update badges	False	
+clarify documentation for missingvaluehandler parameters.	True	
+decoupled linear model sklearn/openstf	False	
+delete project_governance.mdsigned-off-by: jonas van den bogaard <3628277+jonasvdbo@users.noreply.github.com>	False	
+remove unused import	False	
+update readme.md	False	
+format python code with black	True	
+disable flake8	False	
+add licence info to new workflow	True	
+moved capacity prediction modules to own packages to simplify project	True	
+reuse specification	False	
+fixed linting issue	False	
+revert to old kpis based on basecasesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+format python code with black	True	
+update readme.md	False	
+add test debug_pid	False	
+update requirements.txt	False	
+fix imports	False	
+remove comment	False	
+fix typo	False	
+changed logging to have pid as key instead of in the message.	True	
+format python code with black	True	
+changes pid to be consistent	True	
+add handling of eval_set with groupby keyssigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+fixed bug in getting model age	False	
+black changesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update optimize_hyperparameters.py	False	
+create release-drafter.ymlsee details: https://github.com/marketplace/actions/release-drafter	False	
+added version for networkxsigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+format python code with black	True	
+update xgboost.py	False	
+remove debug printssigned-off-by: florian oppermann <florian.oppermann@eonerc.rwth-aachen.de>	False	
+bump version number to 1.6.0 (relatively large breaking change)	True	
+add dep5 for trained_models	True	
+update xgb_quantile.py	False	
+format python code with black	True	
+add missing meta.yamls	False	
+fix e305	False	
+try to fix docs workflow	True	
+change name remove rte.	False	
+format python code with black	True	
+improve naming and comments	False	
+run blacksigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+add unit test	False	
+format python code with black	True	
+remove html theme	False	
+add comments	False	
+remove old save method	False	
+update train_predict_backtest.py	False	
+use custom exceptions and update docstring	True	
+update requirements.txt	False	
+ran blacksigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+update setup.pybumped version number	False	
+fix teams dependency by checking if a valid url is given	False	
+undo incorrection	False	
+fix name and move back to no quotes	True	
+add more test paths	False	
+add auto labler action	True	
+add objective for linear model	True	
+add licence info	False	
+fix code duplication reference in readme, update openstf to openstef and update 2021 to 2022signed-off-by: david swinkels <david.swinkels@alliander.com>	True	
+make working unit tests of storing model and making forecasts	True	
+fixed unit tests	False	
+format python code with black	True	
+update test_apply_features.py	False	
+fixed sonar cloud issue	True	
+add more license info	False	
+updated version number for pre-releasesigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	True	
+implemented feedback	False	
+update openstef versionsigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+fix reuse compliance	False	
+add the property indicating if a model can predict quantilessigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+rename project to short term forecasting	True	
+fixed unit tests and implemented create forecast task	True	
+add handler for logging figures and log warning if it can't be logged	True	
+fix double definition	False	
+update setup.pybumped version number	False	
+fix reuse compliance	False	
+forgot to install flake8 before linting	True	
+update build-sphinx.yml	False	
+moved calcualtion of kpi's to pipeline	True	
+update release-drafter.ymlaction fails, but dont be alarmed. this is due to the branch not being on main: https://github.com/release-drafter/release-drafter/issues/398	True	
+create support.md	False	
+create pull_request_template.md	False	
+added license info	False	
+create documentation.md	False	
+compute the end time of the input datasets in the main task function, so that it is the same for all prediction jobssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+work in progress	False	
+bump version to v2.0.4	True	
+are requirements in docs obsolete	True	
+moved hyper parameter optimization to pipeline	True	
+simplify pipeline by moving saving/loading and the if training is required decission out	False	
+update requirements and fix unit testssigned-off-by: frederik stoel <frederik.stoel@alliander.com>signed-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+delete codeql analysis to avoid long run time	True	
+update conf.py	False	
+black formatting	True	
+update serializer.py	False	
+fix failing testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update feature_request.md	False	
+unittest change	False	
+basic implementation	False	
+raise distinct exceptions for calc kpi	True	
+remove abstract serializer, add mlflow tracking uri from env and run blacksigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+added default modelspecs to the prediction jobs and modified train and optimization pipelines so they can use it.signed-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+changed settings ide to blackchanged settings ide to black	True	
+update setup.pybump version pre release	False	
+format python code with black	True	
+add reuse header	False	
+fix typo	False	
+fix quantile xgb ojective functionsigned-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+use correct newline symbol	False	
+add try-except for each metric	True	
+add reuse license	False	
+format python code with black	True	
+update typhinting, return report instead of none	False	
+implemented some fixes	True	
+added unit tests	False	
+format python code with black	True	
+add feature adder in pipeline.	False	
+fixed more unittests	False	
+removed database calls from train_model_sklearn in pipeline	False	
+fixed some bugs in the capacity prognosis model	True	
+make training less verbose	False	
+add explicit unit testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+simplify model creator, make it more clear that model actually means model_type	True	
+add failing unit test	False	
+removed ato report functionality	True	
+use pytz.utc since that seems to be used more often	True	
+update linter/formatter config	True	
+update create_basecase_forecast.py	True	
+try even more locs	False	
+set experiment and update gitignoresigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+remove duplication of logging statement	False	
+format python code with black	True	
+implemented feedback	False	
+update setup.py	False	
+incorporate suggestions by jm	False	
+update checkout reference version	False	
+remove typo	False	
+add fix to remove artifacts	True	
+improve error text	False	
+fix linting errors	False	
+fix unit tests	False	
+added more unittests	False	
+update readme.md	False	
+made variable names more consistentimproved the names of variables to better match the variables with the functions.	True	
+add licence info	False	
+format python code with black	True	
+make the logging more generalkeys now have the same name in the logging	False	
+create sonar-project.properties	True	
+add unittests related to model age in train_model task	True	
+add doc.	False	
+fix code smellsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+implemented feedback bram	False	
+fixed typo after merge	False	
+minor changes, small docstring improvements	False	
+use our own mae metric, sklearn one gave exceptions	False	
+format python code with black	True	
+update output type for load_model	True	
+update setup.py	False	
+create test_create_component_forecast.py	True	
+remove empty filesigned-off-by: signed-off-by: david swinkels david.swinkels@alliander.com <david.swinkels@alliander.com>	False	
+run flak8 using project config, exit on non ignored errors	False	
+update train_model_sklearn.py	False	
+change coverage location guess	False	
+add packages to requirements.txt	True	
+speed up training test by limiting n_estimators	True	
+fixed unit tests and changed saving of figures to log_figure with mlflow	True	
+change property setter	False	
+add step to fix coverage path	True	
+update proloaf.py	False	
+bug fix implementations	False	
+improve understandabilitysigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+format python code with black	True	
+format python code with black	True	
+add load featureadder from modules.	False	
+recreate the bug in a unit test	False	
+handle no load column in input data	False	
+update prerelease versionsigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+move feature name test to happy train pipeline	True	
+made train model work and more modular	False	
+add /unit	False	
+add modelspecs to function and log	True	
+format python code with black	True	
+add pytest-cov	False	
+cast to listsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+update requirements.txt	False	
+improve readability determine_invalid_coefs()	False	
+format python code with black	True	
+add failing test	False	
+update serializer.py	False	
+remove incorrect **	False	
+fix create_model call in train_model	False	
+create .pre-commit-hooks.yaml	False	
+change model type hint train	False	
+minor change	False	
+change sed command	False	
+load model using serializersigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+added unit test	False	
+remove pull request trigger	False	
+delete deprecated code	False	
+merged remote	False	
+fixed lag features	False	
+format python code with black	True	
+update index.rst	False	
+bump version to v2.2.2	True	
+add doc to pre commit config	True	
+debugged unit test for spliting data using stratificationdebugged unit test for spliting data using stratification. a few typing error are solved.	True	
+update prediction.py	False	
+update readme.md	False	
+rename optimize hyper params pipeline to optimize hyper params pipeline	True	
+fix small typo's	False	
+improve typehinting	False	
+fixed bug in quantile model	False	
+change docstring to remove save_figures_folder, unused with mlflow	True	
+bump version	False	
+code for stratification while splitsing the dataadded code for using stratification while splitsing the data. this in order to make sure peaks are in all the sets.	True	
+solved comments on pr	True	
+black formattingblack formatting	True	
+fix commented base test case code	False	
+cleaned up	False	
+update readme.mdsigned-off-by: jonas van den bogaard <3628277+jonasvdbo@users.noreply.github.com>signed-off-by: david swinkels <david.swinkels@alliander.com>	False	
+add -e	False	
+remove reuse compliance	False	
+basic sonarcloud config	True	
+bump version	False	
+update setup.py	False	
+test objective creator	True	
+add groupedregressor and unit tests for it.	True	
+minor changes	False	
+fixed unit tests	False	
+end messages with a '.'	False	
+update serializer.py	False	
+added the historic load as optional feature (proloaf)	True	
+move community files to organisation repo	True	
+increased version number to 2.5.2	True	
+update support.md	False	
+add mlflow runs	False	
+fixed typo in defining quantile columns	False	
+fixed more linting issues	False	
+replace ktpbase get_logger call by structlog to fix unit tests	True	
+fix typo's	False	
+moved split_data_train_validation_test to model_selection package	True	
+format python code with black	True	
+these test vanished from the unit-tests	False	
+format with blacksigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+format python code with black	True	
+fixed extreme stdev with back test	False	
+reorganise linear + missing value classes.	False	
+format python code with black	True	
+create index.rst	False	
+save path instead of uri	False	
+fix package data files	False	
+fix if no old model is found	False	
+format python code with black	True	
+add pre-commit requirements	False	
+optimization code added, not functionalthe objective init and call do not seem to be up-to-date.	True	
+fix unit test, add dummy ktpbase module	False	
+improve readme of documentation	False	
+remove type	False	
+add doc	False	
+implemented first use of holidays package	False	
+remove mlflow files	False	
+add mlruns dir to .gitignore	True	
+update teams message format	True	
+bump version to 2.0.0	True	
+converted to snakecase	True	
+implemented some feedback	True	
+update requirements.txt	False	
+update test_calculate_kpi.pysigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+add unit tests	False	
+test unmocked model pathsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+bump daskbumps [dask](https://github.com/dask/dask) from 2021.4.0 to 2021.10.0.- [release notes](https://github.com/dask/dask/releases)- [changelog](https://github.com/dask/dask/blob/main/docs/release-procedure.md)- [commits](https://github.com/dask/dask/compare/2021.04.0...2021.10.0)---updated-dependencies:- dependency-name: daskdependency-type: direct:production...signed-off-by: dependabot[bot] <support@github.com>	True	
+rename parameter "x" to "x"	True	
+update create_component_forecast.py	True	
+update openstef_dashboard_doc.html	False	
+bump version openstf for release	True	
+remove unused line	False	
+remove wrong/unused imports and add init to dataclasses folder	True	
+format python code with black	True	
+allow no feature importance figure	False	
+remove superfluous returnssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+remove commented out codesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+don't check model age when testing	False	
+change installation instructionto use package at pypi	True	
+format python code with black	True	
+format python code with black	True	
+create makefile	False	
+fix unit tests	False	
+added the possibility to specify the horizons used for training from the prediction jobsigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+format python code with black	True	
+more refactor	True	
+update openstef_dashboard_doc.html	False	
+fixed bug, removed duplicate code and added unit test	False	
+format python code with black	True	
+updated version number for release	True	
+update setup.py	False	
+add comment about optuna	False	
+updated code with the commentsupdated code with the comments	False	
+update readme.md	False	
+add missing value handler.	False	
+update unittest to cover code	True	
+update requirements.txt	False	
+update postprocessing.py	False	
+update requirements.txt	False	
+fix code smells	False	
+improve logging	False	
+update setup.py	False	
+update prediction_job.py	False	
+add reuse header	False	
+incorporate fixsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+removed unused variable/import	False	
+change x to x and fix a test.	True	
+delete make.bat	False	
+create test_post_teams_alert_invalid_keys()	False	
+fix nan metrics when calculating kpisigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+work in progress	False	
+fixed unittests	False	
+add auto black on pr	True	
+create make.bat	False	
+replace print by logger	False	
+first try	False	
+added a functionnality to sort prediction jobs taking into account dependenciessigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+model_creator use pj	True	
+bump versionsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+add tests for cover	True	
+add return type hinting	False	
+add logging when model loaded	False	
+dataclasses renamed to data_classesdataclasses is an exisiting package and this caused errors	True	
+imported packagesimported packages	False	
+update committers.md	False	
+raise clear exception on unimplemented model	False	
+have optional mlflow tracking uri, make saving report to disk optional and update requirementssigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+added a config with smart_union activated to avoid unwanted conversions on integers ids to strings in the depends_on attributesigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+integrated quantile model with pipeline	False	
+rename license/mit.txt to licenses/mit.txt	True	
+update based on  reviews	False	
+format python code with black	True	
+added basic mecanism to allow custom models	True	
+format python code with black	True	
+create pr-labler.yaml	False	
+remove references to sjv column names	True	
+changed random.sample due to security errorschanged random.sample due to security errors	True	
+rename unit tests to align them more	True	
+remove_model unittest improvement	False	
+increase number of trials	False	
+fixed bug, back test is not default	False	
+update openstef_dashboard_doc.html	False	
+format python code with black	True	
+format python code with black	True	
+add sonarcloud badges	True	
+format with blacksigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+readded iterable type hint since it is used at other placessigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+update setup.py	False	
+format python code with black	True	
+use correct newline symbol	False	
+update requirements.txt	False	
+update to openstef instead of alliander-opensource	True	
+add test/unit	False	
+add pre-commit-config	False	
+fixed logger exceptions	False	
+implemented feedback	False	
+format python code with black	True	
+fix failing unit tests	False	
+changed ktpbase to openstf-dbc	True	
+incorporate name change	False	
+could not replicate but added proposed fix	False	
+integration test for the general pipeline	True	
+changed testsigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+fix linting error	False	
+rename pr-labler.yaml to pr-labeler.yaml	True	
+remove obs label	False	
+private method because might be changed later	True	
+added some more documentation	True	
+fix typo	False	
+moving create_forecast pipeline, work in progress	True	
+added more documentation	False	
+update pull_request_template.md	False	
+revert naming untill we have made decision, rename core pipeline to core	True	
+rename requirements.txt to _obsolete_requirements.txt	True	
+update predict_sklearn.py	False	
+ran blacksigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+remove unused functions	False	
+updated csv	False	
+update setup.py	False	
+try to fix docs by using printf (more consistent behavior then echo)	True	
+update imports and remove option to log matplotlib figureremoved the option to log a matplotlib figure since we can use plotly	True	
+add dummy optimize hyperparameters pipeline	False	
+rename _obsolete_requirements.txt to requirements.txt	True	
+format python code with black	True	
+update setup.pybump version to 2.2.3	True	
+implemented predict pipeline	False	
+after merge changes	False	
+format python code with black	True	
+comments on pr	False	
+fix wrong inputssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+bug fixes in lag featuresmake sure to look at the unittests!	True	
+format python code with black	True	
+black formatting	True	
+fixed some bugs	True	
+security sonar cloud fixsecurity sonar cloud fix	True	
+try if higher-level requirements can be installed	False	
+update test_validation_find_zero_flatliners.py	False	
+update setup.pybump version	False	
+format python code with black	True	
+update mlflow 1.21.0	False	
+add badges	False	
+added ktpbase/config/config.py	False	
+add new prediction job attribute	False	
+add daterange selection in basecase pipeline	False	
+clean up mlflow serializer	False	
+improve docstring and comments	False	
+update setup.py	False	
+fix badges	False	
+use subset of data for trainingset	True	
+format python code with black	True	
+remove obsolete fin_nonzero_flatlinesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+fixed typo in objective.py and add docstring to **args	True	
+minor changes	False	
+update black	False	
+rename source/index.rst to docs/index.rst	True	
+added documentation	False	
+refactored more	True	
+update .gitignore	False	
+added github actions workflow	False	
+skip storing of new model	True	
+added the feature name proporty for compliance with the new abstract property introduced in #193	True	
+improve docstring	False	
+remove feature_importance input argument	False	
+test can_predict_quantiles attributesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+basics of loading parameters with mlflowactually using the old parameters will still cause an error	True	
+optimize imports	False	
+bump openstf to 2.60	True	
+change integration to component testsigned-off-by: david swinkels <david.swinkels@alliander.com>signed-off-by: signed-off-by: david swinkels david.swinkels@alliander.com <david.swinkels@alliander.com>	True	
+do not update quantiles from modelspecssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+remove modelage check from tasks\train_model.pythe model check is now only done in the pipeline\train_model	False	
+add type hints and documentationssigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+fix typo	False	
+update setup.py	False	
+fixed linting	False	
+fixed bug	False	
+modified validation import in pipeline/predict_sklearn.py	False	
+fixed unit tests	False	
+update serializer.py	False	
+fix invalid classifiers	False	
+add typehints	False	
+update openstef dbc versionsigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+fixed bugsigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+install sphinx theme when building docs	False	
+fixed unit tests	False	
+update model_creator.py	True	
+add more unit tests to confidence interval applicator, catch lookuperror, improve error when empty standard deviation and run isort	True	
+undo wrong new param insert	False	
+format python code with black	True	
+update numpy dependency	False	
+removed old pipeline files	False	
+if multiple exceptions are raised in a task, present an overview of pids per exception in teams message	False	
+changed random.sample due to security errorschanged random.sample due to security errors	True	
+unittests for model_specification.py	True	
+add new reuse workflow	False	
+again, change line so black will do something	True	
+fixed component forecast pipeline	True	
+scale the load when training (proloaf)	False	
+fix build error	False	
+format python code with black	True	
+fixed unit tests	False	
+start clean up, refactoring	True	
+remove commented out codesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+bugfix in the object creator	True	
+format python code with black	True	
+format python code with black	True	
+clarify missingvalueshandler's fit method.	False	
+create .nojekyll	False	
+update predict_sklearn.py	False	
+add matplotlib	False	
+move license info of issue templates to seperate file	True	
+update python-build.yaml	False	
+bump version 3.1.7	False	
+update setup.py	False	
+in between commit	False	
+black format	True	
+fixed some issues and added unit tests	True	
+fix flaky unittestsigned-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+move the custom model check in the "try" block and keep "except" block for real exceptions.	True	
+fix preprocess testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+round to milliseconds for readability	True	
+format python code with black	True	
+create dependabot.yml	False	
+update readme badge	False	
+changed testsigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+added quantile forecasts to forecast pipeline	True	
+fix incorrect tests	False	
+bump openstf-dbc	False	
+add wildcards to bugfix/hotfix feature names	True	
+add new files	False	
+first steps in removing openstef-dbc dependencies	False	
+change testcase import	False	
+add autolabler	True	
+update index.rst	False	
+delete makefile	False	
+rework implementation	False	
+format python code with black	True	
+update intro readme	False	
+updates from pull request	False	
+remove unused variable	False	
+made more general and added bridgeday functionality	False	
+filter using phase tag	False	
+sonarcloud improvements	True	
+update bug_report.md	False	
+format python code with black	True	
+bump version to 2.1.2	True	
+add test dir directly	False	
+add license info	False	
+add featureadder and dispatcher	False	
+handling custom horizon column in train_modelsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	True	
+solve code smell, merge if statement with enclosing one	True	
+update setup.py	False	
+update setup.py	False	
+bump version to 2.1.3	True	
+improved implementation	False	
+make callback arguments more clear, replace _cb by _callback	False	
+update create_solar_forecast.py	True	
+fixed ide marked errors, small structure changes	False	
+log pid when fallbackforecast is used	True	
+fix weird bug about merging the results for group_predictsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	True	
+format python code with black	True	
+unittest and remove training_period_days	False	
+added units to ato report	True	
+update train_model_sklearn.py	False	
+update build-sphinx.yml	False	
+remove nexus reference	False	
+bump version to 3.0.0, first of openstef	True	
+fixed license errorfixed license error	False	
+reduce n_trials to 1signed-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+cleanup pipeline and add logging	False	
+fixed test_train issue3 and implemented lightgbm	False	
+update docstring	False	
+bump versionsigned-off-by: frank kreuwel <fpmkreuwel@gmail.com>	False	
+mlflow in training pipelineadded mlflow to training pipeline. the unit test succeed but still need a unit test for a pj using the mlflow load, now falls back to the old load function	True	
+do not ignore previously trained models in unit testssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+format python code with black	True	
+update filenamethis to clairify the license structure	True	
+fix unreachable code	False	
+added license info	False	
+revert "bugfix #155 ktps-1572 enum hyperparam optim"	False	
+bump openstf	False	
+format python code with black	True	
+update project_governance.md	False	
+remove linting step	False	
+update index.rst	False	
+fix for unittestunittest for checking the team message.needs random_order=false.	True	
+improve docstrings	False	
+update conf.py	False	
+fix unit test	False	
+improve unit tests for serializer	True	
+add test for case when no jobs are available	True	
+add tests for lag_features	True	
+fixed serialization of figures	False	
+add a comment about scaling.co-authored-by: david swinkels <david.swinkels@alliander.com>	False	
+update train_model_sklearn.py	False	
+format python code with black	True	
+removed printing scaling features	False	
+fixed code smells	False	
+change csv to new format	True	
+format python code with black	True	
+add installation of requirements.txt	False	
+make num boost round optional input, speed up testing	False	
+move trained models so we can start with unit test of pipeline	True	
+parameters in json	True	
+fix 'can not determine shape of dataframe bug'signed-off-by: florian oppermann <florian.oppermann@eonerc.rwth-aachen.de>	False	
+adding hyperparams and features_set in the pj	False	
+format python code with black	True	
+reformatted with black	True	
+ran black on save	False	
+remove unused declaration	False	
+delete sonar-project.properties	True	
+format python code with black	True	
+change logging for importing feature_names	True	
+implemented feedback	False	
+update build-sphinx.yml	False	
+update readme to include license info	True	
+change workflow to github flow	True	
+reduced input data to speedup unit tests	True	
+fix failing unit testssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+refactored a bit to remove code smells	True	
+bump version	False	
+guarentee existence of validation set	False	
+format python code with black	True	
+change installation of -r requirements.txt	False	
+change model kwargs to single line	True	
+remove commented code	False	
+update maintainerssigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+bump version	False	
+bugfix	False	
+update feature_applicator.py	True	
+add oldmodelhigherscore unittest	False	
+log trained folder path	False	
+implemented feedback	False	
+changed settings ide to blackchanged settings ide to black	True	
+fixed part of the unittests	False	
+rename project to openstf	True	
+add python package upload	False	
+add pip use previous cache step to speed up builds	True	
+update requirements.txt	False	
+update python-upload-package.yaml	False	
+fixed create forecast pipeline	True	
+fixed unit tests and did some housekeeping	True	
+update custom.md	True	
+fix typo	False	
+more clear test name	False	
+add minor logging information	True	
+fix for review commentsfix for review comments	True	
+fix missing raise bug and try to reduce complexity	True	
+added test for feature_names in all models	True	
+deleted unnecessay variablesdeleted unnecessay variables	False	
+remove unclear unit test, interferes with tempdirsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+added layer for regressoradded a layer to keep the openstfregressor interface a real interface.	True	
+add dir to save model because can't write in the root	True	
+update taskcontext.py	False	
+add failing testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update documentation.md	False	
+update setup.py	False	
+add objective unit test	False	
+format python code with black	True	
+improve docstring	False	
+updated unittests	False	
+format python code with black	True	
+check if date fails it returns inf	False	
+update classifiers	False	
+replace documentation of sjv bij tdcv (typical domestic consumption values)	False	
+update docs-check.yaml	False	
+add ssf badge	False	
+format python code with black	True	
+try to fix docs check adding debug information	True	
+format python code with black	True	
+update docstringsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+add license information to tests	True	
+add docs/requirements.txt for local instructions	True	
+add html artefact and push docs	False	
+update openstef_dashboard_doc.html	False	
+format python code with black	True	
+create modelspecs outside of try	False	
+update package versionsigned-off-by: david swinkels <david.swinkels@alliander.com>signed-off-by: signed-off-by: david swinkels david.swinkels@alliander.com <david.swinkels@alliander.com>	False	
+get modeltype from pj	False	
+added the unit indication in the abstractfeatureapplicator docstring	True	
+fix typo	False	
+changed function namechanged the function name to better match it's goal. starts with a underscore to make it more clear that it is not the way to get the feature importance. get the feature importance from the attribute model.feature_importance_dataframe.	True	
+fixed check on equal feature_names old and new model	False	
+format python code with black	True	
+fixed some bugs and increased version	True	
+add init.py in metamodels.	False	
+disable shallow depth for sonar	True	
+update bug_report.md	False	
+remove sphinx global depedency	False	
+add comments and licence info to dummy kptbase	True	
+unify and simplify custom exceptions, always use pid in exception message	True	
+format python code with black	True	
+update typhinting, return union[path, none] instead of path	False	
+fix error catching	False	
+try most basic config	False	
+update release.md	False	
+fix basecase for 0 valuessigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+format python code with black	True	
+fix wrong date popsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+seperate generating and saving figures by letting the reporter generate a report	False	
+add failing unit testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update pr-labler.yaml	False	
+cleanup workflow	False	
+import json	True	
+implemented feedbacksigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	False	
+fix issues with mismatch between timezone info	False	
+improve logging messsage toosigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+fixed some issues	True	
+added proloaf model	False	
+clean up unit tests and add dosctring	False	
+improve/add unittest and remove modelspecs from train_pipeline functionnow modelspecs is not needed until train_pipeline_core and thus doesn't need to be given to train_pipeline	True	
+update openstef_dashboard_doc.html	False	
+update html interactive	False	
+bump version to 2.0.1	True	
+update docstring	False	
+update readme.md1) updated the location of the code_of_conduct.md and contributing.md file.2) refered to support.md for contact information.	True	
+add reuse header	False	
+format python code with black	True	
+black formatting	True	
+update feature_request.md	False	
+format python code with black	True	
+first working version	False	
+rename .github/pull_request_template.md.license to .github/pull_request_template/pull_request_template.md.license	True	
+postfix custom exceptions with error, seems to be best practise since all builtin exceptions use that strategy	True	
+define abstract model class and add test for existing models	True	
+final guess attempt	False	
+fixed issue with copying	False	
+make location dynamicsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+basic logic of unit testnon functional because now uses mocking data	True	
+add failing unit testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+added docstring to predict pipeline. added return value and removed useless imports and functions	True	
+rename openstf to openstef	True	
+add unit tests	False	
+changed documentation string and fixed unittest	False	
+security sonar cloud fixsecurity sonar cloud fix	True	
+format python code with black	True	
+started on implementation	False	
+remove useless init in linearopenstfregressor.	True	
+solve too high complexity predictionjob loop	True	
+feedback review	False	
+fixed import error	False	
+update xgb_quantile.py	False	
+format python code with black	True	
+update typhinting, return dict instead of none	False	
+recreate uninformative exceptionsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+add complete list of valid kwargs for each model type	True	
+update trained model to new interface	True	
+bump version to v2.1.0, seems to make more sense given the changes	True	
+change conf sys location	False	
+remove ktpbase and minor updates to index.rst	True	
+add build command docs/stf ktp-184	False	
+fix flatline at start or endsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+format python code with black	True	
+ran black	False	
+remove_non_requested_feature_columns in trainfeatureapplicator	True	
+format python code with black	True	
+speed up test_train unit tests	False	
+minor change to see if black works again	True	
+format python code with black	True	
+moved running validation robot to pipeline	True	
+fix for review commentsfix for review comments	True	
+moved reporter	False	
+update support.md	False	
+try more basic template	False	
+include fix for bug	True	
+add meta.yamlsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+black formatting	True	
+bumped version number for releasesigned-off-by: jan maarten van doorn <52956303+janmaartenvandoorn@users.noreply.github.com>	True	
+add removing excess models	False	
+format python code with black	True	
+possible solution	True	
+fix bug	False	
+update confidence_interval_applicator.py	True	
+implemented happy flow	False	
+replaced hardconded horizon by the resolution information in the prediction job.	True	
+add feature_names to apply_features	True	
+fixed logging config issue	False	
+add license info	False	
+naming clarified in test.	False	
+improve feature_engineering docstrings	False	
+fix unittests	False	
+ran black formatter	True	
+changed output of test_are_coefs_valid() and made more robust	False	
+rename features to feature_names to prevent confusion between when refering to a feature (name+data) and a feture_name (only the name)	True	
+check on all f8 errors	False	
+improve find models function in mlflow serializer	False	
+update .gitignore	False	
+removed old pipeline funcitonality	True	
+add unit test to achieve 100% coverage	True	
+reduce test trials	False	
+format python code with black	True	
+added license file for model.bin	True	
+update create_basecase_forecast.py	True	
+fix nan metrics when calculating kpisigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+create release.md	False	
+added license string	False	
+update create_basecase_forecast_sklearn.py	True	
+sphinx_rtd_theme in conf.py	False	
+format python code with black	True	
+check building of docs also when directly working on develop or main	True	
+finish test functions	False	
+add fix for breaking black in pre-commitsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+changed settings ide to blackchanged settings ide to black	True	
+fixed linting error	False	
+rename tests	False	
+need to be datetime not date	True	
+fixed unit testthis unit test was an old version of the test, this was reverted after the merge.	False	
+update conf.py	False	
+add failing testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+change model type hint	False	
+fixed unit tests	False	
+run unit and component test as one to avoid overwriting coverage.xml with incorrect code coverage	True	
+add seperate function to determine model age from pid	True	
+update readme.md	False	
+make docs check on pr and build on release	False	
+added documentation and corrected bug when shuffling groupssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	False	
+removed old models and added license info	False	
+update xgb_quantile.py	False	
+fix bug quantiles in hyperparam optimsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update versionsigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+removed validation robot task to alliander specific project	True	
+added documentation and type hints	False	
+delete obsolete_requirements.txt	True	
+ran black	False	
+added unit test and fixed minor issues	False	
+format python code with black	True	
+reorganised code to avoid circular imports	True	
+remove date from stored kpissigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+move split forecast back to task	True	
+add commentsigned-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+remove forecast_type of basecase so default is used from pj. important for correct storing in influx!	True	
+delete buildsite.sh	False	
+chagned functionality and name of are_new_coefs_valid() to determine_invalid_coefs()	True	
+improved tests and fixed issue	False	
+make function able to handle zeros at start or endsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+add unit test happy flow pipeline	False	
+add ktpbase to path	True	
+enable fallbackforecast test	True	
+ran black on save	False	
+do not use template for name/tag	True	
+added a license file for reuse	True	
+added the start and end time to the errorthe pid, start and end time can be used for logging or printing.	True	
+new openstf-dbc	False	
+test save model	False	
+delete openstef_dashboard_doc.html	False	
+update setup.py	False	
+fixed bug	False	
+fix linting test	False	
+update to newest blacksigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+add test that works on windows. bug-report states it does not work on unix, so lets see in the github action	True	
+update openstef_dashboard_doc.html	False	
+added test files for train and predict in pipeline. to be completed.	True	
+basic feature importance	False	
+delete train_predict_backtest.py	False	
+rename .github/pull_request_template.md to .github/pull_request_template/pull_request_template.md	True	
+add unit test for featureadder and dispatcher	True	
+improvements based on review	False	
+add comments	False	
+fixed some linting warnings	True	
+format python code with black	True	
+comment	False	
+reset index else might cause error with model.score	True	
+create make.bat	False	
+update readme.mdsigned-off-by: jonas van den bogaard <3628277+jonasvdbo@users.noreply.github.com>	False	
+adaptation of the tests for linear model.	True	
+bump version	False	
+format python code with black	True	
+use constantsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update index	False	
+update setup.py	False	
+update openstf-dbc requirement from ~=1.2.0 to ~=2.0.1updates the requirements on [openstf-dbc](https://github.com/alliander-opensource/openstf-dbc) to permit the latest version.- [release notes](https://github.com/alliander-opensource/openstf-dbc/releases)- [commits](https://github.com/alliander-opensource/openstf-dbc/compare/v1.2.0...v2.0.1)---updated-dependencies:- dependency-name: openstf-dbcdependency-type: direct:production...signed-off-by: dependabot[bot] <support@github.com>	True	
+fix failing testsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+fixed bug in unit test	False	
+update build-sphinx.yml	False	
+try to fix docs check by chaning version	True	
+bump version	False	
+update allowed python versionssigned-off-by: david swinkels <david.swinkels@alliander.com>signed-off-by: signed-off-by: david swinkels david.swinkels@alliander.com <david.swinkels@alliander.com>	False	
+fix operationalpredictfeatureapplicator	True	
+added documentation	False	
+store trained model	True	
+simplify and improve unit test	False	
+format python code with black	True	
+try to fix docs check by chaning pre build command	True	
+delete notebook_model_selection.ipynb-	False	
+fix wrong patch and feature applicator	True	
+changed some implementation and added optuna objective for proloaf	True	
+add input argument typehinting	False	
+create conf.py	False	
+fix fallback unit test	False	
+added license info	False	
+delete custom.md	True	
+changed unittest for proloaf	True	
+improve objective creator unit test	True	
+changed the way custom models are treated. removed custom form enum and use the model_type to identify the model to load	True	
+format python code with black	True	
+update setup.py	False	
+html containing dashboard documentation	False	
+fix broken links due to renaming	True	
+update confidence_interval_applicator.py	True	
+bump version for new alpha release (different convention)	True	
+hotfix setup.py, missing modules and data folder	False	
+update setup.py	False	
+format python code with black	True	
+implemented feedback	False	
+remove higher level requirements.txt	False	
+migration of test for the grouped regressorsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	True	
+update test_train_model_sklearn.py	False	
+fix bug for single dict in teams monitoring	True	
+fixed unittest	False	
+removed test_something in test_train_model_sklearn	True	
+add modelspecs as load_model output	False	
+test that optimize_hyperparameters_pipeline returns a dict	False	
+black formatting	True	
+feature importance	False	
+unit test for objectives	True	
+update gitignore and fix typo	False	
+bump version	False	
+add -e	False	
+fixed a bug	False	
+first steps	False	
+remove unused tests	False	
+added spdx lines for reuse	True	
+revert "update test_validation_find_zero_flatliners.py"this reverts commit 7852bc04b2f8d937905151b70ba70a73d06e5add.	False	
+bump version	False	
+raise error if input data is empty	False	
+update requirement versionssigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+chore - more renames	False	
+fix typing unionsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+update optimize_hyperparameters.py	False	
+expanded unit tests more	False	
+move capacity prediction test data to test data csv file	True	
+add sonarscan to build step	True	
+update release-drafter.yml	False	
+suggestion to improve and sync model creator and objective creator interface	True	
+fixed import pytorch-lightning error	True	
+remove mean from skill_score inputsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+fix incorrect indent	False	
+add quotessaw this on https://github.com/chainsafe/ui-monorepo/blob/dev/.github/pr-labeler.yml	False	
+update build-sphinx.yml	False	
+format python code with black	True	
+update bug_report.md	False	
+improve short description	False	
+format python code with black	True	
+update gitiginore and add a trained model for testing	True	
+fix smells	False	
+fixes additional coments pr	False	
+format python code with black	True	
+add failing unit test	False	
+add specific location of coverage xml	False	
+rename licenses/license-mit to third-party-licenses/license-mit	True	
+add time delayed when calculating completeness	False	
+improve documentation of generate forecast datetime range	True	
+fix proper use of features for training	True	
+format python code with black	True	
+bumb versionsigned-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+restructuring of file locations	False	
+format python code with black	True	
+update readme.md	False	
+format python code with black	True	
+fixed unit tests	False	
+update test_train_predict_backtest.py	False	
+commented out path fix	False	
+switch openstef version to a pre releasesigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+fixed some typing issues	True	
+format python code with black	True	
+add test for linear objective	True	
+remove unused prediction job in reporter	False	
+moved check function to alliander specific project, used nowhere else	True	
+update black-format-code.yml	True	
+add details for split coefs backwas added: https://github.com/alliander-opensource/short-term-forecasting/commit/17f3a43ffa75b33224ca150cdd8cfa3f1e093ad9#diff-c55b85529f55f88a29a6ef267f0b5f30c577a47e8f1503f16e3d27be1e27f354was removed by accident: https://github.com/alliander-opensource/short-term-forecasting/commit/c747f2db0713935bc4f0b48614ca84e1e3fab635#diff-c55b85529f55f88a29a6ef267f0b5f30c577a47e8f1503f16e3d27be1e27f354	True	
+format python code with black	True	
+clean up some random code with code coverage	True	
+rename source/conf.py to docs/conf.py	True	
+add license info	False	
+update release-drafter.yaml	False	
+added documentation	False	
+ran black	False	
+update optimize_hyperparameters.py	False	
+refactored more	True	
+update documentation.md	False	
+corrected two bugs. 1. bad result unpacking when calling find_groups. 2. bad call to collections.chain to chain groupssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+round to milliseconds	True	
+change back to old path	True	
+modified tests in test_train_model so that the 'custom_model_path' parameter is passed when building custom models	True	
+pj unused in reporter	False	
+update setup.pyincreased minor verison number	True	
+format python code with black	True	
+clean up gitignoresigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+rename missingvaluehandler into misssingvalueshandler.	True	
+implemented feedback	False	
+update openstef_dashboard_doc.html	False	
+revert change of signaturesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update teams.py	False	
+change sources	True	
+moved splitting of forecast to pipeline	True	
+format python code with black	True	
+fix unit tests	False	
+update and rename .pre-commit-hooks.yaml to .pre-commit-config.yaml	True	
+black formatting	True	
+format python code with black	True	
+added structlog 21.1.0 (latest) to the requirements	True	
+format python code with black	True	
+increase minimum training_duration_days	False	
+format python code with black	True	
+remove old model.pkl versionssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+format python code with black	True	
+change line so black will do something	True	
+renable skipped tests	False	
+add fallback forecast	True	
+move figures save path one level up to pipeline	True	
+stf/stf	False	
+add figures dir to path op weight_plot	True	
+formattingsigned-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+minor suggestions for changes in text	True	
+revert setting feature_names to empty list when none, breaks unit tests. might be a bug	True	
+update reviewers	False	
+create pr-labler.yml	False	
+rename clean	False	
+add pytest report	False	
+fix licence info	False	
+bump version	False	
+commit for runnning blackcommit for runnning black	True	
+minor changes, improve type hinting and docstrings	False	
+fix bug and add unit tests	False	
+added basecase for "other" component	True	
+fixed bug	False	
+modifications in order to perform a backtest	True	
+first implementation	False	
+fix f821 errors (undefined name 'unittest')	False	
+rename kind to fallback_strategy	True	
+improve logging	False	
+fixed broken unit test	False	
+implemented working version of quantile regression	False	
+added a consistency check for the pj id in the pj object and the model specssigned-off-by: alexis mignon <alexis.mignon@proabyes.com>	True	
+update release-drafter.yml	False	
+improved unittest, doesn't mock everything	False	
+update openstef_dashboard_doc.html	False	
+update issue templates	False	
+create release-drafter.yaml	False	
+revert "change unit test for objective to test all model types"this reverts commit f060349fab384b81a06509bede2d99661d453d85.	True	
+try even more locs	False	
+create train_predict_backtest.py	False	
+no longer remove first two weeks of training set	False	
+update lag_features.py	False	
+remove unnecessary printssigned-off-by: gonca g??rses-tran <gonca.guerses@rwth-aachen.de>	False	
+revert back test_serializer_remove_old_models	False	
+again2, change line so black will do something	True	
+included third-party libraries license information in readme	True	
+bump version	False	
+improve retrieving of feature_names	False	
+add unit test for predict pipeline	True	
+changeback to old filepath for trained models	True	
+format python code with black	True	
+format python code with black	True	
+format python code with black	True	
+fix __version__ attr	False	
+fixed code smell	False	
+increased validation and test fraction	False	
+renamed tests to be in line with module names	True	
+rename directory openstf	True	
+fix create_model interface	False	
+add licensing information.	True	
+make flake8 less strict	False	
+adapt integration testsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+correct for line length	True	
+add extended happy flow test cases	False	
+update setup.pybump version number	False	
+update html	False	
+format python code with black	True	
+update filename to license and move to root directorythis to clarify the license structure	True	
+fix unittests	False	
+add feature names to applicator and bump version	True	
+add cov location to project.properties	True	
+format python code with black	True	
+fix typehinting to be compatible with python 3.7 and 3.8	True	
+add option to add model_type to create_forecast and train_model task	True	
+made neural network dependencies optional	False	
+try a lot of locs	False	
+format python code with black	True	
+add linear model	False	
+use the validated data instead of the input data - fixes nan values in target	False	
+use modeltype enum	False	
+added more simplifications	False	
+make default default arguments to pipeline	True	
+update version	False	
+add custom exceptions for invalid input data and when old model scores higher then new model	True	
+update bug_report.md	False	
+fix wrong none	False	
+doc fixsigned-off-by: willem frederik stoel <frederik.stoel@alliander.com>	True	
+format python code with black	True	
+fix unit test	False	
+format python code with black	True	
+fixed bug in stdev determination	False	
+fix unittest to check the inputdatainsufficienterror is raised	True	
+update setup.py	False	
+added license files	False	
+add correct use of validation datasigned-off-by: florian oppermann <florian.oppermann@eonerc.rwth-aachen.de>	False	
+remove old database reliant functions	False	
+update requirements.txt	False	
+update reporter.py	False	
+update license infosigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+vanished test updated	False	
+delete model.sav	False	
+format with black and remove union	True	
+ran black	False	
+rename stf to openstf	True	
+update numpy to fix vulnerabilitysigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+test if actions work again	False	
+format with blacksigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+add test for regressorobjective	True	
+format python code with black	True	
+fix comparing old to new model with different featuresets	True	
+format python code with black	True	
+update setup.py	False	
+add previously stored models	True	
+direct folder names	False	
+raise error when forecast window can't be created based on data and expand unit tests	True	
+supertest [ktps-184]	False	
+update readme.md	False	
+add functionality to store reports to disksigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+update sonar-project.properties	True	
+refactor and extend persistent storage serializer	True	
+fixed bug and added unit tests	False	
+seed random number generatorsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+fix monitoring bug	True	
+bump version	False	
+format python code with black	True	
+update conf.py	False	
+format python code with black	True	
+format python code with black	True	
+update requirements.txt	False	
+update create_forecast.py	True	
+remove ktpbase.logging dependency	False	
+format python code with black	True	
+add license for new file	True	
+update openstef_dashboard_doc.html	False	
+remove unused imports	False	
+bug fixes for merging main into proloaf branch	True	
+update unit test	False	
+fix style issues due to merge	True	
+fixes pr comments	False	
+minor change	False	
+isort imports	True	
+update openstf-dbc requirement from ~=2.1.0 to ~=2.1.1updates the requirements on [openstf-dbc](https://github.com/alliander-opensource/openstf-dbc) to permit the latest version.- [release notes](https://github.com/alliander-opensource/openstf-dbc/releases)- [commits](https://github.com/alliander-opensource/openstf-dbc/compare/v2.1.0...v2.1.1)---updated-dependencies:- dependency-name: openstf-dbcdependency-type: direct:production...signed-off-by: dependabot[bot] <support@github.com>	True	
+sort index after applying multiple horizons	True	
+scaling of features and applying the historic_load column	True	
+move feature importance logic in linearopenstfregressor.	True	
+minor code cleaning	False	
+format python code with black	True	
+improve docstrings in action	False	
+naming and imports clarified.	False	
+next pre-release	False	
+update create_basecase_forecast.pysigned-off-by: frankkr <fpmkreuwel@gmail.com>	True	
+clean up mlruns	False	
+increase test speedlimit the input data to increase testing speed	True	
+update xgb_quantile.py	False	
+format python code with black	True	
+add comment	False	
+fix unit test	False	
+update black for pre commitsigned-off-by: signed-off-by: david swinkels david.swinkels@alliander.com <david.swinkels@alliander.com>	True	
+fix accidentally broken create_model interface	False	
+refactor for easier testing	True	
+remove post_teams functionality from optimize hyperparams	False	
+fix feature_name method	False	
+fix e226	False	
+format python code with black	True	
+bump version to v1.6.3	True	
+make python version dependency less restrictive	False	
+create model.joblib.license	False	
+add empty ktpbase to docs folder	True	
+update docs-publish.yaml	False	
+remove ktpbase dependency from pipeline	False	
+update train_model.py	False	
+remove ktpbase and minor updates to index.rst	True	
+format python code with black	True	
+fixed typo	False	
+make debugging easier by selecting pid	False	
+rename project.properties to sonar-project.propertiesthis way the sonarcloud step in the build-action can find the file	True	
+update readme.md	False	
+moved building teams message to teams.py	True	
+change unit test for objective to test all model types	True	
+add fix and unit test	False	
+make feature importance optional	False	
+update test	False	
+update to new sonarcloud project	True	
+fix unit test	False	
+fixed more unittests	False	
+update lag_features.py	False	
+fixed unit test error	False	
+format python code with black	True	
+bump version	False	
+update readme.md	False	
+move enums to enums from general	True	
+add bug link	False	
+remove working dir	False	
+update setup.py	False	
+add license info	False	
+fixed bug	False	
+update model_creator.py	True	
+try even more locs	False	
+update openstf-dbc requirement from ~=1.1.0 to ~=1.2.0updates the requirements on [openstf-dbc](https://github.com/alliander-opensource/openstf-dbc) to permit the latest version.- [release notes](https://github.com/alliander-opensource/openstf-dbc/releases)- [commits](https://github.com/alliander-opensource/openstf-dbc/compare/v1.1.0...v1.2.0)---updated-dependencies:- dependency-name: openstf-dbcdependency-type: direct:production...signed-off-by: dependabot[bot] <support@github.com>	True	
+try to copy requirements.txt	True	
+switch forecasting window to dynamic window based on forecast data	True	
+update setup.py	False	
+update readme.md	False	
+add default training period days hyperparam	False	
+update documentation	False	
+format python code with black	True	
+import missing openstf.	False	
+fix loading local model at remotesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+added an abstract feature_names property in opensftrergessorinterface	True	
+format python code with black	True	
+add more model filessigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+removed unnecessary comments in code	False	
+fixed comments	False	
+fix codesmell commented code	False	
+ran black	False	
+add command to fetch devicesigned-off-by: user jupyter <jupyter@reserver.acs-lab.eonerc.rwth-aachen.de>	True	
+change skill_score denumerator and remove superfluous mean from signaturesigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	True	
+use self.feature names	False	
+update openstef_dashboard_doc.html	False	
+auto generate task name from task module name	True	
+remove duplicate lines with variable	False	
+format python code with black	True	
+made nn dependencies optional	False	
+fix e231	False	
+fixed bug	False	
+improve testing speed	False	
+fix a conditionsigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+added extra unittests	False	
+update version	False	
+specify parameters for proloaf	True	
+minor changes	False	
+continued with implementation	False	
+backtest for the entire input range	True	
+fix wrong example data file, where apx is filled for horizon=0.25	True	
+update setup.py	False	
+update version	False	
+remove /unit of tests	False	
+update type hints and docstrings	False	
+improve logging messsage toosigned-off-by: david swinkels <david.swinkels@alliander.com>	True	
+update utils.py	False	
+bump version number to v2.3.0	True	
+update setup.py	False	
+format python code with black	True	
+updated js for the interactive imagemap	True	
+format python code with black	True	
+update issue templates	False	
+add short term forecasting	True	
+updated html	False	
+remove accidental additions	False	
+optimize imports	False	
+update python-build.yaml	False	
+mlflow in hyperparameter optimization	False	
+update testcases to match new predict pipeline structure	True	
+update feature_applicator.py	True	
+update html hoover	False	
+rename licenses/license to license	True	
+add __version__ attr	False	
+fix hyper param optimizationsigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+fix typo	False	
+change logs to debug	True	
+add test functions	False	
+change if order	False	
+rename auto_black_on_pr.yml to auto-black-on-pr.yml	True	
+get feature_names from mlflow	False	
+improved naming, assertion methods and clarity	False	
+add compliance copyright/license.	False	
+fix mlflowserializer after removing abstractserializersigned-off-by: david swinkels <david.swinkels@alliander.com>	False	
+fix reuse issues	False	
+updates	False	
+update html	False	
+add type hintssigned-off-by: benoit hardier <benoit.hardier@probayes.com>	False	
+fixes for unittest failures and feature applicator with proloaf	True	
+add coverage comment	False	
+changed an undefined name error	False	
+change import unit.utilssigned-off-by: frank kreuwel <frank.kreuwel@alliander.com>	False	
+update readme.md	False	
+fix unit test for create forecast task and add pytest-report to gitignore	True	
+use given tzinfo instead of fixed	False	
+mlflow to mlflow	True	
