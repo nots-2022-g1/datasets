@@ -1,0 +1,1048 @@
+GitCommitMessage	IsUseful	MatchedOnKeyword
+handle empty data frames in scenario.add_par()	False	
+rewrite 'ixmp config' cli using click	False	
+re-enable py3.9 runs of "pytest" ci workflowthe packages llvmlite, numba, numpy, and pandas are now available asbinary wheels for all platforms.	True	
+split install of r deps and r package	True	
+squash warnings due to importing pandas.util.testing in test_utils	True	
+rename conftest.r to setup.r per testthat convention	True	
+update release_notes.rst	False	
+add #345 to release notes	True	
+add function to check if a scenario has a specific item (#111)* add auxiliary functions to check an item exists in the scenario* pass `name` args in`has_*()` functions* add unit tests* add to release notes	True	
+alllow alternative header cases when adding timeseries (#18)* accept 'node' as column name when adding timeseries data* renaming header (mirroring `pyam_analysis` package)* only require `[region, variable, unit]` in `add_timeseries()`* add unit test for error message if missing columns in `add_timeseries()`* fix float issue in automatically determining jvm `-xmx`	True	
+remove 'java' section in api docs	False	
+raise valueerror for invalid units in jdbcbackend	True	
+remove unused test_mp_props fixture	False	
+make test_resource_limit() less fragile	False	
+explicitly set convertstrings argument to jpype.startjvm() (#174)- add a test for the warning reported in #162- rewrite start_jvm with explicit convertstrings=false- set convertstrings=true- update comments, docstrings, release_notes	True	
+expand testscenario.test_excel_io	False	
+move .to_iamc_layout to .utils	True	
+improve test coverage	False	
+updated ixmp.jar (#233)* updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/62a5da51d93ced3df44cb6916fd5ee7395a71100...e5fdea3e4b590d70632d24d7fee1b8677da3841b* add missing dependency	False	
+handle sets out of order in io.s_read_excel; reduce complexity	True	
+colour pytest output on github actions runners	False	
+document version and default version handling (#132)* instantiate same class on scenario.clone()* add documentation about version/default handling* update release notes	False	
+also catch calledprocesserror from gams_version() in show_versions()	False	
+mark v3.4.0 in release notes	False	
+add doc/data-model	False	
+revert 5e7afd5	False	
+allow kwargs to config.add_platform	True	
+combine tmp_env, tmp_cfg fixtures	False	
+skip sphinx build in "pytest" ci workflow on py3.6 runners	False	
+remove xarray version spec of <0.12	True	
+remove unused code from reporting._config_args()	False	
+move set_log_level to backend	True	
+add add_test_data() to ixmp.testing; formerly in test code	True	
+apply consistent format (pr link last) to 3.x-series release notes	True	
+add tests/generalize code for future xr.dataarray conversion	True	
+update docs autosummary of ixmp.reporter	True	
+corrected format in tables of *python[ixmp package] section of docu	True	
+update release notes	False	
+appease stickler	False	
+adjust test_jdbc.test_handle_config() for windows	True	
+move and update codecov.yml	False	
+corrected typos and formatted the ixmp reporting docudone by also editing the docstrings of different methods of the reporter class as well as other main classes	True	
+add a test of cachingbackend.del_ts	True	
+document new key methods	False	
+initial backend file/class tree	False	
+add 'export' and expand 'import' cli commands for excel scenario data	True	
+documenting imxp.scenario.units() and correction of typos	True	
+parametrize tests for both kinds of reporting.quantity	True	
+fix writing down timeseries changes (#324)- add test for add/remove timeseries with long name- updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/6ec77036a0850d8ff3170f662d542a77c44c119e...ef6772bb7476c302e7c89a90d8232ac81a5cdccb- exclude a test due to issue with dependency update	True	
+tidy reporting.computations: method order, docstrings, pint usage	False	
+re-use common test data in test_platformthe file is shortened by about 30%.	False	
+adjust testing.assert_log for py36 compatibility	True	
+avoid shuffling dimensions in reporting.computations.aggregate()	False	
+use a temporary directory for gamsmodel input/output gdx files	True	
+pass test for reporter.add(..., sums=true)	True	
+test set_meta() with invalid type raises typeerror	False	
+updating db migration for hsql and macro support by extending varchar in ix_key table (#86)	True	
+add #354 to release notes	True	
+use quiet=true in more tests/fixtures where gams output isn't needed	False	
+don't drop levels for attrseries.sel() on single dimension	True	
+move gdx-related calls to jdbcbackend	True	
+update docs for messageix release (#25)	True	
+log a warning when filtering too heavily	False	
+move utils.import_timeseries to backend.io.ts_read_file- timeseries.read_file: new method.- timeseries.add_timeseries: add a `year_lim` argument, so limitingdata by year can be done even when not reading from file.- core.to_iamc_template: rename to core.to_iamc_layout, updatedocstring, remove duplicate set computation.- simplify cli.import_timeseries.- update docs.	True	
+use solve(???, quiet=true) by default in testing.make_dantzig()this shortens output from pytest considerably, especially when thedanztig model is solved in a fixture/test setup and its output is notrelevant to the test per se.	True	
+add ms_cat_set_elements to backend for message_ix	True	
+rework configuration defaults	False	
+add a "report" extra requirements target including genno[compat]	False	
+combine test_feature_geodata with test_timeseries	False	
+illustrate that stray scenarios reference platform and thus backend	False	
+also warn() from .utils.logger()	False	
+update release notes	False	
+adjust imports from ixmp.testing	False	
+add 'units' arg/column handling to reporter.add_file()	True	
+use weakref to refer to platform from timeseries; add tests	True	
+streamline config	False	
+add ixmp_jdbc_exception_verbose global option & tests, use in ci	False	
+simplify and update readme; fix github actions badge	False	
+update ixmp.jar based on commit b6812f206b03ed3f3a849cdf299a91c0230ffc26 (#185)- include timeseries changelog fix	False	
+accept "#new" as a version/fragment in tools.parse_url()	False	
+remove "sparse" from direct requirements in setup.cfg	False	
+check model access (#167)* check model access- added method to check model access- improve error handling in platform constructor- add tests for check model access with mock http server- fix test- ixmp.jar built from f8ca8599090bb30625b879b99b2d93e2d51b0e53* fix travis/apveyor ci* minor changes (docstring, quotes etc)	True	
+satisfy flake8	False	
+add test_excel_io_filters()	False	
+replace test_mp_props with test_mp in test_reporting_cli	False	
+remove commented diagnostic code in computations.data_for_quantity	False	
+new `ixmp.jar` with timeseries filters and messageix bugfix (#17)* new `ixmp.jar` with timeseries filters and messageix bugfix- adds filters for retrieving timeseries data from teh database- fixes a bug when using the `clone-and-slice` option with message-scheme scenarios concerning the `resource_volume` updatefrom commit `0379b77bcd4a8c2e303a3c5a8ba767c9f0385043` on ixmp_source* add dependency jars for better authentication methods	True	
+reset to development state	True	
+update utils.format_scenario_list for empty results	True	
+add concat() to computations.__all__	True	
+update jarfile to current ixmp_source master (#94)- replace jarfile (compiled with jdk8)- fix migrations in test db (ixmptest.script)- add start hswldb client script	True	
+preallocate dataframe in jdbcbackend.item_get_elements	False	
+revise test_update_scenario() to use only ixmp features	True	
+add postgresql dependency jar	False	
+update tutorial/readme links for 2.0.0	True	
+fix typo in docstring of reporting.computations.select (#352)	True	
+sync all version numbers (#45)	False	
+update readme and documentation (#154)- update readme files- initial clean-up of docs- complete clean-up of docs to align with messageix docs organization- update some links in readme- add long_description to setup.py	True	
+add four testing fixtures/utilities- ixmp.testing.memory_usage- ixmp.testing.random_ts_data- ixmp.testing.add_random_model_data- ixmp.testing.resource_limit	False	
+debug appveyor ci 1	False	
+fix indexing of keys from reporter.add_product()	True	
+address sphinx warnings	False	
+bump minimum pandas version	False	
+geodata rebased (#186)* add support for handling geodata* updated release notes* minor indentation fix* minor: adapt release notes	True	
+move setup-r action before cache; use r version in cache keythis ensures r_libs_user is available for cache restore.	True	
+skip tests using 'resource' on windows/appveyor	False	
+further document base.model.initialize	False	
+exclude jpype 0.7.4 for #279	True	
+combine test_regions with test_platform	False	
+reformat scenario.remove_set docstring	False	
+improve test coverage of reporting.quantity	True	
+remove python 3.6 exclusion in sphinx step of "pytest" ci workflow	True	
+appease flake8	False	
+new `ixmp.jar`: bugfix when connecting to hsqldb from multiple notebooks (#121)from ixmp_source commit `19ae12e7ca10e84d5e86f6b5d08657503f55081a`	True	
+importing ixmp in setup breaks conda	False	
+remove python 3.6 compatibility code	False	
+reset release notes to development state; add #330	True	
+update issue templates	False	
+add git to dockerfile for teamcity	True	
+add functions to view and define regions/synonyms for timeseries data (#125)* add functions to work with regions for timeseries data, add unit tests* add `ixmp.jar` with extended timeseries features and bugfix for cloning across platformsbuilt from commit `e282b7005b9c3ab373ffc4d8129080d2df70db81`* appease stickler and @gidden* add to release notes* appease @khaeru* appease python 2.7 on windows	True	
+remove content in doc/reporting that duplicates genno docs	False	
+add backend.base.cachingbackend	False	
+add gcc, python3-dev to ci/dockerfile for python psutil	True	
+add type hints to scenario.add_par()	True	
+update workflow comments re: missing python 3.9 wheels for dependencies	True	
+document base.backend methods for platform	True	
+import from .reporting.util, not genno.compat.ixmp.util	False	
+fix flag value for end of iteration in diff(); add test_diff_items	True	
+add #398 to release notes	True	
+simplify notice and clarify different with messageix	False	
+flatten doc/ tree- remove source/ subtree	False	
+appease stickler	False	
+add at_level argument to testing.assert_logs()	True	
+catch more exceptions in reporting.utils.parse_units	False	
+sync pytest in ci/conda-requirements.txt with setup.py	False	
+prototype of 'ixmp list' cli command	True	
+add windows ci (#50)	False	
+localconfig (#42)	False	
+create importable testing.create_test_mp	False	
+adjust level of caplog fixture in test_run_clone	True	
+exclude benchmark tests from coverage measurement	False	
+adjust usage of testing.make_dantzig in r tests	True	
+make class used by ixmp.cli.main configurable (for iiasa/message_ix#307)	False	
+adjust test_reporting_cli	False	
+update release_notes	False	
+remove prefixes on backend names; streamline import hierarchy	False	
+use sphinx.ext.extlinks in release notes	False	
+un-ignore pytest for typing	True	
+update testing.test_mp fixture to use an in-memory database	True	
+document #217; update release_notes	False	
+also write to gdx in test_reload_cycle- use a 2d parameter in testing.add_random_model_data- appease stickler	True	
+properly mark deprecation of scenario.remove_meta()	True	
+add get_units to backend	True	
+expand set of pages appearing in docs navigation sidebar	True	
+split reporting.quantity and reporting.attrseries- make quantity() a factory method rather than class/type.- quantity.class is a string used to check the current implementation.- remove reporting.as_quantity and all uses of this function;quantity(...) now does the same.- move attrseries.align_levels from computations.product.- update testing.assert_qty_equal and .assert_qty_allclose.	True	
+further parametrize timeseries tests; add transact()	False	
+add reporting.computations.add (from message_ix)	False	
+edit migration tips in release_notes	False	
+always fetch the pint 'application registry' from within functions	False	
+remove direct imports from ixmp.backend.jdbc in ixmp.core	False	
+add one graphviz diagram for reporting	True	
+add a user-friendly message when no jvm is found (closes #249)	False	
+update install.rst, release notes	False	
+cover & hotfix untested scalar values/units in add_par()- this test gap was revealed by iiasa/message_ix@e7d4c6a.	False	
+remove test_find_dbprops (test of removed method)	True	
+add #317 to release notes	True	
+squash a warning in testscenario.tset_load_scenario_data_clear_cache	False	
+update the cla to include github licenses and suggested changes by lawyers (#23)* add license info* integrate suggested changes by the lawyers	True	
+add test_invalid_properties_file	False	
+clean up teamcity build scripts	False	
+replace backend.jdbc.iddict with weakref.weakkeydictionary	False	
+add timeseries, scenario methods to backend; warnings	True	
+adjust indentation, use lower-case name for github pr template	True	
+increase test_access timeout to 1.0 seconds for travis/macos	True	
+correct check of scenario (sub)class in scenario.__init__	True	
+organize shared data in the test suite	False	
+move keys_for_quantity() to .reporting.util	True	
+prepare v3.2.0	False	
+add parameter for exporting all runs to platform.export_timeseries_data (#367)- add failing test for platform.export_timeseries_data()- update ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/8ea775a091d213a981b9f82a2bb3622d7ee77fbe...f69e859ac7d829c2419cd4f19ccdc0e82e856b10- allow exporting timeseries of all model+scenario runs- add a parameter to platform.export_timeseries_data to allow exporting all model+scenario run combinations- add tests	True	
+update release_notes	False	
+update release_notes	False	
+improve exception handling in jdbcbackend._get_item 2	False	
+use shallow fetch in "lint" ci workflow	False	
+add stickler yml (#57)	False	
+add s_item_delete_elements to backend	True	
+update install instructions (closes #196; closes #344)	False	
+sort output in 'ixmp report' cli command	False	
+revert accidental overwrite of model.base	True	
+split "platform" cli command to a group; expand help	True	
+update release notes	False	
+remove hard-coded per-test model/scenario names	False	
+quiet logging in .backend.io	False	
+add #195 to release_notes.md	True	
+avoid collision in test_jdbc.test_exceptions()	False	
+add sparse to ci requirements	True	
+fix exposing whole config file to log output (#232)- fix exposing whole config file to log output- fix returning db url as second element of tuple- check for folder (or empty string) specified as platform dbprops argument- add test for jdbc backend init output- update release notes- use test_data_path	True	
+omit verbose pytest-cov output by default	False	
+specify python version in install step [ci]	False	
+ensure consistent log level in ixmp{,.core,.backend.jdbc}	False	
+add --platform option to cli	True	
+add #399 to release notes	True	
+debug ci (#265)- appveyor: also cache c:\r\library- travis: always install r source packages- comment to describe travis configuration	True	
+add unit tests for tutorials (#5)	True	
+remove test_r.py	False	
+appease stickler	False	
+corrected format in tables of *python[ixmp package] section of docu	True	
+handle keyword args to the computation in reporter.add	True	
+silence a pandas warning in jdbcbackend	False	
+add a quiet option to gamsmodel	True	
+remove redundant curl installation on gha windows runner	False	
+bump jpype requirement to 0.7.5 (#279)	True	
+simplify existing tests- test_data_path need no longer be passed to make_dantzig()	True	
+explicitly depend on nbformat >= 5.0 for test_computationerror_ipython	True	
+apply path.resolve() in _config._iter_config_paths()	False	
+squash warnings due to importing pandas.util.testing	True	
+split .core.timeseries and .core.scenario- add type hints.- reflow docstrings and comments.	False	
+update docker configuration for teamcity ci (#176)- update docker image for tests- add teamcity test reporting- add sample test execution script	True	
+implement ts_set / simplify add_timeseries	False	
+allow setting log_level via jdbcbackend keyword arguments	False	
+expand test coverage in reporting.computations	False	
+ignore missing type stubs for pyam-iamc to satisfy mypy	True	
+disable travis caching of miniconda to resolve ci errors (#190)- don't cache miniconda packages on travis- increase verbosity in ci/env.sh	True	
+limit branch builds on travis, appveyor	False	
+add ixmp.model.gams.gamsmodel	False	
+adding travis osx support (#58)* adding travis osx support* add release notes	False	
+deduplicate jdbc._validate_dbprops, ._read_properties	False	
+test timeseries.read_file(???, lastyear=???)	False	
+update release_notes and docs	False	
+bump sparse requirement, adjust test_sda_accessor()	False	
+lint with flake8	False	
+appease stickler	False	
+expose name argument for test_mp fixture	True	
+use '/', not '\', in windows jdbc urls	False	
+update pytest markers; rename test_jdbc.test_gc	False	
+update release notes	False	
+ret ixmp (#69)* fixes in retixmp, improve readme, add in install.batstill not working with some specific new functions like add_horizon, where lists are passed as input, but mapping sets can be easily defined* add release note* stickler requirements* make path change for r users universal for any os* move up comment* code* add retixmp documentation + update tutorials	True	
+update pr template to match message_ix	True	
+update docstrings in backend.io	False	
+handle typeerror in show_versions	False	
+appease stickler	False	
+handle tags properly in key.iter_sums(); needs tests	False	
+skip calling model.initialize() when cloning	False	
+remove scenario._java_kwargs	False	
+improve documentation (#108)* add intersphinx mappings to jpype and pandas* test basic semantics of scenario.add_set, .init_set* improve docstrings of scenario.add_set, .init_set* edit many docstrings for platform, timeseries, scenario* address 2019-01-16 review comments by @danielhuppmann* resolve conflict in release notes* explain how timeseries.version is incremented	True	
+protect tests from modules loaded by show_versions- ensures tests pass no matter which subset/order is run.- also tidy reporting.utils.parse_units.	False	
+improve exception handling in jdbcbackend._get_item	False	
+updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/b6812f206b03ed3f3a849cdf299a91c0230ffc26...0f825c62879fc0600f357a5e14d19c5b90723335	False	
+test excel i/o cli	False	
+add test_jdbc.test_cache_clear	False	
+point to message_ix help & support options from doc/index.rst	True	
+mark v3.3.0 in release notes	False	
+simplify contributing by pointing to messageix docs	True	
+remove former workflow step for gams/graphviz	True	
+coerce configuration keys from cli to the expected type	True	
+improve reporting.exceptions to work in ipython/jupter/other repl	True	
+allow existing item with matching names in io.maybe_init_item	False	
+add tests of reporting.computations.add	True	
+convert args tuple to list for pop() in jdbcbackend.handle_config()	True	
+remove completed reporting requirement a7	False	
+always use --no-manual in 'r cmd check' test	False	
+remove unused files in ci/	False	
+parametrized tests of deprecated platform() constructor args	True	
+model.initialize() works on already-initialized scenario	False	
+test reporting.rename_dims	False	
+update copyright year and ece program name	False	
+force graphviz version 2.38 from chocolatey on windows cihttps://chocolatey.org/packages/graphviz	False	
+migrate us to travisci, removing circleci (#114)* add travis updates* remove circle, retest	True	
+update documentation	False	
+only test ixmp on travis	False	
+consolidate config tests in a class; test 'late' register() call (#415)	False	
+complete test_model_initialize	False	
+remove __future__ in setup.py	False	
+lint to appease stickler	True	
+silence warnings in jdbcbackend.gc() when jvm is not running	False	
+strengthen testing.protect_pint_app_registry	False	
+expand documentation of reporting.key	True	
+remove py2 checks/workarounds in r tests	False	
+lint	False	
+add github actions workflow for ubuntu-latest	True	
+remove parametrize_quantity_class fixture; use the one from genno	False	
+replace .ix with .loc (#105)* ixmp.core: replace .ix indexer with .loc* fix long lines in ixmp.core* describe change in release_notes.md	False	
+bump minimum version of python to 3.7 in "pytest" ci workflow	True	
+update url tests	False	
+address mypy 0.800 warnings	False	
+add ability to pass gams_args through solve api (#177)* add ability to pass gams_args through solve api* add ability to specify gams-line arguments in solve api* release notes and stickler* whoops* update docstring	True	
+increase sleep in mock fixture 1000 ms	False	
+use --no-multiarch in rcmdcheck(), for windows	True	
+avoid usage of r devtools in ci	True	
+update fetch-depth for gha lint workflow	True	
+use simpler but stronger assertions in test_feature_timeseries	False	
+add attrseries.from_series()	False	
+move out all message tests, update testdb_setup.py to work (#49)	True	
+move 'ixmp list' code to utils.format_scenario_list	True	
+reorganize reporting tests	False	
+use quantity.from_series in data_for_quantity	False	
+add utils.show_versions	False	
+extend r installation dependencies	False	
+[r api] fix config and local hsqldb path issues, update tutorials (#8)	False	
+remove unused import in utils	False	
+adjust test_cli.test_main to new exception message	True	
+specify python 3.8 in lint workflow	False	
+ensure filters are always converted to string (#225)* add test_filter_str* use as_str_list() on filter elements* add test_cache_non_hashable* use as_str_list() on filter elements for cache keys* update release_notes* document string handling in backend.item_get_elements* switch back to object dtype* add commented code, comments, and reference to issues* simplify derivation of expected return value in test_filter_str	True	
+update release_notes.md	False	
+use pint.get_application_registry instead of singleton units	True	
+add performance tests for scenario.add_par	True	
+merge backend.s_add_set_elements and .add_par_values	False	
+allow passing string to to_jlist (converting to singleton list) (#351)- explicitly convert string parameter to singleton list- add comment regarding jpype	True	
+test unit substitutions are applied	False	
+retixmp (reticulate) + 2 rixmp installations tips (#34)* ixmp installation problem when both 32 and 64 bit r version installed* reticulate ixmp and transport tuorialthe tutorials are exactly as the r tutorials, no specific feature of the python code is used* update the readme, suggesting the installation of the rtools* clean folder	True	
+simplify ._config._locate()	False	
+test_reporting_describe modified to retain the previous behaviour	True	
+temporarily disable r cmd check in "pytest" ci workflow (#403)	False	
+use as_str_list in filtered()	False	
+add reporting.sparsedataarray	False	
+add a hook to also build docs on ci (#44)	True	
+update @genno.config.handles() semantics	False	
+reflow comments and docstrings in ixmp.core and tests	False	
+add genno, message_ix_models to show_versions()	True	
+handle reporting filters using a @genno.config handler	False	
+add backend.io.s_write_excel	False	
+expand test coverage in model.base, model.gams, utils	False	
+add ts_get_geo, ts_set_geo, ts_delete_geo to backend	True	
+add s_add_set_elements to backend, rewrite add_set, expand tests	True	
+fix up release notes	False	
+add timeseries.transact()	False	
+adjust test_config.test_set_get	False	
+adjust testscenario.test_from_url	False	
+[reporting] sum across all dimensions; check missing keys (#178)- add support for reporting scalar values- move ixmp.reporting.utils tests to a new file- add a (failing) test referring to a missing key- add reporter.check_keys and expand test- properly escape regexes in test_missing_keys- use check_keys in reporter.add()- also test that reporter.{dis,}aggregate() check missing keys	True	
+fix jvm-args issues (#40)* fix jvm-args issues* remove `print()`	False	
+reflow comments, docstrings, string literals	False	
+document support for in-memory hypersql databases (closes #224)	True	
+add codecov configuration and workaround rstudio/reticulate#571 (#192)- add codecov configuration:- install `codecov` instead of `coveralls` as a py dependency.- tweak setup.cfg, ci/coveragerc, ci/codecov.yml so that coverage is always computed, certain files are ignored.- adjust travis & appveyor ci to upload coverage reports.- add the coverage badge to readme.md.- add workaround for a reticulate bug (rstudio/reticulate#571).- rename `pytest.mark.testr` to `pytest.mark.rixmp`.- add lots of documentation and revise comments in travis and appveyor ci scripts so they are more directly parallel to one another.- update pr template.	True	
+add cli.versiontype docstring	False	
+add 4 methods to backend- s_has_solution- s_list_items- s_item_index- s_item_elements	True	
+parametrize test_log_level	False	
+add reporting.computations.store_ts	False	
+streamline tests (#128)- ixmp.testing: new submodule for reuse of testing utilities.- create_local_testdb(): moved from tests/testing_utils.py- dantzig_transport(): replaces code in tests/test_integration.py andtests/testdb_setup.py.- consolidate test data in tests/data.- ixmp.platform.__init__: ensure dbprops is string, for java compat.- ixmp.default_paths: use path objects.- tests/conftest.py:- new fixtures: test_data_path, tutorial_path.- existing test_mp* fixtures: add docstrings, use tmp_path_factoryfixture.- new hook: pytest_report_header (replaces test_admin.py).- other tests: use pytest & ixmp fixtures.	True	
+test an exception raised from scenario.add_par()	False	
+sort items by name in io.to_excel()	False	
+remove r cmd check from "pytest" ci workflow (closes #403)	False	
+add s_set_meta to backend	True	
+add .base.model.clean_path() to clean filenames of invalid characters	True	
+set java_home in .appveyor.yml 2	False	
+add s_get_meta to backend	True	
+avoid using java classes until jvm is started	False	
+documenting imxp.scenario.units() and correction of typos	True	
+use scenario.scheme if no model arg to scenario.solve	True	
+adjust reporting tests	False	
+add utils.update_par	False	
+make diff(???, filters=) optional	False	
+initial release of the ixmp package (#1)this pr brings in the first release (after a major clean-up operation) of the ixmp package.- the java backend and all lib and database files- the python package and the current ad-hoc version of the r api- comprehensive unit testing for python, one placeholder unit test for r- two tutorial sets (python and r) based on dantzig's transport problem	True	
+add clone, get_scenarios to backend	True	
+implement jdbcbackend.handle_config(); use in config.add_platform()	False	
+extend excel write/read to handle large data beyond the row limits (#309)* improve s_write_excel for writing data beyond maximum allowed rows* improve s_read_excel to read data from multiple sheets for one item* update release notes* make max_row an integer* extend cli and test_cli to test max row limit* extend core.py for input argument max_row for to_excel()* correct tests for backend.io* reduce max_row in tests* improve backend.io for a default max row and checking users input for that* reduce number of rows in tests to cover sets* correct append of data* update docs* update backend.io and cli to address comments from @zikolach* small change in text* remove extra if clause* add #309 to release notes* expand docstring and docs for scenario.to_excel(..., max_row=)* simplify handling of max_row argument in io.s_write_excel()* use a convenience function to read items from multiple excel sheets* use python built-ins to simplify io.s_write_excel()* use path.with_name() in test_excel_io()co-authored-by: paul natsuo kishimoto <mail@paul.kishimoto.name>	True	
+add black and mypy to ci workflows	True	
+lint tests.core.test_platform	False	
+check type before len of key in scenario.add_set	True	
+reporter.set_filters() with no args clears filters	False	
+give more helpful messages on "ixmp list" user error (#262)* editing of *ixmp list* to show users why they get errors* undone some editing in previous commit d085bc5adfb3280b9747da99b7ea2c18a1258154 and fixed errors. test_main pending to be addressed* got rid of non-triggable errors and added error also for command report* adjusted import of pandas.testing* amke *test_main* to pass* bring coverage back to 100% in ixmp.clico-authored-by: paul natsuo kishimoto <account+github@paul.kishimoto.name>	True	
+handle type coversion of equ_list, var_list in jdbcbackend.read_gdx	True	
+use categoricaldtype for astype() in test_diff()	True	
+convert java to python exceptions in get_scenarios() and commit()	True	
+add filters when retrieving timeseries data from database (#11)* add `iamc_idx_cols` definition* rewrite `ixmp.timeseries.timeseries()` functions to use filters* add unit test to check iamc-output of new `timeseries()` function* update docstrings as suggested by @ofr-iiasa	True	
+add #376 to release notes	True	
+remove deprecated methods/args; mark 2.0 deprecations	False	
+improve test coverage	False	
+add set_node to backend	True	
+increment dask requirement	False	
+add #349 to release notes	True	
+gitignore pytest-profiling output	False	
+simplify testthat.r per testthat docs; add r tests	False	
+add gams_version() to tests and docs	True	
+use iiasa/actions/setup-gams in "pytest" ci workflow	False	
+add #441 to release notes	True	
+refactor test_feature_timeseries.py using new fixtures	False	
+adjust data structure used by model.initialize_items	False	
+adjust expected logging from data_for_quantity()	False	
+correct tutorial references to model (#7)- debug windows tests- correct tutorial references to model	True	
+handle old- and new-style sheets for index sets	True	
+use modern, minimal sphinx makefiles	False	
+use solve(???, quiet=true) in testgamsmodel	False	
+add tests; remove computations.make_dataframe	False	
+type scenario.__init__()	False	
+return abspath from find_dbprops() (#123)- give abspath for dbprops in current directory- add py2 compatibility for filenotfounderror- handle missing config file in find_dbprops()- test that find_dbprops() returns an absolute path- update release notes	True	
+flatten tests/data tree; adjust fixture use in test_access	False	
+improve test coverage of model.base	True	
+correct tests of logging in test_reporter	True	
+add #396 to release notes	True	
+collecte timeseries tests in a class	False	
+disable appveyor cache	False	
+add get_auth to backend	True	
+copy when using values from gamsmodel.defaults to avoid modification	True	
+update release notes for v3.0.0	True	
+lint conftest.py	False	
+add s_delete_item to backend	True	
+debug appveyor ci 2	False	
+exclude xarray code from coverage	False	
+reorder pytest workflow steps to work around r-lib/actions#250	True	
+handle key with tag in reporter.add_product()	False	
+use explicit levels for tests of logging	True	
+rm conda-based dep installs, closes #65 (#96)	False	
+reporter.describe modified to not print by default	True	
+address flake8 errors (stricter than stickler)	False	
+skip test_gc	False	
+addition of tmp_path fixture	True	
+update model documentation	False	
+add backend.io.s_read_excel	False	
+add #444 to release notes	True	
+add test_jdbc.test_del_ts to ensure object are garbage collected	True	
+mark some lines uncovered by tests	False	
+preserve attrs in reporting.computations.aggregate	False	
+add #347 to release notes	True	
+add implementation of `timeseries(subannual)` and tests (#295)co-authored-by: paul natsuo kishimoto <mail@paul.kishimoto.name>	True	
+document more backend methods	False	
+add tests for parse_url	True	
+raise valueerror from jdbcbackend.get	False	
+use index=true in rep.aggregate()	False	
+add .readthedocs.yml	False	
+add model.initialize, model.initialize_items	False	
+fix string issues and refactor for more pythony code (#39)* add unit test for #35* add an `isstr()` function* refactor to `make_dims()` function* unpack tuples, fix unit test* cast args in `add_cat()` to str* more docstrings and pythonizing* more pythonizing* remove `isstr()` auxiliary function	True	
+implement jdbcbackend.ts_delete	False	
+test .testing.data.random_ts_data()	False	
+fix docstrings (#306)	False	
+bump version to 0.1.3	True	
+add reporting.computations.apply_units	False	
+attrseries.__init__: wrap .to_series() in a try clause- fixes test_reporting_aggregate, testquantity.test_assert	False	
+make test_reporting.py more compatible with xr.dataarray	False	
+test jdbcbackend.handle_config	False	
+jdbcbackend.close_db doesn't throw needless exceptions	False	
+use environment files to configure paths on gha	True	
+improve performance of key creation for 2+-d parameters in add_par()- use pandas .agg() instead of .apply().- use other pandas features instead of the much slowerixmp.utils.as_str_list():- select the columns corresponding to idx_names in order.- use pandas .astype(str), instead of applying str() to individualelements.- use series.tolist() instead of list().	True	
+convert test_access.with_mock_server to a fixture	True	
+test package build on prs also	False	
+adjust test_reporting_platform_units for pint 0.10pint 0.10 is more forgiving of invalid characters; e.g. in 'g$', the '$'is discarded, and the unit is parsed as 'g' (gauss). use 'e$' in thetest.	True	
+switch to conda-install, cleaner readme (#43)	True	
+improve attrseries.squeeze()	False	
+add test for reporter.add(..., sums=true)	True	
+deduplicate to_jlist in jdbcbackend; clarify api; edit docstrings	False	
+migrate `rixmp` package from `ixmp_dev` (#19)	False	
+update release_notes	False	
+handle filters in scenario.to_excel and "ixmp export" cli	False	
+move from_url and *_meta arguments to timeseriesnothing about these is specific to scenario objects/model data.	True	
+increase jpype minimum version to 1.2.1	True	
+add backend.handle_config() method	False	
+update release notes	False	
+simplify test_format_scenario_list()	False	
+re-add range as valid key type for scenario.add_par	True	
+write empty sets after items with data in io.to_excel()	False	
+tune cast of config keys on read/cli set	True	
+remove rixmp from the documentation and tutorials	False	
+changes caught by message_ix, yet not ixmp, tests 1	False	
+expand test_reporter_apply()	False	
+replace map with pojo on loading timeseries	False	
+omit names from the item name -> ixmp type map if no data written	False	
+keep comment with line it described	False	
+test format_scenario_list	False	
+remove ~/.local/ixmp as a config location; update release_notes	False	
+update release notes	False	
+add test_reporter_add_queue()	False	
+add test_computations.test_apply_units, .test_select	False	
+add test_cli.test_show_versions	False	
+exclude jpype 0.7.3 for #279	True	
+fix "pragma: no cover" comment on test_jdbc.test_gc_lowmem()	False	
+add github actions workflow for windows-latest	True	
+coerce path inputs to {to,read}_excel to pathlib.path	True	
+import path library	False	
+add #397 to release notes	True	
+add dependencies to setup.py (#103)- set the "install_requires" and "extras_require" keyword arguments in setup.py.this ensures that the dependencies automatically installed with the package.- trim requirements.txt to remove old dependencies.- change the versioneer style to pep440-pre from git-describe to produce pep 400-compatible version strings that do not include '+'.- update readme	True	
+add utils.parse_url	False	
+scenario.add_set() with an empty key is a no-op	False	
+adjust tutorial py_transport_scenario to remove deprecated calls	True	
+revise order of outputs from utils.show_versions; fix 'iam_units' dep	True	
+update test_capture_message	False	
+replace .reporting with genno.compat.ixmp as of v0.5.0; adjust imports	True	
+update release_notes	False	
+use maybe_commit to reduce complexity in backend???s_read_excel()	True	
+revert 3bc8af6 (cf. #419)	False	
+handle 'year' int dtype for message_ix after data load	True	
+make appveyor ci more robust; support pandas 0.25.0 (#173)* use --no-progress for choco on appveyor to shorten logs* on appveyor/windows, install only binary r packages, not source* update rixmp installation instructions (closes #169)* bump jpype dependency to 0.7 (leftover from #164)* force install of pytest>=3.9 on appveyor* attempt to fix unit test failure with copy()* debug failure in test_reporting_units* add attrseries.__finalize__* remove debugging print() statements	True	
+hotfix redefinition of existing units (iiasa/message_ix#211) (#155)	True	
+add testscenario.test_add_par2(), confirming #373	False	
+silence backend logging on teardown of test_mp fixture	True	
+fix test_get_timeseries_iamc	False	
+remove obsolete test_config.test_get	False	
+increase a number of scenarios in test	True	
+allow disabling jdbcbackend caching	False	
+re-add check_dtype=false to assert_qty_equal (for travis)	True	
+update ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/07b82efe90a6590b30cc764804f1e9187e9cfb55...8ea775a091d213a981b9f82a2bb3622d7ee77fbe	False	
+replace _db_driver_class function with dict lookup	False	
+add release notes forgotten in #73 (#74)	False	
+increase test coverage of reporting.computationerror	True	
+handle checked-out state in model.initialize_items, dantzigmodel.initialize	False	
+fixes setup.cfg test path (#100)	False	
+add but skip tests for scenario.from_url	True	
+add set_unit to backend	True	
+use populate_test_platform in tests	False	
+increase core test coverage	False	
+add #298 to release notes	True	
+add --user-config pytest option	False	
+streamline and document backend.s_item_get_elements	False	
+requirements for messageix release 1.2 (#142)* extend dantzig example with both meta- and non-meta-timeseries* extend `clone()` to cover timeseries data in `first_model_year`* extend `clone()` tests (for same platform)* add valueerror when cloning across platforms without keeping solution* update unit test for cloning across platforms* move checking whether arg is year to own function* change order of adding timeseries for concistency with new `remove_solution()`* reftaor uit tests for `clone()` in line with new behaviour* extend function `remove_solution()` to accept `first_model_year` arg* add valueerror when re-solving a scenario* refactor unit tests for cloning across platform instances* minor docs cleanup* clean-up of comparison of distance values in integration tests* check parameter after cloning across platforms* harmonize after rebasing* edit test to keep solution when cloning across platforms* add validity check for initializing a scenario with `version` arg* make test-db name optional (for use in `message_ix`)* move `is_year` utils function to `utils` (for reuse in `message_ix`)* extend tests to make sure that solution is cloned across platforms* refactor to `isyear()`* docstring clean-up* simplify model naming convention in `testing` class* catch before trying to add duplicate units in the database* fix dictionary of model/scenario names* clean-up of docstrings* add validation that no duplicate region (synonym) is added* new ixmp.jar: cloning across platforms, timeseries features, messageix v1.2built from ixmp_source: commit `e5e5283add1040e1de1349fb84e76ebdb8b14a7b`* rename to `check_year` (as suggested by @gidden)* use explicit indexing (as suggested by @gidden)* add to readme* test that data is saved when cloning across platforms* from `ixmp_source` commit `1510549ccc765db91747e9051ae704ac49284e86`* minor docstring and arg changes (suggested by @khaeru)	True	
+expand test_reporting_describe to test new default behaviour	True	
+split distinct try: blocks in config.read(); tolerate unregistered	False	
+winsolve (#22)* add some quotations to try to help windows users* update run test to confirm spaces works* update cmd to be single string if on windows	True	
+upstream test of reporting???update_scenario()	True	
+add timeseries.url property	False	
+update io.py	False	
+ignore commented csv lines in computations.load_file	False	
+restore test coverage of backend.io	True	
+copy input dataframe in add_par() to avoid changing its contents in the calling scope (#245)- add a test for #210- fix #210- update release_notes	True	
+messageix manuscript reference update (#107)* update references to messageix manuscript in readme's and documentation* update reference to messageix south africa manuscript* formatting update in readme* escaping `&` in latex bib file	True	
+add #391 to release notes	True	
+adjust tests/data/report-input1.csv	False	
+update lint.yaml	False	
+ensure setuptools-scm is installed on gh actions runners	False	
+run pytest ci jobs nightly	False	
+appease stickler 2	False	
+uses consistent semantics in docstrings of .base.backend.*_meta methods	True	
+adjust test_computationerror_ipython for python 3.6	True	
+prepare v3.1.0	False	
+simplify reporting configuration code; don't log warnings	False	
+type .cli.scenarioclass to avoid mypy complaints in message-ix	True	
+catch all warnings in tests	False	
+use si '/' in dantzigmodel units	False	
+add test for tutorial value (#9)this ensures that the tutorials not just run, but also return the correct solution	True	
+use syntax highlighting in doc/api-r.rst	False	
+ignore unrelated filters in data_for_quantity	False	
+matrix python versions in github actions workflow	False	
+move gams adapter docs	False	
+un-skip reporting tests	False	
+add s_clear_solution to backend	True	
+add #363 to release notes	True	
+fix reading timeseries/layers subannual value- update ixmp.jar (iiasa/ixmp_source#251)- fix reading time span db values mapping	False	
+downgrade jdbc to verion 8 to keep java 1.8 compatibility (#180)	True	
+return int64 'year' and 'meta' cols from timeseries.get_geodata	False	
+corrected format in tables of *python[ixmp package] section of docu	True	
+added 2 tests to test timeseries variable name length (#47)	True	
+remove _backend method for timeseries subclasses	True	
+update pr and issue templates	False	
+add test_jdbc.test_reload_cycle	False	
+reorganize core tests 2	False	
+allow missing units in computations.data_for_quantity() log message	False	
+add ixmp.model.dantzig	False	
+only reset_index() in format_scenario_list() when there are >0 results	False	
+only log warning when reading sets/pars with mismatched idx_names	False	
+adjust pytest invocation on appveyor and travis for new updated markers	True	
+update cli tests	False	
+update rixmp/description per rcmdcheck notes	False	
+update install from source docs to include pip --editable option (#242)	True	
+handle key with tag in reporting.key.product(); simplify code	False	
+copyedit to match other docstrings	True	
+use pkg_resources to retrieve version	True	
+only dylibs (#32)	False	
+add ixmp.testing.assert_logs; update docs	False	
+move java/python conversions to backend.jdbc	True	
+split "config" cli command to a group; add "config show"	True	
+document key.from_str_or_key()	False	
+also use rename_dims in reporter.from_scenario()	False	
+support iterating with user-supplied callbacks (#115)* add callback arg to scenario.solve()* add test of callback* test warning raised for possibly malformed callback* update release notes* appease stickler* update solve() docstring* update add_region() docstring to squash sphinx warning* remove utf-8 character in test_core.py (py2 compat)* pass kwargs to callback* fix comments	True	
+revert "replace deprecated `pandas.dataframe.ix[]` by `iloc[]` (#12)" (#15)this reverts commit `d4af47de6f294cd3f4c4b9df9cd3d1c4223b902a`. see #14	False	
+lint core.py	False	
+remove deprecated arguments to scenario.clone()	True	
+complete test_excel_io	False	
+added docsting to ixmp.platform.units() to report it in ixmp docu	True	
+improve exception handling, move all java-specific tests to one module	True	
+extend extras_require report (#431)	False	
+improve performance in .backend.jdbc.to_jlist()- create, populate, and return the java.linkedlist in a single line,instead of incrementally.- convert a python iterable to a complete list, then pass to jpype,instead of passing each element individually.	True	
+edited sentence to pass the stickler ci test	True	
+fix how ixmp locates gams files on network drives (closes #203)- fixing how ixmp locates network drive paths, dealing with the issue #203- update release_notesco-authored-by: paul natsuo kishimoto <account+github@paul.kishimoto.name>	False	
+apply black 22.1	False	
+modify yaml syntax for reporting external files	True	
+import java.util.properties via existing java_classes	False	
+adjust tests	False	
+return copy from config.get_platform_info	False	
+use double quotes for pytest marker selection on appveyor	True	
+add column headers from export_timeseries_data() to backend.fields	True	
+use a unique hypersql url in test_weakref	False	
+test .reporting.computations.store_ts	False	
+use consistent names for global reporting vars; document	True	
+remove use of .utils.logger(); mark as deprecated	True	
+improve test coverage in .core	False	
+install pytest on "lint" workflow for its type stubs	True	
+fix string join in test_filters	False	
+expand arguments accepted by quantity() constructor	False	
+change test_mp fixture from class- to module-scopethis significantly improves performance in the test suite by reducingthe number of times new platforms (and thus jdbcbackends) must becreated and populated.add a new fixture test_mp_f, with "_f" indicating function-scoped.adjust where these are used in other fixtures and (some) tests.	True	
+correct short url to rtd docs in readme	True	
+ixmp teststest_check_year() and test_ispanda() are added.	False	
+move open_db, close_db, units to backend	True	
+add ixmp_data / execute all tests in temporary directories (#130)* execute all tests in temporary directories- new class ixmp.config.config to regularize config handling.- remove ixmp.default_paths, ixmp.default_path_constants.- cli.config(): use config.save().- scenario__init__(): use config.find_dbprops() and config.get().- conftest.py: new fixture 'tmp_env' and hook 'pytest_sessionstart'.- test_config.py: test config features.- test_core.py: use pytest 'caplog' fixture to test that configurationvalues are used.- test_tutorials.py: use 'tmp_env' to force tutorial execution in asandbox.* appease stickler* update release notes* update copyright years* coerce path to str for py2 compatibility* use next() instead of for/break	True	
+cleanup for generating index dimensions (#110)* fix some corner cases for settings index dimensions, use utils functions* harmonization of nomenclature in `utils`* add `dist` folder to gitignore* add error message when creating index dimensions from set (not ordered)* add to release notes	True	
+remove install.bat (#196)	False	
+simplify handling of expected data in timeseries tests	True	
+test "config show" cli command	False	
+drop python 2 ci (#175)* turn off py2 ci on travis & appveyor* also force r binary install of appveyor on appveyor/windows* further strip py2 ci bits* strip marked/some obvious py2-isms* update release notes	True	
+adjust test_reporting.test_cli and report-config-0.yaml	False	
+reorganize reporting submodules	False	
+reflow docstrings and comments	False	
+simplify .reporting.utils.collect_units	False	
+updated pytest version requirement to >=3.9 (#133)	True	
+add meta (annotation) support for model/scenario levels (#353)* meta: add first dummy methods and tests* meta: rename scenario meta methodsto allow for the generic get_meta, set_meta, delete_meta methods,rename the scenario specific meta methods.* meta: add platform method to get/set meta- update ixmp.jar- add platform.get_meta, platform.set_meta- add some tests (only two pass so far)todo: make all tests pass, maybe add more tests* minor changes- remove redundant backend methods from platform- use unwrap to handle bigdecimals- fix tests- replace ixmp.jar (freshly built from appropriate branch)* update meta tests- look for more specific errors- add new test for model+scenario meta* update ixmp.jar- set_meta void return type- set meta version parameter type* meta: implement platform.remove meta; add tests- implement platform.remove_meta- deprecate scenario.delete_meta (scenario.remove_meta should be used)- add more tests* meta: improve validation of arguments* meta: add tests setting/retrieving booleans* meta: improve implementation, test scenario meta args* expose adding model/scenario names- update jar* meta: add more tests* create abstract base methods for adding model/scenario* add models/scenarios list methods- add tests* meta: add release notes, update documentation- add release notes- update docstrings- remove unused backend method delete_scenario_meta* add wrapping/unwrapping metadata list values + test* remove duplicate set_scenario_meta method* fix saving mixed metadata + test* meta: documentation, release notes, consistent names- update sphinx documentation- consistently use "meta category" instead of "meta attribute"- update release notes* meta: parametrize tests; fix scenario.add_meta bug* fix wrapping integer values (in list metadata)* rename platform.list_models to .models/.scenariosto be more consistent with existing platform methods like.regions() and .units():- rename platform.list_models to platform.models- rename platform.list_scenarios to platform.scenarios* meta tests: make constants upper-case* meta: minor doc updates* meta: update ixmp.jar, update+add tests- platform.get_meta() does not allow empty arguments- update ixmp.jar with bugfix ofhttps://github.com/iiasa/ixmp_source/pull/329- update and add tests* meta documentation update: valid argsdescribe valid args of getting/setting/deleting meta indicators* updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/2c3244517d6ffd6de70c896d3198d9d3a43ddfae...07b82efe90a6590b30cc764804f1e9187e9cfb55* flake8 fix: unused f-string* platform.get_meta: add 'strict' parameter'strict' will only retrieve meta indicators from the exact given level(model, scenario, version combination).* remove calls of get|set|remove_scenario_meta* order backend jdbc and base methods.* adapt changed error message.* rename scenario/model methods- to distinguish from scenario/model objects, rename methods toget/retrieve scenarios/models to scenario_name and model_name- adapt documentation of parameters* update documentation.- adapt to renamed method names- some minor documentation fixes/updates* fix minor flake8 syntax error.* update release notes and backend test- update release notes to changed method names- remove methods from backend test* order backend test methods alphabetically.* minor release notes adaption.- correct method name to get_model_names() from model_names()co-authored-by: michael pimmer <blubb@fonfon.at>	True	
+copyedit release_notes	False	
+collect java binaries in ixmp/backend/jdbc/	False	
+move dantzig gams file to ixmp/model/	True	
+replace gams-inputdir by `subprocess(cwd=...)` (#10)	False	
+remove py2-related code from appveyor ci config	False	
+lint tests.backend.test_jdbc	False	
+reset to development state	True	
+add empty ixmp/tests/{,core}/__init__.py to satisfy mypy 0.800	True	
+remove extras spec ("ixmp[tests]") fron appveyor conda reqs- not supported by conda (https://github.com/conda/conda/issues/2984)and recently ceased working.	False	
+expand test_set() to cover remove_set(), scenario._keys()	True	
+catch and re-raise ixexception in jdbcbackend.get	False	
+update test of expected meta error message.	True	
+pass key.product test	False	
+use reporter.check_keys() in reporter.write()	False	
+add "publish" ci workflow	False	
+add backend documentation	False	
+remove references to appveyor and travis	True	
+reimplement import-timeseries using click	False	
+simplify logging in platform.add_unit()	False	
+update use of deprecated methods in r tutorials	True	
+remove unused utils.harmonize_path	False	
+exclude jpype 0.7.2 from ci; add python3-setuptools for teamcity (#278)- add python3-setuptools to dockerfile for teamcity ci- move dockerfile, add python3-distlib, unzip '-q'- add ci/run.sh for teamcity- exclude jpype1!=0.7.2 to avoid segfaults- add 'sparse' to 'tests' extra dependencies- reformat dockerfile per @zikolach suggestion- also exclude jpype 0.7.2 in ci/conda-requirements.txt	True	
+tidy warn() import in ixmp.core	False	
+added docsting to ixmp.platform.units() to report it in ixmp docu	True	
+update pdwrite to support multiple dfs for excel (#64)* update pdwrite to support multiple dfs for excel* add tests for pd io* add release note* appease stickler* appease stickler* consolidate is_pd* fix bugs* add xlswriter to container* add xlrd to container* add xl to other cis* correct names..	True	
+enable r tests in github actions workflows	False	
+add sums kwarg to reporter.add()	True	
+skip benchmark tests by default	False	
+document limitations of jdbcbackend	True	
+make ixmp test utilities available for message_ix (#137)* add run_notebook and get_cell_output to ixmp.testing* update release_notes* fix relative import in tests_tutorials* move 3 fixtures to ixmp.testing* add a missing path separator in ixmp.config* move some hooks to ixmp.testing* fix get_cell_output()* tidy & update documentation	True	
+quote reporter.graph["config"] before dask.core.cull()earlier versions of dask would only fall into infinite recursion withget(), but (as of dask 2021.1.1 or a slightly earlier version) this alsoaffects cull().	True	
+data_for_quantity(): raise valueerror on missing units, catch, & log	False	
+adjust test_platform_jvmargs() for windows environment	True	
+use python dataclasses internally to simplify config class- expand class docstring.- add typing.- don't overwrite values read from file when config.register() iscalled (fixes #415).	True	
+ensure the database is open in test_reporter.test_cli()	False	
+implement cachingbackend.del_ts; call in jdbcbackend	False	
+get rid of temporary properties file- parameterize platform constructor with properties class instance	True	
+update doc/conf.py for sphinxcontrib-bibtex 2.0.0	True	
+add config.unregister(); _strict parameter to config.set()	True	
+add .eggs to .gitignore (#332)	True	
+use py3.6 compatible format strings	False	
+print *and* return the result of reporter.describe()	True	
+improve documentation of {read,write}_{excel,file}, get_log_level	True	
+expand key functionality	False	
+improve docstrings	False	
+adapt links due to pr comments	True	
+call model.initialize through scenario.__init__	False	
+move tests/ tree inside ixmp/	False	
+depend on openpyxl rather than xlrd/xlsxwriter	False	
+add 'ixmp show-versions' cli command	False	
+migrate to versioneer (#99)* migrate to versioneer* appease stickler* try again for windows and removing plus sign* add comment	True	
+add attrseries.transpose(), .to_dataframe()	False	
+parametrize and collect some timeseries tests	False	
+add reporting.testing.random_qty	False	
+add test_jdbc.test_exceptions	False	
+specify exceptions raised by backend.item_get_elements	False	
+fix adding timeseries with region synonyms (#164)* fix import timeseries- add test for editing timeseries in iamc format- add updated ixmp.jar- updated line lengths- add test for timeseries with synonyms- replace ixmp.jar (built from e9e1c502e9b6fb802c53e1a9d58df3a4bfc92cf7)- update ixmp java dependencies- updated jpype-related asserts in test_core* update tests- change scope for test_mp- replace test_mp_props- reduce verbosity	True	
+always read notebooks as utf-8 in ixmp.testing.run_notebook()	False	
+partially revert 7ea0eb9	False	
+ensure timeseries/scenario.version is set when cloning (#246)- add a test for #211- fix #211 by always setting the version attribute- update release_notes	True	
+move reporting assertions to reporting.testing	True	
+add #378 to release notes	True	
+adjust copyright dates to 2020	True	
+add #435 to release notes	True	
+remove gams version from cache key in pytest workflow	False	
+fix last_update and test	False	
+work around jupyter/nbclient#85	False	
+set release version in rixmp/description	False	
+expand calling options for reporter.add and reporter.apply	True	
+tweak handling of deprecated args in platform/jdbcbackend	True	
+appease stickler	False	
+add errors= arg to scenario.from_url()	True	
+allow tuple/sequence for backend.init_item(???, idx_sets=) and related	True	
+log at debug, not warning, in reporting???data_for_quantity()	False	
+apply "isort ." and "black ." to all python code	True	
+add docstrings suggested by @gidden in review of related message_ix pr (#151)	True	
+deprecate .utils.isscalar()	False	
+appease stickler	False	
+handle per-jdbcbackend jvm args via configuration (closes #408)	False	
+include python 3.10 in "pytest" ci workflow	False	
+remove deprecated dbtype argument to jdbcbackend	True	
+add migration note per #416 to release notes	True	
+add #362 to release notes	True	
+further adjust jdbcbackend tests	False	
+ensure checked-in state after backend.io.s_read_excel()	False	
+add #327 to release notes	True	
+add utils.maybe_check_out, utils.maybe_commit	False	
+improve features for working with iamc-style timeseries data (#116)* write unit test for failing `add_timeseries()`* remove over-ambitious `mp.close_db()` in unit test* reset index when adding timeseries to scenario (if necessary)* change `timeseries.timeseries()` args for consistency with `pyam`* add java dependencies* refactor timeseries-table-formatting to own function, extend tests* migrate timeseries-tests to own test file* add function`remove_timeseries()` and tests* new ixmp.jar for better timeseries data treatmentbuild from commit `a5cac17bd0ba1fb9cbe52a3bf0463c20cb71f6e0`, includes new function for removing timeseries and fixes a bug when adding timeseries data to an ixmp.scenario* appease stickler, remove `pyam` dependency* add to release notes* reworked tests to fail on `remove_timeseries()`* more reworking of tests for removing timeseries* new  `ixmp.jar`: new features and bugfixes for working with timeseriesfrom `ixmp_source`, commit `e338178a900bf5c6e748ba8535460796a051a9fc`	True	
+work around python/mypy#9940	False	
+read csv or excel in utils.import_timeseries	False	
+add workaround for pandas-dev/pandas#25760	True	
+add utils.diff, utils.maybe_convert_scalar, and tests	False	
+simplify access tests, remove unused specimens	False	
+remove unused imports	False	
+omit coverage of test_jdbc.test_gc; comment	True	
+use --url options to shorten test_excel_io	True	
+make computationerror tolerant of failure to capture locals	True	
+add (disabled) ci configuration for python 3.9-dev	True	
+add 'file-io' documentation page	False	
+use --no-multiarch when installing r package (ci / windows)	False	
+more user-friendly exception handling in jdbcbackend constructor	False	
+update versions of actions used in ci workflows	True	
+exclude windows-latest py3.6 [ci]	False	
+update documentation for computations.aggregate()	True	
+handle un-renamed dims in data_for_quantity	False	
+add test for key.product	True	
+set 2.0 in rixmp/description	False	
+use a unique hypersql url in test_gc	False	
+use scenario.idx_names in reporting.utils.keys_for_quantity	False	
+test base.backend.handle_config()	False	
+add tests of the backend abc	True	
+bump pandas requirement to 1.2	True	
+update unit tests, extend message-scheme `flexibility_factor` indices (#7)- refactors the unit tests and test-database to separate messageix-gams-specific tests from general tests and message-java-specific features. the austria tutorial will be migrated to the the message_ix repository.- includes a new ixmp.jar file, fixing a bug with the platform.getunitlist() function.-  switches from java.ext.dirs to adding the library jar files to the classpath explicitly    using ext.dir may cause problems when multiple python packages use jpype.- changes the index sets of the message-scheme flexibility_factor parameter, and renames an index set to rating bin for a more comprehensive implementation of the sullivan renewables formulation.	True	
+added release notes and pr template (#56)	False	
+add del_ts to backend; ensure garbage collection in jdbcbackend	True	
+add config.register()	False	
+release v0.2.0 (#157)* move and update pull_request_template.md* set rixmp release date and version* set version in release_notes.md* streamline setup.py* remove nonexistent db_files from setup.py* add summary/highlights to release_notes.md* add authors.md, use iiasa ene in setup.py	True	
+accept --url argument in cli	False	
+add rcmdcheck to gha workflow	True	
+catch exception when jdbcbackend.__del__ is called during __init__	False	
+update release notes	False	
+update documentation of .utils; rewrap docstrings	True	
+update github pull request template	False	
+don't error on missing dim= kwarg in reporting???concat()	False	
+modification on the meaning of 'compares equal'	True	
+add development notes for .base.backend	True	
+simplify invocation of rixmp tests	True	
+improve description of #353 in release notes	True	
+add jdbc._gc_aggressive option	False	
+allow windows line endings in test_verbose_exception	False	
+version bump to 0.1.2	True	
+update ixmp._version.get_config to match setup.cfg	True	
+adding cli command to run solver- add test- add remove solution flag- fix creating scenario from url (when run from message_ix)- update release notes	True	
+move __init__ code to jdbcbackend, pass tests	True	
+fix code style	False	
+combine backend.init_{ts,s}; align {timeseries,scenario}.__init__	False	
+document cachingbackend	False	
+remove appveyor, travis, stickler	False	
+remove pass in base.backend abstract methods	False	
+switch to rtd sphinx theme (#118)* switch to rtd sphinx theme* remove include in custom.css* apply iiasa colours to sphinx rtd theme* update release notes	True	
+add and use test fixture protect_rename_dims	False	
+make test_resource_limit more permissive	False	
+reset to development environment	True	
+refactor core tests using new fixtures; group into classes	False	
+update installation instructions	False	
+move concat to reporting.computations; filter missing keys	True	
+add test for #373	True	
+add #422 to release notes	True	
+upstream reporting.computations.update_scenario() from message-data	False	
+strip py2 workarounds in tests/test_r.py	False	
+copyedit release_notes	False	
+move key from reporting.utils to (new) reporting.key	True	
+remove py2-related links in `install` docs	False	
+update docstrings, documentation	False	
+increase coverage to 100% in ixmp.cli	True	
+add (failing) test of writing gdx filenames with invalid characters	True	
+remove ci/install-*.sh scripts	False	
+bugfix for cloning message-scheme scenarios (#156)jar built from `ixmp_source`, commit `102758021ab77ac6ef1658a0f7dfab77e52f6cb9`	True	
+tidy r test code	False	
+update travis-ci.org link to .com in readme	True	
+clean error message for `check_out()` and refactor to `..._solution` (#73)* add `has_solution()`, rename `..._sol`consistently to `...solution`* add clean warning when using `check_out()`* updating tests to new formulation	True	
+ignore missing type stubs for pretenders to satisfy mypy 0.800	True	
+address exception in computations.ratio	False	
+adjust backend api spec to match jdbcbackend behaviour	True	
+disable r caching on appveyor	False	
+split .testing to 3 submodules; collect all fixtures and data	True	
+temporarily disable rixmp tests	False	
+update release_notes	False	
+update travis to test both py2 and 3 (#83)	True	
+reset to development state	True	
+add jvm path to show_versions	True	
+suppress windows warnings using temporarydirectory() in gamsmodel.run()	False	
+document more backend methods	False	
+catch jvmnotrunning when jvm shuts down before jdbcbackend is gc'd	False	
+remove doc/ mentions of upstreamed code; add genno to intersphinx config	True	
+demote missing annotation warning to info in timeseries.__init__()closes iiasa/message_ix#383.	True	
+pass scheme to constructor from jdbcbackend.clone	True	
+adjust log messages in tests to match code	True	
+reformat rixmp::adapt_to_ret docs; wrap example in if (false) {}	False	
+handle zero dims in key.from_str_or_key	False	
+update release_notes	False	
+add python3-zmq to ci/dockerfile for teamcity	True	
+add pypi, conda-forge readme badges	False	
+split reporter.add to reporter.add_single	True	
+improve coverage to 100% in reporting.attrseries and .sparsedataframe	True	
+remove a debugging print() statement	False	
+reporting.configure(): log.warn instead of warn	True	
+replace test_default_dbprops_file; add ixmp_cli fixture	False	
+fix test access (#179) (#181)	False	
+coerce str to path in computations.write_report()	True	
+add ts_check_out, ts_commit to backend; clean loading of jclass	True	
+update jdbc.py to allow using .remove_set() (#251)- update jdbc.py to allow using .remove_set()- extend test_set to implement a test for remove_set()co-authored-by: paul natsuo kishimoto <account+github@paul.kishimoto.name>	True	
+java virtual machine xmx can now be user specified in python api (#26)	False	
+update release_notes	False	
+add model.gams.gams_version()brought upstream from message_ix	False	
+remove 'pretenders' from conda-requirements	False	
+convert some java exceptions to runtimeerror	True	
+add styfle/cancel-workflow-action to 'pytest' ci workflow	True	
+allow selection of items to write in scenario.to_excel	True	
+set 2.0 in release_notes	False	
+improve reporting (phase 2) (#150)- add ixmp.reporting submodule meeting requirements fromhttps://github.com/iiasa/message_ix/wiki/reporting#requirements- classes reporter, key,- submodules computations, describe, utils (attrseries, quantity, etc.)- cli using click.- hide code/imports under py27.- implementation notes.- doc: add documentation of reporting- ixmp: make reporter a top-level name- ixmp.testing: add quantity-agnostic assertions- tests:- test ixmp.reporting thoroughly- skip tests on py27- add --testr command-line option/mark- packaging:- add requirements: click, dask, graphviz, pint, pyyaml, xarray- use find_packages() in setup.py to install ixmp.reporting- update .gitignore- ci:- install requirements, including graphviz with 'chocolatey' on appveyor- set 'python: 3' for stickler to avoid mistaken e999; ignore w503 which iscontra pep8full list of commits:- add stub class for dask-based reporting- add inital methods for key, reporting- move reporting module to a subtree- split reporting module to submodules- make reporter a top-level name- more implementation notes- test reporter.from_scenario() on dantzig problem- improve key, key.aggregates()- keep xarray attributes in calculations- test (dis)aggregation on dantzig- add computation todo- add & test exogenous data input/file output- improve docstrings- retrieve equations and variables in reporter.from_scenario()- retrieve sets in reporter.from_scenario()- use partial() in key.aggregates() to encode string arguments.- move quantity_as_xr to reporting.utils- implement reporter.read_config(); parse csv- refresh todos- use find_packages() in setup.py to install ixmp.reporting- add dask to requirements- add xarray to requirements- appease stickler- fix tests after rebase- disable py27 builds on travis and appveyor- add reporter.visualize(); improve documentation- repeat sets of computations for different nodes (req. a6)- allow reporting from command-line (req. a8(iii))- install dask[array] to force toolz installation on ci?- try to resolve conflict/typo in cli.py- accept master typo in cli.py :(- add graphviz to requirements- install graphviz on ci infra; add pyyaml to requirements- convert str to path for subprocess in test_reporting_cli- same as previous- install graphviz with 'chocolatey' on appveyor- add reporter.describe() and tests- set 'python: 3' for stickler to avoid mistaken e999- fix recursion in reporter.describe()- add weighted aggregation- simplify reporting cli using click- pass/derive units for common operations- also handle units in reporting.utils.quantity_as_xr; write csv & xlsx- fix reporting cli test- add reporting.utils.rename_dims and .clean_units() for messageix- update gitignore- delay load; create reporting.describe- new computation aggregate2 for grouping- new 'aggregate' and 'sum' semantics- add reporter.full_key convenience method- appease stickler- add pint to requirements for ci- add click to requirements for ci- stickler: ignore w503, which is against pep8- hex(id(...)) is not repr() on windows- upper-case previous- fix windows hex(id(...))- simplify sum()- update documentation- make git ignore .coverage- simplify keys_for_quantity() to avoid expensive data load- use dask.optimization.cull()- add reporter.__contains__- fix xarray alignment in computations.product- add keys.product()- add reporter.add_product()- import 'make_dantzig' in test_reporting.py- place test_reporter_visualize result in a tmp_path- handle more configuration options for units- handle rename_dims through configure()- update test_report_size- add more checks for sparseness- add warning message in docs- fix bug in data_for_quantity logging- debug again???- disambiguate reporter from message_ix reporter for docs- handle size == 0 in sparseness check- first light - dantzig test passes- trying aggregate- testing- expand attrseries/quantity features- add attrseries.to_series() no-op- update comments re: quantity- add quantity-agnostic assertions to ixmp.testing (#147)- first test for quantity equals- add test for attrs property- fix failing test where attrs provided in constructor- update test_reporting.py to use ixmp.testing and remove quantity shim- rm extraneous test- make some tests more general- stickler- add check_attrs option- add test for check_attrs=false- drop values in computations- try updating brew before install- explicitly install- move travis trickery to ci/travis-before_install.sh- move reporting docs- remove an abortive attempt at reporting.computations.rebase- it was picked up somehow in the rebase.- remove utf-8 character in reporting/__init__.py (py2 compat)- re-add py2.7 tests to travis; skip for reporting- fix previous- add test for rudimentary rixmp usage of ixmp.reporting- remove more utf-8 characters for py2- add testr cli- support load=false in scenario._item()- use _item(..., load=false) in keys_for_quantity()- py2 compat: reorder args to reporter.product()- add filters arg to data_for_quantity()- py2 compat: don't use * in unpacking assignment- replace utf-8 character in ixmp.reporting.utils- add test_reporting_filters- add reporter.filter()- configure reporting filters via configuration file or key- fix expected results of reporter.describe() with filters- raise user-friendly exceptions from pint exceptions- more py2 compat in reporting.utils- rename reporter.filter ??? reporter.set_filters- more flexible test for log records- py2 compat in report.utils._parse_units- further py2 compat- change signature of reporter.add_product()- further py2 compat- py2 compat: require xarray < 0.12- further hide ixmp.reporting on py2- further hide ixmp.reporting in ixmp.testing, for py2 compat- remove utf-8 characters in test_reporting.py- py2 compat in test_reporting.py- py2 compat in test_reporting.py 2- py2 compat in test_reporting.py 3- py2 compat in test_reporting.py 4- skip rixmp tests of ixmp.reporting on py2- final tweaks to documentation- avoid importing xarray in ixmp.testing for appveyor / python 2.7- delay importing xarray on py2 in test_reporting.py	True	
+adding warning for calling class ixmp.scenario with `scheme=='message'` (#79)* adding warning for `scheme=='message'`* add release notes* extend docstrings* another try for a deprecated-warning	True	
+adjust test for deprecation warnings to match raised exceptions	True	
+handle scalars in previous	False	
+use '/', not '\', in windows jdbc urls 2	False	
+combine backend.get_ts and .get_s	False	
+simplify travis/appveyor ci config/align with message_ix	False	
+cast to key() in more cases of reporter.add(), .add_product()	True	
+move ._jobj() shim from timeseries to scenariotimeseries is clean of direct java references	True	
+move test_report_size to testquantity.test_size	True	
+add test to check if removing scenario objects cleans memory	True	
+clear cache entirely in jdbcbackend.item_delete_elements	False	
+documenting imxp.scenario.units() and correction of typos	True	
+remove obsolete test_db_config_path	False	
+add attrseries.drop, .rename	False	
+format user-friendly exceptions on gamsmodel error (closes #383)	False	
+add test_testing for .testing.resource	True	
+test reporter.add_product()	False	
+import show_versions in __init__.py; sort imports	False	
+copy indexers dict in reporting???attrseries.sel	False	
+relax test_platform_units- since a common pint registry is used for all code/tests, this testcan fail depending on whether it is run in isolation or as part ofthe entire suite. relax one log assertion to avoid these failures.	True	
+use consistent parameter/variable name 'type_' in ._config	False	
+add tests of gamsmodel options; adjust make_dantzig	True	
+rename test_platform_init_raises to test_platform_deprecated	True	
+see java_home in .appveyor.yml	False	
+expand tests of "ixmp solve" cli command	True	
+exclude windows-latest-3.10 job from "pytest" ci workflow	False	
+use nbclient instead of subprocess in ixmp.testing.run_notebook()	True	
+add dantzigmodel to documentation	True	
+simplify jdbcbackend.{get,init}; update documentation	False	
+mention performance tests in development docs	False	
+remove deprecated usage of dbprops to specify path to jdbcbackend	True	
+update test_new_scen	False	
+reorganize core tests	False	
+tidy & reflow docstrings & comments	False	
+expand documentation and docstrings	False	
+expose timeseries data export (#243)- add platform method to export timeseries data directly to file- add test- add ixmp.itemtype, minimal {,jdbc}backend.{read,write}_file, tests- update docstrings and add to release notes- replace backend.export_timeseries_data with backend.write_file- roll jdbcbackend.write_gdx into jdbcbackend.write_file- roll jdbcbackend.read_gdx into jdbcbackend.read_file- document itemtype- remove ts argument from backend.{read,write}_file- update docstring- update docstring and move default to filters- fix moving default to filters- move filters to kwargs- update ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/883bb432d4df4523290fcee7ef88813848b972b4...0cd6eb355af454e3c7d214d0e5612ea455aff9c0co-authored-by: paul natsuo kishimoto <account+github@paul.kishimoto.name>	True	
+update `solve()` and documentation for messageix release version (#4)	True	
+update r tests	False	
+add solution and short aliases to backend.itemtype	True	
+remove 'raise from' in jdbcbackend.item_set_elements- jpype exceptions do not support this syntax	False	
+move call conveniences into base.backend	False	
+increase timeout waiting for mock server	True	
+extend describe_recursive() for lists of dict	True	
+update reporting.quantity documentation	False	
+reflow text in doc/tutorials.rst	False	
+update dependencies.	False	
+address type hint errors (#430)* adjust type hints* import mutablemapping from typing* import any from typing	False	
+handle clone limitations in jdbcbackend	False	
+replace deprecated `pandas.dataframe.ix[]` by `iloc[]` (#12)	False	
+multiple platform-(db)-connections, message-scheme v1.1 (#88)* allow setting of log level on platform, this will fail for the moment* add release notes* updated ixmp.jar (for testing platform dynamic database compatibility)added missing property to properties filesmetadata and multi db- added idea project files to ignore- updated ixmp.jar (metadata saving optimization)clean up meta tests* add caching and update tests* fix bug with scenario merge* add explicit release note* remove db-migration files (included in jar file)* updating tests to new api* udpate test-db properties file to work with new jar file (only one db connection)* deprecate `cat` feature in `ixmp.scenario`, migrate to `message_ix.scenario`* ixmp.jar: upgrade message-scheme specifications to v1.1from ixmp_source, commit `9ddcd51d0e59be5a4ca7f0fcc7676e2c20568456`* update test database* ixmp.jar: upgrade message-scheme specifications to v1.1fix issue in auto-crlf, from commit from ixmp_source, commit`c196a71fbbb94daea9580df40d3afba834ae745e`* add 'deprecated' warning for `clone(scen)`* ixmp.jar: additional flyway migration files for timeseries index, merge conflictfrom `ixmp_source`, commit: 79587a793db3eed90f1c44ab67201b80f3ffc3f0* remove outdated flyway migration file (merged into `ixmp.jar`)* update readme* ixmp.jar: messageix v1.1, multiple db connections, imprved flyway handling with oraclefrom `ixmp_source` commit `a893d27a116dcc1bccfba4b9396c83db0f07bae8`* refactor transport tutorials notebooks to new api* remove empty cell at end of notebook* skip jupyter notebook tests on windows with py3	True	
+address doc warnings	False	
+remove ms_years_active from backend	False	
+update release notes	False	
+bulk saving for metadata and exposing documentation api (#314)* allow saving multiple metadata entries in one go* add api to set/get documentation for models/scenarios/timeseries/etc* updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/923f5b9b3c283c31f5ea6deb0854548a11144599...6ec77036a0850d8ff3170f662d542a77c44c119e	True	
+document scenario.from_url	False	
+add attrseries.dims	False	
+add pep 263 mark in core.py for unicode characters in docstrings (#117)	True	
+revision of the tests and changes to code format/structure- moved test_check_year to test_utils.py.- added tmp_path to test_pd_write.- adjsuted code structure according to pep 8.	True	
+simplify doc/source/conf.py per sphinx-quickstart 3.0	False	
+add pytest to doc/requirements.txt (#138)	True	
+add timeseries.url to docs, examples, and release notes	True	
+use raw string for regex in jdbc._read_properties()	True	
+correct r description in api docs	False	
+isolate testscenario.test_init_par() better	False	
+add py.typed	False	
+updated cli doc as suggested by @khaeru	False	
+escape windows paths in testgamsmodel.test_error_message()	False	
+ensure cli tests are sandboxed	False	
+add type hints to backend, platform, timeseries, and scenario methods	True	
+remove reference to deleted ci/coveragerc in setup.cfg	True	
+revise addition of temp_pathtemp_path fixture added to test_utils.py- pd_read function revised according to the changes.	True	
+added docsting to ixmp.platform.units() to report it in ixmp docu	True	
+consolidate definition of test data in test_feature_timeseries	True	
+remove (empty) .tests.conftest	False	
+expand tests of computations.product	True	
+remove deprecated platform positional args for dbprops, dbtype, jvmargs	True	
+add .tests.test_compat.test_message_model_dir()	False	
+protect reporter 'config' key from dask scheduler	False	
+fix test_reporting_cli	False	
+add scenario.items() and test	False	
+preserve int dtype in data_for_quantity()- previously, code converted *all* index columns to `str`; butmessage_ix returns 'year'-indexed columns as `int`.- convert only columns needing conversion, i.e. those with a specific(categorical) dtype.	True	
+add s_add_par_elements to backend, jdbcbackend	True	
+handle existing items with read_excel(???, init_items=true)	False	
+correct git merge of scenario.__init__	True	
+bump genno requirement to 1.3.0 in setup.cfg	True	
+copy classifiers from message_ix to setup.cfg	True	
+set reticulate_python on all platformsfor the value of this environment variable, reticulate accepts eitherthe path to a binary *or* the path to a directory containing the pythonbinary; seehttps://github.com/rstudio/reticulate/blob/d14c0f0/r/config.r#l760-l766it is not necessary to specify windows-only ".exe" suffix in the value.	True	
+add test coverage dependencies to setup.py	True	
+update list of reporting computations per genno 1.11	True	
+remove caching from ixmp.core	False	
+update io.py	False	
+add #339 to release notes	True	
+.gitignore more coverage-related files	False	
+change clone(keep_sol=...) ??? keep_solution in r tutorial	False	
+move attrseries from reporting.utils to (new) reporting.attrseries	True	
+remove unused utils.pd_read, .pd_write	False	
+bump message-scheme version number to 1.0 in `ixmp.jar` (#46)* updated ixmp.jar: bump message-scheme version number to 1.0from repository `ixmp_source`, commit 32749f3a6b6ed03cdd5c63efea14145554f6fcaf* add flyway migration files	True	
+re-enable pytest/windows-latest-py3.6 ci job (closes #360)	False	
+tidy usage of ._config in test suite	True	
+add format_scenario_list to docs	True	
+add ms_cat_list, _cat_get_elements, _year_first_model, _years_active	False	
+don't assert zero references in test_del_ts	False	
+add #374 to release notes	True	
+made a note for add() method more clear and added to .gitignore the folder .idea where pycharm stores project specific settings files not relevant for committing	True	
+always convert values to python float in jdbcbackend.item_get_elements	True	
+override timeseries.check_out in scenario- this avoids using has_solution() on timeseries.	False	
+add github actions workflow for macos-latest	True	
+write empty sets after the 'ix_type_mapping' sheet in io.to_excel()	False	
+add gams_version() output to show-versions utility/cli command	True	
+adjust reporting.quantity.attrseries for pandas 1.0	True	
+improve test coverage	False	
+adjust test_timeseries_remove_all_data to use empty timeseries	True	
+skip tests that segfault with pandas 1.0	False	
+also quote lists of set elements in reporter.from_scenario	True	
+protect test_platform_units against --verbose pytest option	False	
+addresss pytest warnings with monkeypatch.setenv()	False	
+update broken link in documentation	False	
+avoid loading item to get indices in jdbcbackend	True	
+adjust test_computationerror for python 3.6	True	
+expand documentation of configuration	True	
+modify tutorials and debug tests of tutorials	True	
+adjust reporting to avoid scenario._element	True	
+closing db connection on jdbcbackend removal- update jar (add close db handling for closed db)- add test_gc marker to setup.cfg	True	
+sanitize the model "case" name (for iiasa/message-ix-models#9)	False	
+hotfix pytest/pathlib2 instabilities (#131)* also add comment on when to remove the fix	True	
+convert release_notes to rst; add what's new docs page	True	
+extend api to support dynamic time slices (#264)- allow to add timesteps and get list of timesteps from db- add support for adding and retrieving of timeseries having subannual dimension- add python3-setuptools to test image dockerfile- add more tests- rename time to subannual in "public facing api"- adjust test to in-memory db with dynamic population- updated ixmp.jar (source diff https://github.com/iiasa/ixmp_source/compare/0cd6eb355af454e3c7d214d0e5612ea455aff9c0...10742197121eaf83c6f222f969d7e2842d0bbdde)- move adding subannual column to to_iamc_templateco-authored-by: daniel huppmann <dh@dergelbesalon.at>	True	
+expand test_excel_io to cover unreadable items	True	
+corrected format in tables of *python[ixmp package] section of docu	True	
+streamline scenario.add_par to use only a single backend call	True	
+tidy and harmonize ci/ and git configuration	False	
+use sparsedataarray in tests	False	
+update minimum version of genno to 1.1.0	True	
+document parse_url; add xfail tests	False	
+add missing comma in test_import_ts	False	
+clean-up of api for timeseries and scenario constructors (#76)* refactor to `ixmp.scenario()` and `ixmp.timeseries()` as main constructor	True	
+closing db connection on jdbcbackend removal	False	
+check backend type in gamsmodel.run()	False	
+add a todo in store_ts	False	
+remove macos-specific jdk override from "pytest" ci workflow	False	
+unwrap dask.core.quote()'d items for reporter.describe	True	
+add test placeholders	False	
+update documentation of rixmp installation and use (#305)- describe how to build the doc for windowsto me it seems the previous explanation does not work. instead, writing make html works on windows as on other os- correct rixmp installation guidecorrections to make sure it work in any case- improve installation description	True	
+split .core to .core.platform, .core.scenario; adjust imports	True	
+adjust r install step to un-fail macos jobs [ci]- never upgrade dependencies; avoids r attempting to download non-existent binary packages on macos. see:https://github.com/iiasa/ixmp/pull/359#issuecomment-673474748- force (re-)install of rixmp even it was cached from a prior job.	True	
+remove scenario.years_active (should be in message_ix)	False	
+upper-case name reporting.utils.replace_units	False	
+fix old, broken links in release notes	False	
+add reporting._handle_computation_error()	False	
+updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/290e790c272c30d7ec3572325ba33154f78f948e...883bb432d4df4523290fcee7ef88813848b972b4	False	
+bump genno requirement to 1.11.0; adjust calls in reporter.from_scenario	True	
+suppress java noise on windows/appveyor (#247)- debug java exceptions on windows- add appveyor caching- allow jpype to assemble the classpath- handle ixmp.jar being outside the lib/ directory- remove debugging code- appease stickler- use log.debug() in start_jvm()	True	
+fix method for setting scenario metadata- update ixmp.jar and logging dependencies (source diff https://github.com/iiasa/ixmp_source/compare/78b211703d85d47271018de721c6dbc9b45dc01a...290e790c272c30d7ec3572325ba33154f78f948e)- reduce log level to debug for reading app configuration	True	
+add #389 to release notes	True	
+only dropna() in product, ratio computations for attrseries	True	
+add a warning to docstring of .testing.jupyter.run_notebook()	True	
+add 'dims' arg to reporter.add_file()	True	
+rescue test_timeseries.pyin #270, this file was cleaned up and tests were collected in a class,with parametrization. shortly after, #264 was merged, which squashedthese improvements. this commit rescues the improvements and adaptsadditions since then to the same pattern.	True	
+updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/0f825c62879fc0600f357a5e14d19c5b90723335...62a5da51d93ced3df44cb6916fd5ee7395a71100	False	
+store new path on config.save()	False	
+simplify codecov invocation on travis	False	
+support reporting.key.drop(true)	False	
+adjust platform creation in test_integration	False	
+clean-up docs after merge	False	
+run gc test when passing --test-gc only skipping other tests	False	
+add genno to setup.cfg / install_requires	True	
+improve docs of reporting.quantity	True	
+add [report] extra requirements to [tests]	True	
+squash warning due to deprecated use of delete_meta() in test_meta()missed by #353 and #366	True	
+narrow use of pd.series.xs() in attrseries.sel()	True	
+return without exception traceback on "ixmp solve"	False	
+correct r tutorial json	False	
+close db log verbosity/tests- set java log level to off when python notset- set explicitly log level to info upon creating jdbc backend (make tests behavior consistent as same jvm reused and log level set for root logger there (globally))- replaced exception with log output on duplicate db closing call- silently close db for test_mp fixture when backend is destroyed- update jar (improve db closing)	True	
+implement jdbcbackend.ts_get	False	
+remove rixmp.legacy and associated tutorials	False	
+fix typo in method name for `add-region-synonym` (#183)	True	
+harmonize handling of exceptions, format strings in jdbcbackend	True	
+add a test for #216	True	
+add store_ts, to_iamc_layout to api docs	True	
+add zenodo badge to readme	True	
+correct gamsmodel logoption value when quiet=true (closes #404)	False	
+set jdbc._gc_aggressive = false when running teststhis leads to a roughly 50% reduction in the time to run the test suite.	True	
+ignore .pid files remaining when tests are interrupted- cf. #167	False	
+satisfy isort and mypy	False	
+correct travis yaml syntax for matrix builds	True	
+add reporting.quantity.assert_quantity()	False	
+also install genno on 'lint' ci workflow for type hints	True	
+add reporting.computations.select	False	
+replace f'{foo!r}' with f'{foo}'/repr(foo) (#293)	False	
+adjust docstring of reporter.from_scenario()	True	
+fix `clone()` across platforms (databases) (#129)	False	
+add #416 to release notes	True	
+include dantzig.gms as package data (#275)	False	
+expand test coverage of platform.add_timeslice()	True	
+adding docstrings in ixmp core (#36)* pep8* update docs* add docstrings for `read_sol_from_gdx()` and `remove_sol()`* shorten/harmonize in-function docstrings for `clear_cache()`	True	
+use logger.warning, rather than .warn	False	
+add pytest-benchmark to [tests] extra requirements	True	
+adjust test_scenario.test_set	False	
+raise runtimeerror from backend.commit()	False	
+reflow comments and docstrings in ._config	False	
+more standard handling of computation errors	True	
+add s_init_item to backend	True	
+adjust tests.backend.test_base.test_class	False	
+use setuptools-scm; remove versioneer	False	
+added docsting to ixmp.platform.units() to report it in ixmp docu	True	
+replace .tests.reporting with genno.tests.compat.*ixmp*	False	
+add region/unit parameters to export timeseries (#343)* add extra parameter regions to export_timeseries_data method* expose unit parameter* extend test reading csv with pandas* update release notes* allow to pass lists of models/scenarios to export* updated ixmp.jar- source diff https://github.com/iiasa/ixmp_source/compare/ef6772bb7476c302e7c89a90d8232ac81a5cdccb...2c3244517d6ffd6de70c896d3198d9d3a43ddfae	True	
+expand test_reporter_add_product()	False	
+fix log test in test_reporting_filters	False	
+update jarfile to revision 8067978dec553014a3b896df2705b2dbc2e20c5d (#95)- replace jarfile (compiled with jdk8)- reverted ixmptest.script to pre-release 1.1 version	True	
+remove print() in base.model.initialize_items()revision of commit by @francescolovat	True	
+remove repeated definitions of data in test_feature_timeseries	True	
+add a test of computationerror via jupyter	True	
+add scenario.from_url	False	
+remove shims scenario._jobj and ._item	False	
+work around pydata/pandas-dev#39168	False	
+add ixmp.testing.bool_param_id	False	
+update conda itself from channel conda-forge	False	
+use proxies instead of weakrefs; don't double-proxy	True	
+silence warnings in timeseries.__del__	False	
+strip marked py2 compatibility code	False	
+test io.s_read_excel() with items on multiple sheets	False	
+test_args as dict in test_feature_timeseries	False	
+add sums arg to reporter.aggregate()	True	
+test rixmp using 'testthat' (#135)- rename 'retixmp' ??? 'rixmp'; 'rixmp' ??? 'rixmp.legacy'- test rixmp rather than rixmp.legacy tutorials.- set dev version of rixmp to 0.1.3.9000.- add docs for adapt_to_ret and in ixmp doc.- update description version number, date, authors.- doc/: update documentation.- install.bat: update; purge unused code.- ixmp.config.config._locate(): remove r path hack- was causing test failures when installing on windows using install.bat- ixmp.utils: catch specific exception.- tests/test_r.py:- test_r_build_and_check: test 'r cmd build'.- test_r_testthat: pytest machinery to call r tests.- tutorials:- fix a typo in r_transport_scenario.ipynb- rixmp/tests/: replace tests/r_tests.r with r tests using testthat.- use library(ixmp) instead of import('ixmp') in tests.- mirror python fixtures in r to avoid database collisions.- add pr to release_notes.md.- python 2.7 compatibility throughout.- update ci infrastructure:- install irkernel for testing r notebooks.- install rixmp itself.- travis:- switch to 'language: r' to access r>3.2 (ixmp needs r>=3.3)- remove 'set -x' in before_install.- alter quoting in travis-install.sh for parameter substitution.- install r dependencies in r_libs_user to enable caching.- fix block literal syntax in .travis.yml- appveyor:- add r install from https://github.com/krlmlr/r-appveyor.- stop ci/appveyor-install.ps1 on error.- set xdg_data_home.- do not build manual on appveyor; avoids latex dependency.- workaround missing cran binaries for r 'mime' version 0.7.- disable all r tests on appveyor / python 2.7.	True	
+add .github/issue_template/bug.md, referring to show_versions	True	
+update on: clauses of "lint" and "pytest" ci workflows	True	
+bump genno requirement to 1.6.0 in setup.cfg	True	
+convert java to python exceptions in {gs}et_meta()per #296. this was missed in #353.	True	
+remove pre-populated jdbc/hsql test database	False	
+add files via upload (#16)	False	
+use recursive extras_require in setup.cfg	False	
+don't specify engine in s_write_excel(); use openpyxl in s_read_excel()	False	
+raise exception when using ixmp.scenario for message_ix scenarios	True	
+fix broken links to message documentation	True	
+update error handling and logging- remove finally block in timeseries commit method (java)- change input validation in setstatus method (java)- fix commit in scenario class (java)- propagate exceptions from commit (java)- upgrade pytest dependency- add platform method to get current log level (remove changing log level in tests as it affects other tests log output)- updated ixmp.jar (source diff https://github.com/iiasa/ixmp_source/compare/10742197121eaf83c6f222f969d7e2842d0bbdde...923f5b9b3c283c31f5ea6deb0854548a11144599)	True	
+remove .utils.partial_split(), upstreamed to genno	True	
+use jpype slice code path	False	
+update build badge in readme	False	
+work around pallets/click#411	False	
+update jdbcbackend docs	False	
+fix #216	False	
+remove unused utils.isstr, utils.islistable	False	
+improve typing to satisfy mypy v0.790	True	
+base jdbcbackend on cachingbackend	False	
+move cli.solve help text into docstring	False	
