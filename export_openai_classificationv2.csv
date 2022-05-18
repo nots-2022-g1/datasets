@@ -1,0 +1,1659 @@
+Reference,GitCommitMessage,Response
+0,"build(docs-infra): move to circleci v2 api for aio-builds (#45349)
+Move to the CircleCI v2 api as the authentication fails for downloading artifacts using the v1 methods.
+CircleCI v2 api now requires authentication to occur view the headers instead of being done in a
+query parameter, all of the CircleCI interactions are now performed through one fetchFromCircleCi method
+which ensures the token is provided in the headers as expected.
+PR Close #45349",Yes.
+1,"fix(animations): apply default params when resolved value is null or undefined (#45339)
+The animations package supports adding default parameter values to an animation that will be used as a fallback if some parameters aren't defined. The problem is that they're applied using a spread expression which means that any own property of the animation parameters will override the defaults, even if it resolves to null or undefined. This can lead to obscure errors like ""Cannot read property toString of undefined"" for an animation that looks like `{params: {foo: undefined}}` with defaults `{foo: 123}`.
+I ran into this issue while debugging some test failures on Material.
+These changes address the issue by:
+1. Applying the defaults if the resolved value is null or undefined.
+2. Updating the validation function to use a null check instead of `hasOwnProperty`.
+PR Close #45339",Yes.
+2,"docs: add how to access the resolved data (#45345)
+complete resolver example and add how to access the resolved data in component
+resolves angular#45313
+PR Close #45345",Yes, the reason for the change is that it completes a resolver example and adds how to access resolved data in a component.
+3,"build: lock file maintenance (#45341)
+PR Close #45341",No
+4,"release: cut the v14.0.0-next.7 release (#45368)
+",No
+5,"docs: release notes for the v13.3.0 release (#45366)
+",No
+6,"docs: release notes for the v13.2.7 release (#45364)
+",No
+7,"build: update github/codeql-action action to v1.1.5 (#45358)
+PR Close #45358",No
+8,"docs: add ngx-gantt to ""EXPLORE ANGULAR RESOURCES"" page (#45351)
+PR Close #45351",No
+9,"fix(forms): improve error message for invalid value accessors (#45192)
+improve error message for invalid value accessors when accessor is not provided as array
+PR Close #45192",No
+10,"fix(docs-infra): fix tour of heroes global styles (#45329)
+fix button styles in src/styles.css that are missing from code snippets
+PR Close #45329",Yes, there is a reason in the text for the described change.
+11,"docs: fix small English typo (#45340)
+PR Close #45340",No
+12,"docs: Fix typo in issue template (#45327)
+PR Close #45327",No
+13,"build(bazel): add bazel build and test targets for aio build (#45022)
+First step towards a migration of aio to bazel. Not yet built by ci.
+PR Close #45022",No
+14,"build: update dependency eslint-plugin-jsdoc to v38 (#45332)
+PR Close #45332",No
+15,"build(docs-infra): upgrade cli command docs sources to a517160a2 (#45225)
+Updating [angular#master](https://github.com/angular/angular/tree/master) from [cli-builds#master](https://github.com/angular/cli-builds/tree/master).
+PR Close #45225",No
+16,"feat(docs-infra): remove hidden commands processor (#45225)
+Hidden commands are no longer included in help JSON output.
+PR Close #45225",Yes, the reason for the change is given in the text.
+17,"feat(docs-infra): update CLI templates to match changes with new parser and folder structure (#45225)
+The underlying parser that the CLI uses changed which caused minor changes in the generated JSON helps especially for subcommands.
+The folder structure of the Angular CLI repo also changed slightly.
+More context: https://github.com/angular/angular-cli/pull/22778
+PR Close #45225",Yes.
+18,"refactor(core): Switch over to new closure LOCALE vs getLocale() (#45302)
+This is a change requested via an LSC due to a deprecation.
+PR Close #45302",Yes, the change is requested due to a deprecation.
+19,"docs: add manual changelog edits from `13.3.x` to main branch (#45323)
+Adds the manual changelog edits from the `13.3.x` branch to the
+main branch (where users primarily will look at).
+PR Close #45323",Yes.
+20,"docs: release notes for the v13.3.0-rc.0 release (#45322)
+",No
+21,"refactor(router): Make a few adjustments to createUrlTree for clarity (#45306)
+* `tree` function now accepts the old root rather than the old
+`UrlTree`. The `urlTree` argument was only used to get the `root`.
+This change makes it more clear what that pararmeter is used for and
+what's actually being used
+* Move the `oldRoot` (previously `urlTree`) to be the first argument of `tree`.
+This change now mirrors the argument order for `replaceSegment` and
+can be read from left to right more easily ""in this root,
+replace this old segment group with this new segment group"".
+* Extract `newRoot` to a variable. This just makes it more clear what's
+going on at the end rather than combining a bunch of operations into
+one.
+These changes are being made so that hopefully a future refactor can be
+done which does not rely on the `urlTree` argument at all in the
+`createUrlTree` function. These refactorings will make it easier to see
+1:1 functionlity in these various places.
+PR Close #45306",No
+22,"docs: update <div> to <p> in lifecycle-hooks.md (#45063)
+Changes <div> to <p> in description to match the elements in the screenshot.
+Update lifecycle-hooks.md
+Changes <div> to <p> in description to match the elements in the screenshot.
+PR Close #45063",Yes
+23,"docs(core): update triggerEventHandler samples (#45279)
+PR Close #45279",No
+24,"feat(core): triggerEventHandler accept optional eventObj (#45279)
+Close #44724
+`DebugNode.triggerEventHandler()` should accept the `eventObj` as an
+optional parameter. So the user don't have to write code like
+```
+elem.triggerEventHandler('click', null);
+```
+PR Close #45279",Yes.
+25,"docs: update CHANGELOG to fix broken markdown (#45305)
+PR Close #45305",No
+26,"release: cut the v14.0.0-next.6 release (#45301)
+",No
+27,"docs: release notes for the v13.2.6 release (#45300)
+",No
+28,"fix(language-service): Prioritize Angular-specific completions over DOM completions (#45293)
+When authoring Angular templates, developers are likely to be most interested in
+the current Directive/Component inputs and outputs, then potential
+attributes which would match other directives to the element,
+and lastly the plethora of DOM events and attributes.
+This change ensures that Angular-specific information appears above DOM
+information by prepending the first printable ASCII characters to the
+sort text.
+Fixes https://github.com/angular/vscode-ng-language-service/issues/1537
+PR Close #45293",Yes.
+29,"ci: update payload size goldens to reflect zone.js update (#45289)
+ZoneJS has been updated as part of the lock file refresh by Renovate. The
+polyfills bundle reduced in size by around 4k which is due to some code
+simplication in ZoneJS being finally released. This is the commit responsible
+for the major reduction (also mentioning the reduction):
+https://github.com/angular/angular/commit/0f298a13dbd141e5440d1388b124d03384641efe
+PR Close #45289",No
+30,"build: lock file maintenance (#45289)
+Refreshes the lock file through Renovate.
+PR Close #45289",No
+31,"refactor(migrations): update `isReferenceToImport` to not use `valueDeclaration` (#45292)
+valueDeclaration is only set when the Symbol type is a `Value`:
+* [setValueDeclaration](https://sourcegraph.com/github.com/microsoft/TypeScript@d8b21a8d6cef772fea5cf2a507b651c5d38194bd/-/blob/src/compiler/binder.ts?L321-322)
+* [Value union](https://sourcegraph.com/github.com/microsoft/TypeScript@d8b21a8d6cef772fea5cf2a507b651c5d38194bd/-/blob/src/compiler/types.ts?L4849:9#tab=references)
+This won't be the case if the symbol is an interface (notice that `Interface` is not in the union for `Value` above).
+For this reason, we can't rely on the `valueDeclaration` property of the symbol.
+Instead, it's more reliable to just compare the first items in the `declarations` list.
+PR Close #45292",Yes.
+32,"refactor: replace deprecated `HTMLDocument` with `Document` (#45282)
+`HTMLDocument` is deprecated in favor of `Document`. This change replaces the usages of `HTMLDocument`.
+See: https://github.com/microsoft/TypeScript/blob/20c93d3b1da44d8ee740b466a5cde7894e8b3260/lib/lib.dom.d.ts#L6370-L6376
+PR Close #45282",Yes.
+33,"refactor(core): Improve the efficiency of the Typed Forms migration. (#45288)
+Consider a file that imports `FormControl` and then never uses it. In that case, we don't need to add the import for `UntypedFormControl`.
+By examining constructor calls *first*, we can identify these cases and skip over them.
+This will reduce the memory footprint of the migration when run in tsunami, hopefully making OOM errors less likely.
+PR Close #45288",No
+34,"feat(core): drop support for Node.js 12 (#45286)
+Node.js v12 will become EOL on 2022-04-30. As a result, Angular CLI v14 will no longer support Node.js v12.
+BREAKING CHANGE:
+Support for Node.js v12 has been removed as it will become EOL on 2022-04-30. Please use Node.js v14.15 or later.
+PR Close #45286",Yes, the text describes the change and the reason for the change.
+35,"build: update all non-major dependencies (#45250)
+PR Close #45250",No
+36,"build: update scorecard action dependencies (#45249)
+PR Close #45249",No
+37,"build: update actions/checkout action to v3 (#45248)
+PR Close #45248",No
+38,"fix(docs-infra): remove anchor tags from heritage docs (#45287)
+Remove anchor tags from heritage docs and let `autoLinkCode` insert them properly.
+PR Close #45287",No
+39,"docs(service-worker): improve description of `NoNewVersionDetectedEvent` (#45266)
+The `NoNewVersionDetectedEvent` does not imply that the latest version
+on the server is the same as the version the client is on (because a
+client could be on an older version).
+Update the description of the event to better describe what it actually
+means (i.e. that the SW didn't find a version it didn't already know
+about, but without implying anything about the version the current
+client is using).
+PR Close #45266",No
+40,"fix(service-worker): file system hash in batch of 500 elements (#45262)
+Add file system concurrency hash test
+Fixes #45133
+PR Close #45262",Yes, the reason for the change is given in the text.
+41,"fix(compiler): compute correct offsets when interpolations have HTML entities (#44811)
+When parsing interpolations, the input string is _decoded_ from what was
+in the orginal template. This means that we cannot soley rely on the input
+string to compute source spans because it does not necessarily reflect
+the exact content of the original template. Specifically, when there is
+an HTML entity (i.e. `&nbsp;`), this will show up in its decoded form
+when processing the interpolation (' '). We need to compute offsets
+using the original _encoded_ string.
+Note that this problem only surfaces in the splitting of interpolations.
+The spans to this point have already been tracked accurately. For
+example, given the template `&nbsp;<div></div>`, the source span for the
+`div` is already correctly determined to be 6. Only when we encounter
+interpolations with many parts do we run into situations where we need
+to compute new spans for the individual parts of the interpolation.
+PR Close #44811",No
+42,"fix(core): incorrectly inserting elements inside <template> element (#43429)
+Currently whenever we insert element we do it directly on the node using `appendChild` or `insertBefore`, however this doesn't work with `<template>` elements where the `template.content` has to be used.
+These changes add a few checks to call `appendChild` and `insertBefore` on the `content` of the template.
+Fixes #15557.
+PR Close #43429",Yes, the reason for the change is given in the text.
+43,"docs: Change tag name to TD from TR in context of colspan usage (#45257)
+PR Close #45257",No
+44,"docs: update `flush` description to include microtasks (#45237)
+PR Close #45237",No
+45,"build: update dependency google-closure-compiler to v20220301 (#45260)
+PR Close #45260",No
+46,"build: update dependency magic-string to v0.26.1 (#45247)
+PR Close #45247",No
+47,"fix(forms): Update the typed forms migration. (#45281)
+The typed forms migration was previously designed to add `<any>` type parameters to existing forms classes. However, due to some design changes, the new opt-out strategy requires untyped versions of the classes, as introduced in #45205 and #45268.
+This PR updates the migration to import these new classes (in an idempotent manner), and replace constructor calls with the new classes. It respects qualified imports as well. Finally, the code has been refactored to move as much common code as possible into `util.ts`.
+PR Close #45281",No
+48,"test(compiler): fix deprecation warning (#45285)
+Jasmine logs a warning when there's a `describe` with no tests. These changes fix one such case in the compiler that happens when the tests are run against Windows.
+PR Close #45285",Yes, the reason for the change is given in the text.
+49,"ci: components CI test should use local zone.js build (#45277)
+CI components test install the angular package from the local
+version, but still use the zone.js from npm, so this commit let
+components also install zone.js from local too.
+PR Close #45277",Yes, the reason for the change is described in the text.
+50,"build(docs-infra): upgrade cli command docs sources to 9aa2eb03f (#45275)
+Updating [angular#master](https://github.com/angular/angular/tree/master) from
+[cli-builds#master](https://github.com/angular/cli-builds/tree/master).
+##
+Relevant changes in
+[commit range](https://github.com/angular/cli-builds/compare/ac175ff10...9aa2eb03f):
+**Modified**
+- help/build.json
+- help/generate.json
+PR Close #45275",No
+51,"fix(forms): Property renaming safe code (#45271)
+This fixes property renaming related issues in advanced closure compiler
+optimizations.
+PR Close #45271",No
+52,"refactor(compiler): specify `@angular/core` as peer dependency (#45267)
+The compiler generates code for the Angular runtime in `@angular/core` which
+has to be the exact same version, as otherwise there may be version skew
+between what the compiler generates and what the runtime supports. This would
+result in hard to diagnose problems at runtime. By adding a peer dependency
+for `@angular/compiler` on `@angular/core` we can let the package manager
+report an error (NPM 7+) or warning (NPM 6, Yarn) during installation to
+signal that the set of packages is incompatible.
+PR Close #45267",Yes.
+53,"feat(core): support TypeScript 4.6 (#45190)
+Adds support for TypeScript 4.6.
+PR Close #45190",Yes, the reason for the change is to add support for TypeScript 4.6.
+54,"fix(forms): Add UntypedFormBuilder (#45268)
+This was intended to be part of #45205, but was left out. Adds a new class for use in migration.
+PR Close #45268",No
+55,"refactor(router): Use helper function to throw NoMatch (#45244)
+This update matches the other locations where noMatch is thrown.
+PR Close #45244",Yes, the reason for the change is described in the text.
+56,"build: patch snapshot issue in dev-infra selecting the latest version tag (#45269)
+Local patch ahead of landing of https://github.com/angular/dev-infra/pull/449
+PR Close #45269",No
+57,"release: cut the zone.js-0.11.5 release (#45256)
+PR Close #45256",No
+58,"feat(service-worker): emit a notification when the service worker is already up to date after check (#45216)
+When the service worker checks for an update and finds that the version on the server is the same as
+the version locally installed, it currently noops.  This change introduces an event which it emits
+in this situation which notifies clients a check has occurred without error and no update was found.
+PR Close #45216",Yes, the reason for the change is described in the text.
+59,"docs: change link for devtools to angular repo (#45207)
+PR Close #45207",No
+60,"docs: add Greek localization for Angular Docs (#45152)
+PR Close #45152",No
+61,"fix(zone.js): defineProperties should also set symbol props (#45098)
+Close #44095
+Fix `defineProperties` patch not set `symbol` props issue.
+Co-authored-by: varomodt<varomodt@users.noreply.github.com>
+Co-authored-by: AndrewKushnir<AndrewKushnir@users.noreply.github.com>
+PR Close #45098",Yes, the reason for the change is given in the text.
+62,"refactor(router): Remove special logic for hybrid apps (#45240)
+This commit removes special (undocumented) logic in the Router code that is
+meant to prevent duplicate navigations that result from location syncs in
+AngularJS/Angular hybrid applications.
+The duplicate navigations can occur when both the Router and the AngularJS sync
+code detect a location change via a popstate/hashchange event. When this
+happens, the Angular Router schedules a navigation to sync itself with
+the browser, but the hybrid listener may also schedule an additional
+navigation. There are a few reasons this logic should not be included in
+the Router:
+* This special logic is not tree shakeable so it introduces a bundle
+size cost for all applications, most of which don't need it.
+* There have been many updates to the routing pipeline to tolerate
+duplicate navigations. That is, duplicate navigations can happen and
+routing should still complete successfully.
+* https://github.com/angular/angular/commit/0e8548f667e5fdefa3ac7cdf1ba47e3e17011ffc
+* https://github.com/angular/angular/commit/9e039ca68bfae5328f3fc1f16fabd7673c466a25
+* The logic is really in the wrong place: The hybrid sync code should be
+the location to handle this. If duplicate navigations are meant to be
+avoided, the hybrid sync code should have handling to _not_ trigger
+duplicate navs.
+* This logic _also_ used to exist because the mock location
+helper used for test incorrectly triggered popstate events during
+router navigations. In order to avoid unexpected behavior in tests, this
+logic needed to be added. This incorrect mocking may also have been
+put in place because the upgrade module _would_ see a location change
+event and trigger a duplicate navigation.  The location mock has since been updated to
+match real browser behavior so this is no longer necessary. The
+upgrade module has also been updated to not trigger duplicate
+navigations.  The following commits are related to this:
+* https://github.com/angular/angular/commit/202a1a56314af4ddb99c476f974536a10e390319
+* https://github.com/angular/angular/commit/c6a93001eb74374b0fbc6aea1286fe1183d21382
+Side note: The `setTimeout` in the location change listener is used to
+ensure the ordering of duplicate navigations was consistent. You can see
+that the logic being removed here expects the imperative navigation to precede the
+popstate/hashchange. With the removal of this code, the `setTimeout` no
+longer serves a purpose. However, it has been found that tests can rely
+on this behavior (incorrectly) because they expect the navigation to be
+complete but in reality, it hasn't even started because the test has not
+flushed the timeout. Removing the timeout would be a breaking change as
+a result.
+PR Close #45240",No
+63,"build: add retry logic to postinstall script (#45252)
+Several people on the team (myself included) have had issues where the `webdriver-manager` step of the `postinstall` script fails on the first run, but work correctly on the second one.
+These changes attempt to simplify the workflow by retrying the script up to 3 times before giving up.
+PR Close #45252",Yes, the reason for the change is that "several people on the team" have had issues where the webdriver-manager step of the postinstall script fails on the first run, but works correctly on the second one.
+64,"release: cut the v14.0.0-next.5 release (#45243)
+",No
+65,"docs: release notes for the v13.2.5 release (#45242)
+",No
+66,"feat(core): allow for injector to be specified when creating an embedded view (#45156)
+Adds support for passing in an optional injector when creating an embedded view through `ViewContainerRef.createEmbeddedView` and `TemplateRef.createEmbeddedView`. The injector allows for the DI behavior to be customized within the specific template.
+This is a second stab at the changes in #44666. The difference this time is that the new injector acts as a node injector, rather than a module injector.
+Fixes #14935.
+PR Close #45156",No
+67,"perf(common): make `NgLocalization` token tree-shakable (#45118)
+This commit updates the `NgLocalization` token to become tree-shakable (vs using a direct reference to that token in the `providers` section of the `CommonModule`). The `NgLocalization` token is used for apps that use i18n and for other apps it would be excluded from the bundle.
+PR Close #45118",No
+68,"refactor(forms): Split up `model.ts`. (#45217)
+model.ts is currently extremely large. This is the first step in an attempt to refactor it to be more easily navigable and reviewable. This commit breaks up `model.ts` into the following new files:
+* `model/abstract_model.ts`: The remainder of the model, including the `AbstractControl` base class and helper functions which are used throughout.
+* `model/form_control.ts`: `FormControl`, `FormControlOptions`, and helpers, plus the constructor and untyped friends.
+* `model/form_array.ts`: `FormArray` and untyped friends.
+* `model/form_group.ts`: `FormGroup` and untyped friends.
+This first phase is a purely mechanical code move. There is no new code at all, and no interfaces have been separated.
+PR Close #45217",No
+69,"fix(core): remove individual commands for updating gold files (#45198)
+The documented command for updating the forms gold files was outdated
+and didn't work. Since this command list can easily become outdated,
+remove the individual commands in favor of the simpler global scripts.
+PR Close #45198",No
+70,"refactor(zone.js): for legacy browser, still use hard coding eventNames (#40962)
+For legacy browsers, we still use the eventNames array to patch event instead of
+using `Object.getOwnPropertyNames()` to keep backward compatibility.
+PR Close #40962",Yes.
+71,"refactor(zone.js): remove onProp eventNames array to reduce the bundle size (#40962)
+Zone.js supports the google closure compiler in the advance optimization mode,
+to prevent closure compiler modify the `onProperty` name such as `Element.prototype.onclick`,
+Zone.js implements the `onProperty` patch logic by declaring all the
+event names in the source code, this increases the bundle size and also require
+updating the event names array to keep the information updated.
+Now google closure compiler has the required event names defined in the built-in
+externs files, so zone.js can use more simple implementation and decrease the bundle size
+of zone.js (about 4k).
+PR Close #40962",No
+72,"refactor(router): take only the first emitted value of every resolver to make it consistent with guards (#44573)
+The router used to wait for the resolvers to complete and take the last
+value. The changes here take only the first
+emitted value of every resolver and proceed the navigation. This matches
+how other guards work in the `Router` code.
+Resolves https://github.com/angular/angular/issues/44643
+BREAKING CHANGE: Previously, resolvers were waiting to be completed
+before proceeding with the navigation and the Router would take the last
+value emitted from the resolver.
+The router now takes only the first emitted value by the resolvers
+and then proceeds with navigation. This is now consistent with `Observables`
+returned by other guards: only the first value is used.
+PR Close #44573",Yes.
+73,"refactor(forms): Move `getRawValue` into the `AbstractControl` hierarchy. (#45200)
+Currently, there is a freestanding `getRawValue` function which examines the type of the control. This is an issue for refactoring `model.ts` because it creates unnecessary dependencies between the `AbstractControl` classes. It is cleaner to simply add this method to the model hierarchy and call it directly, and will ease upcoming refactoring.
+PR Close #45200",Yes.
+74,"Revert ""feat(core): allow for injector to be specified when creating an embedded view (#45156)"" (#45220)
+This reverts commit 94c949a60ad0de1f5385ec97f2c1933cb1d55f22.
+PR Close #45220",No
+75,"Revert ""refactor(forms): Move `getRawValue` into the `AbstractControl` hierarchy. (#45200)"" (#45219)
+This reverts commit dfc4301b33c3e08456af59f77e7f3bb611bceb6b.
+PR Close #45219",No
+76,"refactor(forms): Move `getRawValue` into the `AbstractControl` hierarchy. (#45200)
+Currently, there is a freestanding `getRawValue` function which examines the type of the control. This is an issue for refactoring `model.ts` because it creates unnecessary dependencies between the `AbstractControl` classes. It is cleaner to simply add this method to the model hierarchy and call it directly, and will ease upcoming refactoring.
+PR Close #45200",Yes.
+77,"feat(forms): Add untyped versions of the model classes for use in migration. (#45205)
+We had previously introduced an `AnyForUntypedForms` type alias. However, given our updated migration plan, we actually want to use aliases for the model classes themselves. This commit introduces these aliases, and adds them to the public API. It must be merged before the types, in order to migrate google3.
+PR Close #45205",Yes, the change is made in order to migrate google3.
+78,"feat(core): allow for injector to be specified when creating an embedded view (#45156)
+Adds support for passing in an optional injector when creating an embedded view through `ViewContainerRef.createEmbeddedView` and `TemplateRef.createEmbeddedView`. The injector allows for the DI behavior to be customized within the specific template.
+This is a second stab at the changes in #44666. The difference this time is that the new injector acts as a node injector, rather than a module injector.
+Fixes #14935.
+PR Close #45156",No
+79,"docs: improve structure of http example (#44986)
+improve the http aio example by:
+- adding a background color to the messages section so that it
+can be distinguished from the others
+- avoid using `hr` elements to divide the various sections, use
+css instead (so that the divisions can also be omitted when
+the sections are not being shown)
+- fix the erroneous presence of an input text element inside a button
+(see: https://github.com/angular/angular/pull/44557#discussion_r787239658)
+PR Close #44986",No
+80,"feat(zone.js): add Promise.any() implementation (#45064)
+Implements `Promise.any()` introduced in ES2021.
+Close #44393
+PR Close #45064",Yes, the text describes the change as adding an implementation for `Promise.any()`.
+81,"build: update tooling to use new entry-point for dev-infra exports (#45206)
+Previously, dev-infra only bundled the CLI with all its dependencies, while
+we still also kept all bundled dependencies in the `dependencies`. This basically
+meant that the CLI bundling did not provide any value at all.
+We fixed this upstream and now dependencies are still bundled, but no longer
+also declared as `dependencies`. We also stopped shipping deep JS files, only
+shipping the bundles now.
+As part of this deep file removal, we introduced a runtime entry-point for
+exports/types. This one will also benefit from the bundling and it will be
+predictable what symbols dev-infra consumer projects rely on (allowing us to
+also have an API guard or something in the future).
+PR Close #45206",No
+82,"build: update angular (#45206)
+PR Close #45206",No
+83,"refactor(forms): Clean up the find function. (#45199)
+Move `find` into the `AbstractControl` hierarchy, and clean up a longstanding implementation todo.
+PR Close #45199",No
+84,"docs(docs-infra): fix the stackblitz on page i18n-example (#45097)
+The previous configuration didn't allow to serve in any language.
+Fixes #45066
+PR Close #45097",Yes, the reason for the change is given in the text.
+85,"ci: instruct renovate to not update/override merge ready PRs (#45204)
+Sometimes Renovate proposes an update and we need to add some
+manual fixups, like updating a size golden. For this we push to
+same upstream branch.
+Renovate will update the PR though when another new revision/version
+becomes available, overriding the fixup and discarding it.
+This happened quite often now and causes significantly more
+work required by the dev-infra time..
+PR Close #45204",No
+86,"ci: fix stamping for builds performed in CI (#45147)
+Fixes the stamping for snapshot builds and the artifact deployment job.
+Currently the stamped versions will have the `.with-local-changes` version
+suffix given that we add a file to the Git repo that is just
+needed for the CircleCI cache key computation.
+PR Close #45147",No
+87,"build: update dependency @types/chrome to ^0.0.179 (#45201)
+PR Close #45201",No
+88,"ci: update aio payload size golden to reflect Angular update (#45117)
+Updates the AIO payload size golden to reflect the Angular
+update as proposed by Renovate (see previous commit).
+The main bundle got reduced and exceeded the threshold, so we needed
+to update the golden. As part of this, all other bundle metrics are
+updated even though not exceeding the threshold yet.
+PR Close #45117",Yes.
+89,"build: switch to karma web test rule from shared dev-infra (#45117)
+Switches the Karma web test rule from `@bazel/concatjs` to our
+wrapped/extended variant from the shared dev-infra code.
+One benefit is that we now get a `_debug` target for web tests where
+no browser is being launched and the action is kept alive. Allowing
+developers to conveniently connect a browser manually for debugging.
+Also works with iBazel for the manually connected browser.
+PR Close #45117",No
+90,"build: update angular (#45117)
+PR Close #45117",No
+91,"build: lock file maintenance (#45071)
+PR Close #45071",No
+92,"perf(core): only track LViews that are referenced in __ngContext__ (#45172)
+Follow-up to #45051 where every `LView` that was being created was tracked in the `TRACKED_LVIEWS` map. This isn't necessary, because we only need to track the view that have been referenced by an `__ngContext__`.
+PR Close #45172",No
+93,"refactor(router): Refactor errors in applyRedirects to use common throwError function (#45170)
+The implementation of `throwError` in `rxjs` is identical to what is
+done manually in the Router code.
+PR Close #45170",No
+94,"refactor(router): Update match result to be more explicit (#45170)
+The `lastChild` property in the match result is only used to compute the
+remaining segments (i.e. the ones which were not consumed). The updated
+type here makes it easier to use and more clear.
+PR Close #45170",No
+95,"docs: fix style guide example app included as routing (#45148)
+in the aio example apps page the style guide for documentation
+contributions is included in the Routing section instead of being
+in its own section, add a documentation section and include the example
+in that one
+PR Close #45148",Yes.
+96,"build: update all non-major dependencies (#45189)
+PR Close #45189",No
+97,"ci: allow Babel to be updated by Renovate (#44931)
+Automatic updating of Babel was disabled because there were build failures
+when using the latest version of Babel, but these have been resolved in
+#44931. This commit removes Babel packages from Renovate's ignored list
+to allow automatic updates again.
+PR Close #44931",Yes.
+98,"refactor(localize): update version of Babel (#44931)
+The `@angular/localize` package depends on a version of Babel that is two years
+old, so this commit updates to the latest version.
+Some changes were made to the linker and compliance tests to account for slight
+changes in source maps, along with a few code updates because of changes to
+the typings of Babel.
+PR Close #44931",Yes, the text describes the reason for the change as an update to the dependency on Babel.
+99,"ci: add permissions to current github action workflows (#45177)
+The currently recommended best practice for Github action workflows is to set top-level permissions to read only. And if the job uses the automatic `GITHUB_TOKEN`, fine-grained permissions for each job based on the job's requirements should also be added.
+All existing workflows in the repository now have top-level read only permission blocks.
+Only the `scorecard` workflow currently requires additional job level permissions and the minimum set of permissions were already present for the job.
+PR Close #45177",No
+100,"test(animations): Fix flaky animations e2e test (#45196)
+This adds a 300ms wait to the animations tests to ensure they are fully done animating before asserting.
+PR Close #45196",Yes, the reason for the change is described in the text.
+101,"fix(router): Fix type of Route.pathMatch to be more accurate (#45176)
+Route.pathMatch only allows `'full'|'prefix'` in reality. This commit
+adjusts the type to be more strict and also adds a migration to adjust
+existing code.
+resolves #37469
+BREAKING CHANGE:
+The type of `Route.pathMatch` is now more strict. Places that use
+`pathMatch` will likely need to be updated to have an explicit
+`Route`/`Routes` type so that TypeScript does not infer the type as
+`string`.
+PR Close #45176",Yes.
+102,"test(animations): add route animation delay to pages tests (#45144)
+PR #44550 introduced an animation for pages/tabs transitions in the
+animations example application, after such change intermittent e2e
+failures started to occur (see for example: #45083), add a delay to
+account for such animation to all the animations pages/tabs e2e tests so
+to fix the flakyness caused by the animation
+PR Close #45144",Yes.
+103,"refactor(http): change <script>'s ownerDocument in jsonp teardown (#36807)
+handler
+Cancel pending json handler by adopting its <script> element into
+another document
+(https://html.spec.whatwg.org/multipage/scripting.html#execute-the-script-block)
+This way the browser will prevent the script from being parsed and executed.
+Fixes #34818
+PR Close #36807",Yes.
+104,"fix(common): canceled JSONP requests won't throw console error with missing callback function (#36807)
+This commit fixes a use-case where unsubscribing from a JSONP request will result in ""Uncaught ReferenceError: ng_jsonp_callback_xy is not defined"",Yes. The commit fixes a use-case where unsubscribing from a JSONP request will result in an error being thrown.
+105,"thrown into console. Unsubscribing won't remove its associated callback function because the requested script will finish
+",No
+106,"loading anyway and will try to call the handler.
+",No
+107,"PR Close #34818
+",No
+108,"PR Close #36807"
+",No
+109,"fix(localize): avoid imports into `compiler-cli` package (#45180)
+The compiler-cli's declaration files are not necessarily compatible with web
+environments that use `@angular/localize`, and would inadvertently include
+`typescript` declaration files in any compilation unit that uses
+`@angular/localize` (which increases parsing time and memory usage during
+builds) using a default import that only type-checks when
+`allowSyntheticDefaultImports` is enabled.
+Fixes #45179
+PR Close #45180",Yes. The compiler-cli's declaration files are not necessarily compatible with web environments that use @angular/localize, and would inadvertently include typescript declaration files in any compilation unit that uses @angular/localize (which increases parsing time and memory usage during builds) using a default import that only type-checks when allowSyntheticDefaultImports is enabled.
+110,"build: update github/codeql-action action to v1.1.3 (#45188)
+PR Close #45188",No
+111,"docs: remove activatedRouteData backward accesses in aio guides (#45140)
+developers should not access the router-outlet directive in their
+template before defining a template variable for it, such
+implementation is present in a couple of aio guides, fix such guides
+so that they show the more correct way of accessing the outlet's data
+resolves #36173
+PR Close #45140",Yes.
+112,"ci: use renovate Github Action tag version pinning (#45178)
+Renovate supports using hashed version pinning for individual Github actions while still following SemVer-based tags.
+All workflow actions external to the Angular organization now leverage this support to ensure both that stable versions of the actions are used and that the actions are pinned to a hashed version of the tag.
+PR Close #45178",No
+113,"release: cut the v14.0.0-next.4 release (#45184)
+",No
+114,"docs: release notes for the v13.2.4 release (#45183)
+",No
+115,"test(common): remove initial navigation since it may redirect to debug.html (#45171)
+The `should unregister a URL change listener` may fail in Firefox randomly because of
+the `initialNavigation` being set to `true`. This may navigate to `/debug.html` and the
+router throws an error `Cannot match any routes: 'debug.html'`.
+PR Close #45171",Yes.
+116,"docs: fix test description to match code example (#45101)
+PR Close #45101",No
+117,"fix(animations): allow animations with unsupported CSS properties (#44729)
+currently animations with unsupported CSS properties cause a hard error
+and the crash of the animation itself, instead of this behaviour just
+ignore such properties and provide a warning for the developer in
+the console (only in dev mode)
+this change also introduces a general way to present warnings
+in the animations code
+resolves #23195
+PR Close #44729",Yes.
+118,"feat(zone.js): update electron patch to support electron/remote 14 (#45073)
+Close #43346
+From electron 14, the `CallbacksRegistry` is moved to `@electron/remote` package,
+so all `remote` call between `main` process and `renderer` process is
+not being patched since the new version of electron released.
+Also `CallbacksRegistry` is not exported outside, so this commit make a
+`hack` patch to load `CallbacksRegistry` from
+`@electron/remote/dist/src/renderer/callbacks-registry` for patching.
+PR Close #45073",No
+119,"fix(docs-infra): removed duplicated style in aio examples (#45157)
+Removed duplicated style in aio example scss files.
+PR Close #45157",Yes, the reason for the change is described in the text.
+120,"refactor(animations): make `AnimationDriver.getParentElement` required (#45114)
+This change is a follow up to #45057 to make `AnimationDriver.getParentElement`
+a required method, which allows removing the slow path for the animation
+namespace insertion logic.
+BREAKING CHANGE:
+The `AnimationDriver.getParentElement` method has become required, so any
+implementors of this interface are now required to provide an implementation
+for this method. This breakage is unlikely to affect application developers,
+as `AnimationDriver` is not expected to be implemented in user code.
+PR Close #45114",Yes.
+121,"build: update ossf/scorecard-action commit hash to 3662744 (#45162)
+PR Close #45162",No
+122,"refactor(compiler): remove usages of deprecated AST creation functions (#45134)
+Proactively replaces our usages of the deprecated `ts.create*` methods in favor of using `ts.factory.create*` so that we're not surprised when the TS removes them in the future. Also accounts for some cases where the signature had changed.
+PR Close #45134",Yes. The text describes the reason for the change as being proactive in replacing deprecated functions so that the TS isn't surprised in the future when they're removed.
+123,"fix(compiler-cli): Support resolve animation name from the DTS (#45107)
+Before this, the compiler resolves the value in the DTS as dynamic.
+If the `trigger` is imported from `@angular/animations`, this PR will
+use FFR to simulate the actual implementation in JS and extracts the
+animation name.
+PR Close #45107",No
+124,"ci: update SHA for components-repo-unit-tests job to fix flakiness (#45166)
+This commit attemps to fix the flakiness that shows up sometimes
+in the `components-repo-unit-tests` job. See:
+https://app.circleci.com/pipelines/github/angular/angular/43024/workflows/fa9bc546-179a-4215-a7f1-db123efa0fa4/jobs/1126909
+We updated Firefox/Chromium in dev-infra, hoping to fix this non-reproducable
+flakiness (also checked memory/CPU consumption in the test). So far it looks like
+the update helped in the COMP repo so we should try it here as well.
+PR Close #45166",Yes.
+125,"build: update scorecard action dependencies to 040feef (#45135)
+PR Close #45135",No
+126,"docs: replace deprecated `SwUpdate#available/activated` with new API (#44858)
+Since `SwUpdate#available` and `SwUpdate#activated` are deprecated, the new way should be included in the docs instead of the deprecated one.
+docs: added missing imports
+added imports for VersionReadyEvent, filter, and map
+docs: updated service-worker-communications.md
+rewrite of SwUpdate service to describe the new versionUpdates property
+docs: Apply suggestions from code review
+Co-authored-by: George Kalpakas <kalpakas.g@gmail.com>
+docs: added events
+added VERSION_DETECTED and VERSION_INSTALLATION_FAILED
+docs: Apply suggestions from code review
+Co-authored-by: George Kalpakas <kalpakas.g@gmail.com>
+PR Close #44858",Yes.
+127,"perf(core): make `LOCALE_ID` and other tokens from `ApplicationModule` tree-shakable (#45102)
+The `ApplicationModule` module has a number of tokens declared as non-tree-shakable providers. This commit updates them to make tree-shakable.
+PR Close #45102",No
+128,"perf(core): make `Compiler`, `ApplicationRef` and `ApplicationInitStatus` tree-shakable (#45102)
+The `Compiler`, `ApplicationRef` and `ApplicationInitStatus` classes are registered as non-tree-shakable providers in the `ApplicationModule`. This commit converts them to the tree-shakable providers instead.
+PR Close #45102",No
+129,"refactor(core): drop unused `SCHEDULER` provider (#45102)
+The `SCHEDULER` provider was used previously when both ViewEngine and Ivy code was present. After some prior refactoring, all references to the `SCHEDULER` token were removed, but the token itself remains present in the `ApplicationModule`, which makes it non-tree-shakable.
+This commit removes the `SCHEDULER` token as unused.
+PR Close #45102",No
+130,"fix(docs-infra): make hamburger menu non focusable when not visible (#45067)
+the header hamburger menu gets removed from the page by moving it
+outside the screen, it can however still be accessed via keyboard
+navigation, add a visibility hidden to the element to prevent such
+behavior
+PR Close #45067",Yes.
+131,"docs(animations): remove query call in animations example (#45126)
+the query call used for the transition between the Home and About tabs
+doesn't work as intented since it doesn't find any matching element,
+remove such quering since it is not needed
+PR Close #45126",No
+132,"docs(forms): remove `type` duplicate from `button` in reactive-forms example (#45124)
+PR Close #45124",No
+133,"build: update dependency io_bazel_rules_sass to v1.49.8 (#45128)
+PR Close #45128",No
+134,"docs: solve the problem with Dynamic Component guide example (#45123)
+solve ExpressionChangedAfterItHasBeenChecked error by changing the angular lifecycle hook ngAfterViewInit to ngOnInit
+resolves angular#44925
+PR Close #45123",Yes, the text describes the reason for the change as solving an error with the ExpressionChangedAfterItHasBeenChecked.
+135,"docs: fix test examples to use withContext (#45100)
+PR Close #45100",No
+136,"perf(core): avoid storing LView in __ngContext__ (#45051)
+These changes combine #41358 and #41894.
+Currently we save a reference to an `LView` on most DOM nodes created by Angular either by saving the `LView` directly in the `__ngContext__` or by saving the `LContext` which has a reference to the `LView`. This can be a problem if the DOM node is retained in memory, because the `LView` has references to all of the child nodes of the view, as well as other internal data structures.
+Previously we tried to resolve the issue by clearing the `__ngContext__` when a node is removed (see https://github.com/angular/angular/pull/36011), but we decided not to proceeed, because it can slow down destruction due to a megamorphic write.
+These changes aim to address the issue while reducing the performance impact by assigning a unique ID when an `LView` is created and adding it to `__ngContext__`. All active views are tracked in a map where their unique ID is used as the key. We don't need to worry about leaks within that map,  because `LView`s are an internal data structure and we have complete control over when they are  created and destroyed.
+Fixes #41047.
+PR Close #45051",Yes.
+137,"release: cut the v14.0.0-next.3 release
+",No
+138,"docs: release notes for the v13.2.3 release
+",No
+139,"build: update scorecard action dependencies to c4e058a (#45036)
+PR Close #45036",No
+140,"test(zone.js): add integration test for zone.js Mocha patch (#45047)
+Add integration test for `Mocha` patch from `zone.js` to verify the
+issue #42384 is fixed
+PR Close #45047",No
+141,"fix(zone.js): patch global instead of Mocha object (#45047)
+Close #42834
+In the new version fo Mocha, all global test functions are from `global`
+object instead of `Mocha` object. Adn the current `zone.js` Mocha
+patch's logic looks like this.
+```
+global.describe = Mocha.describe = function() {
+return originalMochaDescribe.apply(this, arguments);
+}
+```
+and `originalMochaDescribe` is the unpathced Mocha implementation
+looks like this
+```
+function describe() {
+return context.describe(...);
+}
+```
+And the `context` will finally delegate to `global.describe()`,
+so the current `zone.js` patch causes infinite loop.
+This commit will not patch function of `Mocha` object any longer.
+PR Close #45047",No
+142,"build: update all non-major dependencies (#45037)
+PR Close #45037",No
+143,"perf(animations): improve algorithm to balance animation namespaces (#45057)
+The prior approach would consider all existing namespaces from back to front
+to find the one that's the closest ancestor for a given host element. An
+expensive `contains` operation was used which needed to traverse all the
+way up the document root _for each existing namespace_. This commit implements
+an optimization where the closest namespace is found by traversing up from
+the host element, avoiding repeated DOM traversal.
+Closes #45055
+PR Close #45057",Yes. The reason for the change is to improve the algorithm to balance animation namespaces.
+144,"build: update .pullapprove.yml (#45061)
+Remove errant extra space in fw-compiler glob matcher.
+PR Close #45061",No
+145,"build: update angular (#45061)
+PR Close #45061",No
+146,"docs: clarify install of build schematics deps (#45104)
+PR Close #45104",No
+147,"docs: fix typos (#45103)
+correct word 'questionaire' to 'questionnaire' in Building dynamic forms guide
+PR Close #45103",Yes, there is a reason in the text for the described change.
+148,"docs: fix case types guide (#45095)
+fix case types guide text for more detailed guidance
+PR Close #45095",Yes, the reason for the change is described in the text.
+149,"docs: remove duplicate link (#45095)
+The link to complete schema, is exactly the same as the one above
+PR Close #45095",Yes, the reason given in the text is that the two links are duplicates.
+150,"perf(core): make `IterableDiffers` and `KeyValueDiffers` tree-shakable (#45094)
+This commit removed references to the `IterableDiffers` and `KeyValueDiffers` classes from the `ApplicationModule`, which effectively make them tree-shakable. Both classes have `prov` static field with the right setup, so they'll be properly initialized when referenced.
+PR Close #45094",No
+151,"docs(localize): fix angular.json syntax error about i18n (#45048)
+In chapter internationlization at section ""Deploy multiple locales"" the
+syntax for angular.json is wrong.
+Close #45032
+PR Close #45048",Yes.
+152,"docs: fix grammatical error (#45092)
+'an' is replaced with 'a' for the adjective 'straightforward'
+resolves angular#45075
+PR Close #45092",Yes, there is a reason in the text for the described change.
+153,"test(animations): Fix e2e intermittent failures (#45083)
+This addresses a problem with animations e2e tests that were failing intermittently due to a missing timeout value
+PR Close #45083",Yes, the reason for the change is given in the text.
+154,"docs: extend the LTS for ngUpgrade with a year (#45078)
+PR Close #45078",No
+155,"docs(animations): clarify information about query with `:leave` (#45059)
+add information to the query api docs clarifying that elements with
+a trigger can be queried via `:leave` when their parent is leaving
+this exception is potentially something to be changed (see #45058)
+but for the time being the docs can be updated to make the users
+aware of such behavior
+PR Close #45059",Yes.
+156,"docs: change dependencies to devDependencies in document  (#45053)
+after installing @angular/localize package, it will be placed in devDependencies object
+PR Close #45053",Yes.
+157,"feat(core): move ANIMATION_MODULE_TYPE injection token into core (#44970)
+Moves the `ANIMATION_MODULE_TYPE` DI token into core so that libraries like Material don't have to introduce a dependency to animations only to figure out whether animations are disabled.
+PR Close #44970",Yes.
+158,"fix(common): cleanup URL change listeners when the root view is removed (#44901)
+The `Location` creates the `_urlChangeSubscription` when the `onUrlChange` is called for the first time.
+The subscription `next` function captures `this` and prevents the `Location` from being garbage collected
+when the root view is removed.
+PR Close #44901",No
+159,"fix(docs-infra): fix broken link in Glossary (#45068)
+Fix broken link in Glossary document
+PR Close #45068",Yes, the reason for the change is given in the text.
+160,"docs(animations): improve aio animations guides info around :enter/:leave (#44550)
+improve the aio animations guide information around elements entering and
+leaving, this includes, querying them, their transitions and also improvements
+to the animations guide live examples
+PR Close #44550",Yes
+161,"build(docs-infra): upgrade cli command docs sources to ac175ff10 (#45065)
+Updating [angular#master](https://github.com/angular/angular/tree/master) from
+[cli-builds#master](https://github.com/angular/cli-builds/tree/master).
+##
+Relevant changes in
+[commit range](https://github.com/angular/cli-builds/compare/be7c79b5a...ac175ff10):
+**Modified**
+- help/extract-i18n.json
+PR Close #45065",No
+162,"refactor(docs-infra): replace deprecated toPromise usages (#45045)
+This commit replaces deprecated `Observable.toPromise` usages
+with `lastValueFrom`.
+PR Close #45045",Yes.
+163,"refactor(docs-infra): replace deprecated subscribe usages (#45046)
+This commit replaces deprecated `Observable.subscribe` usages.
+PR Close #45046",Yes.
+164,"build: update angular (#45049)
+PR Close #45049",No
+165,"build: update angular (#45011)
+PR Close #45011",No
+166,"refactor(http): deprecated symbol used (#44985)
+Support for passing an error value to ""throwError"" method will be removed in v8 of rxjs. More info at https://rxjs.dev/api/index/function/throwError#throwerror
+PR Close #44985",No
+167,"perf(animations): made errors in the animations package tree shakeable (#45004)
+This moves all the error strings into exported functions that can be tree shaken away.
+PR Close #45004",No
+168,"build: update .pullapprove.yml (#45007)
+Add aleksanderbodurri@ to the list of require minimum reviews to allow for
+approvals to count for that minimum requirement as well.
+PR Close #45007",Yes.
+169,"docs: improve try-it-now card focus area (#45002)
+the focus/interactable area for the try-it-now card is wider than
+necessary, reduce such width to the appropriate size
+PR Close #45002",No
+170,"docs: remove aikidave@ from contributors.json as part of offboarding (#45006)
+PR Close #45006",No
+171,"build: update .pullapprove.yml (#45006)
+Remove aikidave@ from pull approve config as part of offboarding.
+PR Close #45006",Yes, the reason for the change is given in the text.
+172,"build: update scorecard action dependencies to 7f9dca2 (#45026)
+PR Close #45026",No
+173,"fix(zone.js): fix several test cases which trigger `done()` multiple times (#45025)
+Several test cases trigger the `done()` multiple times and cause warning
+from jasmine. This commit fixes these test cases.
+PR Close #45025",Yes. The reason is that several test cases were triggering `done()` multiple times, causing warnings from jasmine.
+174,"fix(zone.js): async-test should only call done once (#45025)
+`AsyncTestZoneSpec` triggers jasmine `done()` function multiple times
+and causes warning
+```
+An asynchronous function called its 'done' callback more than once. This is a bug in the spec, beforeAll, beforeEach, afterAll, or afterEach function in question. This will be treated as an error in a future version. See<https://jasmine.github.io/tutorials/upgrading_to_Jasmine_4.0#deprecations-due-to-calling-done-multiple-times> for more information
+```
+The reproduce case will be running some `Zone.run()` inside
+`waitForAsync()`.
+```
+it('multiple done', waitForAsync(() => {
+Zone.current.run(() => {});
+Zone.current.run(() => {});
+}));
+```
+The reason the `done()` is called in the `onInvoke()` hook is to handle
+the case that the testBody is totally sync, but we should only do this
+check for the entry function not for all `Zone.run()` scenario.
+Another issue is if we run nested zone inside `waitForAsync()`, the
+`onHasTask()` hook will be triggered multiple times, and cause `done()`
+be triggered multiple times, so we need to only trigger the `done()`
+when the zone is `AsyncTestZone`.
+PR Close #45025",Yes.
+175,"build: lock file maintenance (#44993)
+PR Close #44993",No
+176,"build: update dependency google-closure-compiler to v20220202 (#45013)
+PR Close #45013",No
+177,"build: update scorecard action dependencies to 230611d (#45012)
+PR Close #45012",No
+178,"docs(forms): improve email validator directive docs (#45014)
+PR Close #45014",No
+179,"fix(core): `ViewContainerRef.createComponent` should consult module injector when custom one is provided (#44966)
+Before Ivy, it was only possible to call the `ViewContainerRef.createComponent` function with the ComponentFactory as the first argument. An instance of a `ComponentFactory` resolved via `ComponentFactoryResolver` contained a reference to an `NgModule` where the component is declared. As a result, the component maintained a DI connection with the module injector tree (by retrieving an instance of `NgModuleRef` internally), even when the custom injector was provided (we try to find a token in a custom injector first and consult module injector after that).
+With Ivy, we expanded the `ViewContainerRef.createComponent` function API to support direct references to the Component classes without going through the factory resolution step. As a result, there was no connection to the NgModule that declares the component. Thus, if you provide a custom injector, this is the only injector that is taken into account.
+This commit updates the logic for the factory-less case to try retrieving an instance of an `NgModuleRef` using the DI tree which `ViewContainerRef` belongs to. The `NgModuleRef` instance is then used to get a hold of a module injector tree. This brings the factory-less and factory-based logic to more consistent state.
+Closes #44897.
+PR Close #44966",No
+180,"perf(compiler): chain element start/end instructions (#44994)
+In templates with several levels of nested nodes, it's common for several `elementStart`/`elementEnd` instructions to show up in a row which can be optimized away.
+These changes add chaining support for `elementStart`, `elementEnd`, `elementContainerStart` and `elementContainerEnd` to shave off some bytes when possible.
+PR Close #44994",Yes. The reason for the change is to optimize away elementStart/elementEnd instructions in templates with several levels of nested nodes.
+181,"refactor(compiler): rework instruction generation logic for improved flexibility (#44994)
+Previously the logic for generating chained instructions was somewhat rigid, because we had to collect all of the calls ahead of time and then call one of the chained instruction helpers. This doesn't work for something like `elementStart`, because we have to descend into other elements that could add to the chain.
+These changes refactor the code so that we collect the list of instructions in a flat array and we do the chaining only once at the end when we have the entire instruction set for the code block.
+The new approach has the advantage of being (almost) entirely configuration-based via the `CHAINABLE_INSTRUCTIONS` array and being more flexible in allowing us to chain instructions that span across elements.
+PR Close #44994",Yes.
+182,"docs(common): mark lifecycle methods as nodoc (#45017)
+PR Close #45017",No
+183,"docs: release notes for the v13.2.2 release (#45019)
+PR Close #45019",No
+184,"docs: fix command to clear cache on Windows (#44988)
+PR Close #44988",No
+185,"refactor: one more CHANGELOG fixup. (#45010)
+PR Close #45010",No
+186,"refactor: CHANGELOG is poorly formatted for most recent version. (#45009)
+PR Close #45009",No
+187,"release: cut the v14.0.0-next.2 release (#45008)
+PR Close #45008",No
+188,"refactor(core): drop all `.ngfactory` and `.ngsummary` imports (#44957)
+This commit updates various places in the repo (mostly tests/examples) to drop all `.ngfactory` and `.ngsummary` imports as they are no longer needed in Ivy.
+PR Close #44957",No
+189,"docs: add Cost-Effective Angular Testing (#44969)
+to resources
+PR Close #44969",No
+190,"fix(forms): incorrectly keeping track of ngModel with ngFor inside a form (#40459)
+When an `NgModel` is created within a `form`, it receives an `NgControl` based on its `name`, but
+the control doesn't get swapped out if the name changes. This can lead to problems if the `NgModel`
+is part of an `ngFor`, because the name can change based on its position in the list and a new
+control can be defined with the same name, leading us to having multiple directives pointing to
+the same control. For example, if we start off with a list like :
+```
+[0, 1, 2]; -> [NgModel(0), NgModel(1), NgModel(2)]
+```
+Then we remove the second item:
+```
+[0, 2]; -> [NgModel(0), NgModel(2)]
+```
+And finally, if we decide to add an item to the end of the list, we'll already have a control for
+index 2, causing the list to look like:
+```
+[0, 2, 3]; -> [NgModel(0), NgModel(2), NgModel(2)]
+```
+These changes fix the issue by removing the old control when the `name` of the directive changes.
+Fixes #38465.
+Fixes #37920.
+PR Close #40459",No
+191,"build: update dependency @types/chrome to ^0.0.178 (#44982)
+PR Close #44982",No
+192,"refactor(forms): update `PatternValidator` to inherit `AbstractValidatorDirective` (#44887)
+This commit updates the `PatternValidator` class to inherit `AbstractValidatorDirective` to make it conistent with other validators.
+Closes angular#42267
+PR Close #44887",Yes.
+193,"fix(core): input coercion (#42803)
+BREAKING CHANGE: Forms [email] input coercion
+Forms [email] input value will be considered as true if it is defined with any value rather
+than false and 'false'.
+PR Close #42803",Yes, the change is described in the text.
+194,"fix(compiler): allow banana-in-a-box bindings to end with non-null assertion (#37809)
+For two-way-bindings that use the banana-in-a-box syntax, the compiler
+synthesizes an event assignment expression from the primary expression.
+It is valid for the primary expression to be terminated by the non-null
+operator, however naive string substitution is used for the synthesized
+expression, such that the `!` would immediately precede the `=` token,
+resulting in the valid `!=` operator token. The expression would still
+parse correctly but it doesn't implement the proper semantics, resulting
+in incorrect runtime behavior.
+Changing the expression substitution to force a space between the
+primary expression and the assignment avoids this mistake, but it
+uncovers a new issue. The grammar does not allow for the LHS of an
+assignment to be the non-null operator, so the synthesized expression
+would fail to parse. To alleviate this, the synthesized expression is
+parsed with a special parser flag to allow for this syntax.
+Fixes #36551
+PR Close #37809",Yes.
+195,"ci: group all scorecard action dependencies (#44998)
+With this change we group all the scorecard action dependencies so that Renovate opens a single PR.
+PR Close #44998",No
+196,"docs(docs-infra): fix cosidered typo (#44987)
+fix the ""cosidered"" typo (which should be ""considered"")
+PR Close #44987",Yes, the reason for the change is to fix a typo.
+197,"docs(router): clarify execution order for resolvers (#44995)
+Fixes #44971
+PR Close #44995",No
+198,"build: update angular (#44981)
+PR Close #44981",No
+199,"perf(http): remove IE special status handling (#44354)
+revert the condition as dev only
+PR Close #44354",No
+200,"refactor(core): cleanup `DebugNode` and `DebugElement` implementations (#44270)
+This commit updates `DebugNode` and `DebugElement` implementaitons to cleanup ViewEngine removal artifacts. There is no need for a separate interface and implementation class, so we can combine them now. This comment also gets rid of `R3` suffixes (denoting Ivy) in helper methods.
+PR Close #44270",No
+201,"feat(common): support years greater than 9999 (#43622)
+Since According to ISO8601 the Year is minimum of 4 digits, we should support years greater than 9999. (This is similar to the change in input.js: https://github.com/LeeAdcock/angular.js/commit/e157d6fa69fecbee766e109c6b452f629bc00c8a)
+Changed /^(\d{4}) to /^(\d{4,})
+PR Close #43622",Yes.
+202,"docs: correct typo (#44793)
+Service worker card contains typo 'us' when it should be 'use.'
+PR Close #44793",Yes, there is a reason in the text for the described change.
+203,"refactor(dev-infra): convert nullish coalescing operator to plain javascript (#44968)
+low version nodejs doesn't support nullish coalescing operator very well
+PR Close #44968",Yes, the reason given in the text is that "low version nodejs doesn't support nullish coalescing operator very well."
+204,"fix(forms): Correct empty validator to handle objects with a property `length: 0`. (#33729)
+Form required validator should not reject objects that contain a length attribute set to zero.
+Fixes #30718.
+Co-authored-by: Dylan Hunn <dylhunn@gmail.com>
+BREAKING CHANGE: objects with a length key set to zero will no longer validate as empty.
+This is technically a breaking change, since objects with a key `length` and value `0` will no longer validate as empty. This is a very minor change, and any reliance on this behavior is probably a bug anyway.
+PR Close #33729",Yes.
+205,"fix(platform-browser): Make transfer state key typesafe. (#23020)
+Make `StateKey` typesafe by narrowing the type.
+BREAKING CHANGE: This may break invalid calls to `TransferState` methods.
+This tightens parameter types of `TransferState` usage, and is a minor breaking change which may reveal existing problematic calls.
+PR Close #23020",Yes, there is a reason in the text for the described change.
+206,"fix(router): Update `Navigation#initialUrl` to match documentation and reality (#43863)
+BREAKING CHANGE:
+* The type of `initialUrl` is set to `string|UrlTree` but in reality,
+the `Router` only sets it to a value that will always be `UrlTree`
+* `initialUrl` is documented as ""The target URL passed into the
+`Router#navigateByUrl()` call before navigation"" but the value
+actually gets set to something completely different. It's set to the
+current internal `UrlTree` of the Router at the time navigation
+occurs.
+With this change, there is no exact replacement for the old value of
+`initialUrl` because it was enver intended to be exposed.
+`Router.url` is likely the best replacement for this.
+In more specific use-cases, tracking the `finalUrl` between successful
+navigations can also be used as a replacement.
+PR Close #43863",No
+207,"fix(animations): implement missing transition delay (#44799)
+fix the transition function accepting a delay in its AnimationOptions
+input but not acting on it by adding such delay to all the transition's
+timelines
+(note: adding the delay to all the transition's timelines is the only
+way to accomplish this since transitions have their own logic and do not
+have their own timelines like other animation functions have)
+resolves #29762
+PR Close #44799",Yes, the reason for the change is described in the text.
+208,"build: exclude devtools scope from generated changelogs (#44964)
+The devtools scoped commits are not included in the repository's CHANGELOG.md
+file as these commits are not references areas which are included in the
+primary released artifacts.
+PR Close #44964",No
+209,"docs: update input-output-diagram.svg (#39900)
+""deleteRequest"" is the *event* (not target) and ""crossOffItem"" is the *handler* of the event (not ""source"").
+PR Close #39900",No
+210,"build: setup OpenSSF Scorecard (#44960)
+Set up OpenSSF Scorecard to begin tracking security metrics within the repo.
+PR Close #44960",No
+211,"docs: add po-ui to UI Components resources (#43689)
+PR Close #43689",No
+212,"refactor(docs-infra): add types to all the aio examples buttons (#44557)
+add types to all the buttons in the angular.io examples to encourage
+the best practice of always including a type per button (regardless
+to whether it is in a form or now)
+PR Close #44557",Yes
+213,"refactor(docs-infra): remove outdated comments regarding CustomEvent (#44557)
+remove the comments present in aio examples saying that for older
+browsers such as IE CustomEvent could be necessary (as the the Event
+constructor could be not available)
+such comments are no longer necessary/relevant since the Event constructor
+is available for all the supported browsers
+PR Close #44557",Yes.
+214,"refactor(docs-infra): fix template eslint issues in aio examples (#44557)
+the aio examples have various eslint issues regarding template rules, those
+are currently turned off and TODO comments have been added to them in the
+examples eslintrc, fix such issues and remove the respective TODO comments
+this also includes examples refactoring to use buttons for better accessibility,
+this change tries to make the smallest amound of changes to the examples' behaviors
+and designs/UI
+PR Close #44557",Yes
+215,"docs: describe your change... (#42899)
+in the last Lines ViewEncapsulationComponent should be EmulatedEncapsulationComponent as there is no such  ViewEncapsulationComponent  exists in this example where as
+ShadowDomEncapsulationComponent  contains NoEncapsulationComponent and EmulatedEncapsulationComponent
+PR Close #42899",No
+216,"docs: improve punctuation in animation sequence summary (#44567)
+slightly improve the punctuation in the animation sequence summary present
+in the complex animation sequences guide
+PR Close #44567",Yes.
+217,"docs(animations): add section about animating reordering list items (#44567)
+add a section regarding reordering list items in the complex animation
+sequences guide to help developers rememeber to use a `TrackByFunction`
+whenever they are animating `*ngFor` list items which change their
+ordering
+as suggested here: https://github.com/angular/angular/issues/42750#issuecomment-979127165
+relates to issue #28040 and #42750
+PR Close #44567",Yes.
+218,"feat(router): set stricter type for Route.title (#44939)
+This commit changes the type of `Route.title` property from
+`string | unknown` to `string | Type<Resolve<string>>`.
+Fixes #44936
+PR Close #44939",Yes, the reason for the change is given in the text.
+219,"refactor(router): move types from config and interfaces to models (#44939)
+This commit moves all types from `config.ts` and `interfaces.ts`
+to `models.ts` to fix circular dependency.
+PR Close #44939",Yes.
+220,"docs: remove item from changelog that does not work (#44961)
+After trying this feature, it turns out the approach does not work and we
+will be reverting the commits. Note that the feature _never_ worked so it's
+not a breaking change.
+PR Close #44961",No
+221,"build: update pullapprove (#44962)
+Enable reviews for aleksanderbodurri again now that membership and review
+assignments have been sorted.
+PR Close #44962",No
+222,"feat(compiler-cli): initial implementation of standalone components (#44812)
+This commit implements the first phase of standalone components in the Angular
+compiler. This mainly includes the scoping rules for standalone components
+(`@Component({imports})`).
+Significant functionality from the design is _not_ implemented by this PR,
+including:
+* imports of standalone components into NgModules.
+* the provider aspect of standalone components
+Future commits will address these issues, as we proceed with the design of
+this feature.
+PR Close #44812",No
+223,"refactor(compiler-cli): extract template scoping logic into a function (#44812)
+In preparation for standalone components, this commit moves the logic which
+determines the potential set of components/directives/pipes in a template into
+a separate function. This is a simple but crucial refactoring that breaks the
+assumption that all template scopes come from NgModules.
+PR Close #44812",No
+224,"refactor(compiler-cli): split the 'annotations' package into sub-packages (#44812)
+Previously each `DecoratorHandler` in the compiler was stored in a single file
+in the 'annotations' package. The `ComponentDecoratorHandler` in particular was
+several thousand lines long.
+Prior to implementing the new standalone functionality for components, this
+commit refactors 'annotations' to split these large files into their own build
+targets with multiple separate files. This should make the implementation of
+standalone significantly cleaner.
+PR Close #44812",Yes.
+225,"docs: remove duplicate closing tags in View Encapsulation file (#44958)
+PR Close #44958",No
+226,"docs: remove old commits from CHANGELOG.md (#44956)
+This commit removes old DevTools-related commits that ended up in the CHANGELOG.md since the DevTools repo was merged into angular/angular one.
+Closes #44953.
+PR Close #44956",No
+227,"refactor(compiler): add `@suppress {msgDescriptions}` if no description is present on an i18n message (#44787)
+Refs http://b/214103351.
+This happens if a user writes `<span i18n>Message</span>`. This is accepted as an internationalized message, but without a description. JSCompiler will throw an error in this situation because descriptions are generally required. Now, the Angular compiler will generate a suppression annotation so JSCompiler allows the syntax. This will ease an internal migration to JSCompiler-based i18n.
+PR Close #44787",Yes.
+228,"fix(devtools): change links to the angular repo (#44885)
+Use proper reporting and source code links in the DevTools UI.
+PR Close #44885",Yes, the reason for the change is described in the text.
+229,"build: update pullapprove (#44954)
+Update pullapprove to temporarily remove aleksanderbodurri from pullapprove configuration
+while we correct the membership and review assignment's for the account.
+PR Close #44954",Yes, the reason for the change is given in the text.
+230,"fix(upgrade): Do not trigger duplicate navigation events from Angular Router (#43441)
+This code mimics behavior that Google Analytics has been using to
+prevent duplicate navigations. They set up their own `HybridRoutingService`
+location sync to avoid duplicate navigations that came from the Angular
+router. This would happen because the Angular router would trigger a
+navigation, which would then get picked up by the `$locationShim`, which
+would trigger a `$locationChangeStart`, which would then be picked up by
+the `setUpLocationSync` watcher here, which would again trigger a
+navigation in the Angular Router.
+All of this can be prevented by checking if the `navigationId` exists on
+the history state object. This property is added by the Angular router
+during navigations.
+fixes #21610
+PR Close #43441",Yes.
+231,"test(upgrade): update router upgrade tests to use fewer mocks (#43441)
+This updates the router upgrade tests to use less mocked behavior. The
+test upgrade location module is copied from the one that's used in the
+common package. This update to the tests verifies more real behavior of
+the upgrade module.
+PR Close #43441",Yes.
+232,"fix(platform-browser): do not run change detection when loading Hammer (#44921)
+The Hammer.JS might be loaded asynchronously if the `HAMMER_LOADER` token is provided.
+Its loading causes additional change detection cycles when the script `load` event is fired
+and the `import()` promise resolves. Its loading doesn't have to require Angular running `tick()`
+since the Hammer instance is created outside of the Angular zone anyway.
+BREAKING CHANGE:
+This change may cause a breaking change in unit tests that are implicitly depending on a specific
+number and sequence of change detections in order for their assertions to pass.
+PR Close #44921",No
+233,"docs: remove banner after survey expiration (#44949)
+The survey is now over. We can remove the banner.
+PR Close #44949",Yes. The survey is over and they can remove the banner.
+234,"release: cut the v14.0.0-next.1 release (#44951)
+",No
+235,"docs: release notes for the v13.2.1 release (#44950)
+",No
+236,"build(docs-infra): upgrade cli command docs sources to be7c79b5a (#44942)
+Updating [angular#master](https://github.com/angular/angular/tree/master) from
+[cli-builds#master](https://github.com/angular/cli-builds/tree/master).
+##
+Relevant changes in
+[commit range](https://github.com/angular/cli-builds/compare/db5e7c82e...be7c79b5a):
+**Modified**
+- help/build.json
+- help/test.json
+PR Close #44942",No
+237,"fix(forms): Update the typed forms migration to use FormArray<T> instead of FormArray<T[]>. (#44933)
+Previously, `FormArray` accepted an array generic. Now it accepts the element type, so the migration must be update accordingly.
+PR Close #44933",Yes, the reason for the change is described in the text.
+238,"docs: update the survey expiration date (#44938)
+Extend with a few more days since the survey is still open.
+PR Close #44938",Yes, the survey is still open.
+239,"fix(compiler-cli): ensure casing of logical paths is preserved (#44798)
+The logical filesystem would store a cached result based on the canonical path,
+where the cached value contains the physical path that was originally provided.
+This meant that other physical paths with an identical canonical path would use
+a cached result derived from another physical path.
+This inconsistency is not known to result in actual issues but is primarily
+being made as a performance improvement, as using the provided physical paths
+as cache key avoids the need to canonicalize the path if its result is already
+cached.
+PR Close #44798",No
+240,"refactor(compiler-cli): use relative imports into dts files as fallback in type-check files (#44798)
+The generated imports should normally use module specifiers that are valid for
+use in production code, where arbitrary relative imports into e.g. node_modules
+are not allowed. For template type-checking code it is however acceptable to
+use relative imports, as such files are never emitted to JS code. It is
+desirable to allow a filesystem relative import as fallback if an import would
+otherwise fail to be generated, as doing so allows fewer situations from
+needing an inline type constructor.
+PR Close #44798",No
+241,"refactor(compiler): remove ViewEngine identifiers (#44676)
+This commit removes the leftover `Identifiers` class that was used in the
+ViewEngine compiler. The remaining usages of the `inlineInterpolate` and
+`interpolate` instructions were refactored to make use of an
+`InterpolationExpression` output expression to capture the argument list of an
+interpolation expression. An attempt was made to refactor this further by
+converting to the desired interpolation instruction immediately, but some
+downstream consumers are designed in a way where the argument list itself is
+needed, e.g. as other arguments need to be prepended/appended.
+PR Close #44676",No
+242,"docs(router): use Resolve interface for custom title resolver (#44934)
+PR Close #44934",No
+243,"build: fix test for useUnknownInCatch (#44935)
+CI ran before the change to the tsconfig file
+PR Close #44935",No
+244,"docs(router): provide better typing for resolver example (#44932)
+PR Close #44932",No
+245,"fix(common): include query parameters for open HTTP requests in `verify` (#44917)
+When `HttpTestingController.verify` is used to verify that there are not open,
+unexpected requests it would throw an error with the method and URL of all pending
+requests, excluding the query parameters. This is confusing, as e.g. `expectOne`
+matches a URL including its query parameters and `expectOne` does include the
+query parameters when it reports when no request could be matched.
+This commit changes the error that is reported by `verify` to include the query
+parameters.
+Closes #19974
+PR Close #44917",No
+246,"fix(devtools): highlighter should only show the hovered component's name (#44863)
+The used children property on a HTMLCollection does not contain text elements. Because of this, the highlighter overlay text never got fully cleared.
+PR Close #44863",No
+247,"docs: update devtools docs, and add to the list of available commit scope list (#44863)
+PR Close #44863",No
+248,"feat(common): support NgModule as an input to the NgComponentOutlet (#44815)
+This commit updates the logic of the `NgComponentOutlet` class to allow passing an `NgModule` as an input instead of passing an `NgModule` factory.
+DEPRECATED:
+The `ngModuleFactory` input of the `NgComponentOutlet` directive is deprecated in favor of a newly added `ngModule` input. The `ngModule` input accepts references to the NgModule class directly, without the need to resolve module factory first.
+PR Close #44815",No
+249,"docs: fix incorrect title and tooltip in navigation (#44710)
+Fixes #44589
+In the navigation pane, the title and tooltip for the page,
+Preparing component for translation, are incorrect. This PR
+fixes this issue.
+PR Close #44710",Yes, there is a reason in the text for the described change.
+250,"docs: correct the demo code of NgZone.run (#44733)
+`NgZone.run` needs to be within the async closure, not around its registration, refer to: https://github.com/angular/angular/issues/44714
+PR Close #44733",Yes.
+251,"docs: explain how `ngsw.json` is generated (#44823)
+Update aio/content/guide/service-worker-devops.md
+ngsw.json is the manifest file which is generated at build time ( based on ngsw-config.json ). This explains this a bit clearer.
+At first, I thought that it was a wrongly named filename. Not is it explicitly described.
+Co-Authored-By: George Kalpakas <kalpakas.g@gmail.com>
+PR Close #44823",Yes
+252,"refactor(compiler-cli): remove leftover `_extendedTemplateDiagnostics` flag (#44920)
+This flag is currently a no-op because extended diagnostics are enabled in production.
+PR Close #44920",No
+253,"docs: add colon before introducing the list of items (#44751)
+PR Close #44751",No
+254,"build: enable useUnknownInCatchVariables (#44679)
+This unblocks the internal migration to turn the option on in g3.
+PR Close #44679",No
+255,"refactor(migrations): remove old migrations (#44857)
+When using `ng update` users cannot update multiple major versions at the same time. Therefore migrations that are not targeting version 14 cannot be run and therefore we are removing them.
+PR Close #44857",Yes.
+256,"refactor(core): the `RuntimeError` class should support more compact syntax (#44783)
+This commit refactors the `RuntimeError` class to support a short version of providing error messages:
+```
+throw new RuntimeError(
+RuntimeErrorCode.INJECTOR_ALREADY_DESTROYED,
+ngDevMode && 'Injector has already been destroyed.');
+```
+In prod mode, the second argument becomes `false` andn this commit extends the typings to support that.
+This commit also contains a couple places were the `RuntimeError` class is used to demostrate the compact form.
+PR Close #44783",No
+257,"refactor(compiler): remove parsing support for quote expressions (#44915)
+So-called ""Quote expressions"" were added in b6ec2387b31ad1f51b95c8fac8f2a60b2de855f6
+to support foreign syntax to be used in Angular templates, requiring a custom
+template transform to convert them somehow during compilation. Support for template
+transforms was originally implemented in a43ed79ee7d49ec55a0adea9b587ed67780c870c but
+has since been dropped. Since the compiler is not public API the quote expressions
+should not have any usages anymore. Removing support for them can improve error
+reporting for expressions that contain a `:`, e.g. binding to a URL without quotes:
+```html
+<a [href]=""http://google.com"">Click me</a>
+```
+Here, `http` would be parsed as foreign ""http"" quote expression with `//google.com` as
+value, later reporting the error ""Quotes are not supported for evaluation!"" because
+there was no template transform to convert that code.
+Closes #40398
+PR Close #44915",No
+258,"refactor(forms): Move FormControl to an overridden exported constructor. (#44316) (#44806)
+This implementation change was originally proposed as part of Typed Forms, and will have major consequences for that project as described in the design doc. Submitting it separately will greatly simplify the risk of landing Typed Forms. This change should have no visible impact on normal users of FormControl.
+See the Typed Forms design doc here: https://docs.google.com/document/d/1cWuBE-oo5WLtwkLFxbNTiaVQGNk8ipgbekZcKBeyxxo.
+PR Close #44316
+PR Close #44806",No
+259,"refactor(compiler-cli): remove unused `canonical-path` dependency (#44918)
+This package is no longer used within `compiler-cli` so is being removed as a dependency.
+PR Close #44918",Yes.
+260,"fix(core): Add back support for namespace URIs in createElement of dom renderer (#44914)
+Support for namespace URIs rather than short namespace names was added in
+https://github.com/angular/angular/commit/2b9cc8503d48173492c29f5a271b61126104fbdb to
+support how Ivy passed around the namespace URI rather than short name at the time.
+As a side-effect, this meant that namespace URIs were supported by the
+default dom renderer as part of the public API (likely unintentionally).
+It did not, however extend the support to other parts of the system (setAttribute, setAttribute,
+and the ServerRenderer). In the future we should decide what exactly the
+semantics for dealing with namespaces should be and make it consistent.
+fixes #44028
+PR Close #44914",No
+261,"refactor(core): strict templates type-checking compatibility for perf tests (#44905)
+This commit updates a type used in the transplanted views perf tests, to make the test compatible with strict template type-checking.
+Currently, compiling the perf test results in the following TS error:
+```
+error TS2322: Type 'TemplateRef<{}>' is not assignable to type 'TemplateRef<NgForOfContext<any, any[]>>'.
+17     <ng-container *ngFor=""let n of views; template: template; trackBy: trackByIndex""></ng-container>
+~~~~~~~~
+```
+PR Close #44905",Yes
+262,"fix(forms): ensure OnPush ancestors are marked dirty when the promise resolves (#44886)
+Currently, `ngModel` calls` setValue` after the `resolvedPromise` is resolved.
+The promise is resolved _after_ the child template executes. The change detection
+is run but `OnPush` views are not updated because they are not marked as dirty.
+PR Close #44886",Yes.
+263,"fix(core): flush delayed scoping queue while setting up TestBed (#44814)
+Previously, some NgModules that were added to the delayed scoping queue, never got removed from the queue before unit test execution. That resulted in some components (declared in those NgModules) missing their scope (which components/directives/pipes were matched).
+This commit adds the logic to invoke delayed scoping queue flushing before starting a test to avoid missing/incomplete scopes for Components used in a test.
+PR Close #44814",Yes. The reason is that some NgModules were never removed from the queue before unit test execution, resulting in some components missing their scope.
+264,"perf(animations): remove no longer needed CssKeyframes classes (#44903)
+This commit removes CSS keyframes-based code that was used to support animations in old browsers. With IE11 deprecation, all supported browsers have native WebAnimations support, so the old code can be removed. This results in ~7KB decrease of the animations package bundle size, since most of the code was non-tree-shakable.
+Closes #44520.
+PR Close #44903",No
+265,"docs: Update deployment docs for Vercel (#44904)
+PR Close #44904",No
+266,"build: fix `update_all_goldens.js` to use ESM. (#44916)
+Attempting to run as is fails because we have `""type"": ""module""`. `shelljs` is a CommonJS module however, so we need to do a default import and destructure.
+```
+$ node packages/compiler-cli/test/compliance/update_all_goldens.js
+const {exec} = require('shelljs');
+^
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and '/home/douglasparker/Source/ng/packages/compiler-cli/package.json' contains ""type"": ""module"". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+at file:///home/douglasparker/Source/ng/packages/compiler-cli/test/compliance/update_all_goldens.js:11:16
+at ModuleJob.run (node:internal/modules/esm/module_job:183:25)
+at async Loader.import (node:internal/modules/esm/loader:178:24)
+at async Object.loadESM (node:internal/process/esm_loader:68:5)
+at async handleMainPromise (node:internal/modules/run_main:63:12)
+```
+PR Close #44916",No
+267,"build: update all non-major dependencies (#44855)
+PR Close #44855",No
+268,"build: bump version for `@angular/benchpress` to v0.3.0 (#44893)
+Bumps the version for Angular benchpress so that another
+version shipping with APF v13 and strict ESM can be published.
+PR Close #44893",Yes.
+269,"build: switch benchpress NPM output to APF with ESM (#44893)
+Switches the benchpress NPM package to APF with ESM. This
+is necessary as benchpress relies on framework APF strict ESM
+packages. CommonJS packages like benchpress currently are not
+able to import from strict ESM packages without adding a CJS/ESM
+interop that complicates code unnecessarily.
+The best way forward is to just switch the benchpress package from
+CommonJS to the modern ESM output, matching with the Angular ecosystem.
+PR Close #44893",Yes.
+270,"fix(compiler-cli): enable nullish coalescing check only with `strictNullChecks` (#44862)
+TypeScript configures `strictNullChecks` to be disabled by default, so the nullish
+coalescing check should follow the same default. The rule actively depends on
+`strictNullChecks`, as TypeScript doesn't include `null`/`undefined` in its types
+otherwise so the check wouldn't have a way to differentiate between them.
+This commit also takes the `strict` flag into account when `strictNullChecks` itself
+is not configured.
+PR Close #44862",Yes.
+271,"fix(compiler-cli): accept nullish coalescing operator for any and unknown types (#44862)
+We should not make assumptions about the any and unknown types; using a nullish
+coalescing operator is acceptable for those.
+PR Close #44862",No
+272,"docs(core): showcase host listener support for specific keys in events (#44833)
+PR Close #44833",No
+273,"perf(animations): Remove generic objects in favor of Maps (#44482)
+We were using a number of generic objects as if they were maps and relying on delete to remove
+properties. In order to improve performance, these have been switched to native maps.
+PR Close #44482",Yes. The reason for the change is to improve performance.
+274,"docs: update Nx headline (#44910)
+PR Close #44910",No
+275,"docs: add code format in content projection guide (#44907)
+PR Close #44907",No
+276,"fix(docs-infra): make it possible to see whole notification text on smaller screens (#44900)
+Previously, when the notification text did not fit on the viewport
+width, it got truncated and it was not possible to see the whole text.
+This commit fixes this by making the notification scrollable when the
+text overflows.
+PR Close #44900",Yes, the reason for the change is that the notification text was getting truncated and it was not possible to see the whole text.
+277,"fix(docs-infra): make it easier to interact with notification on smaller screens (#44900)
+On smaller screens, the action button in `NotificationComponent` is
+hidden (due to limited horizontal screen ""real estate""). Thus, the only
+way to perform the action is to click on the notification message, which
+is typically a link.
+Previously, the link inside the notification did not take up the whole
+height of the notification bar. As a result, clicking outside the link
+would dismiss the notification without following the link.
+This commit makes it easier to interact with the notification (esp. on
+smaller screens) by ensuring the link covers the whole notification bar
+(width and height).
+PR Close #44900",Yes.
+278,"build: update dependency d3 to v7 (#44892)
+PR Close #44892",No
+279,"build: update dependency @types/send to ^0.17.0 (#44890)
+PR Close #44890",No
+280,"build: update dependency @types/chrome to ^0.0.177 (#44889)
+PR Close #44889",No
+281,"build(docs-infra): upgrade cli command docs sources to db5e7c82e (#44888)
+Updating [angular#master](https://github.com/angular/angular/tree/master) from
+[cli-builds#master](https://github.com/angular/cli-builds/tree/master).
+##
+Relevant changes in
+[commit range](https://github.com/angular/cli-builds/compare/9ac3df5d1...db5e7c82e):
+**Modified**
+- help/build.json
+- help/e2e.json
+- help/extract-i18n.json
+- help/serve.json
+- help/test.json
+- help/update.json
+PR Close #44888",No
+282,"fix(devtools): show date type property value in preview (#44864)
+Values of Date properties were not shown in the preview. It was formatted to a simple string thus not giving valuable info to the developer.
+PR Close #44864",Yes, there is a reason in the text for the described change.
+283,"refactor(compiler-cli): Update where and how the indexed errors are exposed (#44884)
+The initial commit e9124b42d5ac8f570b53a86691aff64d9f6c6ee1 stored the errors rather than
+throwing but did not store them in a place that was accessible to consumers. Instead,
+the errors should be added to the IndexedComponent so they can be surfaced where the
+index results are consumed
+PR Close #44884",Yes.
+284,"build: fix formatting in zone.js BUILD file (#44912)
+Fixes formatting in one of the Zone BUILD files.
+The lint check on the renovate branch did not check
+formatting as it seems. Needs more investigation as
+the PR was green.
+PR Close #44912",No
+285,"Revert ""fix(docs-infra): content overflow in mobile (#44851)"" (#44899)
+This reverts commit c2e09e09114977fcdc93cd60db57e4c863a12d9a, because it
+messes up the table layouts on some resolutions/pages. See #44891 for
+details.
+Fixes #44891
+PR Close #44899",No
+286,"build: update legacy saucelabs bundle generation to account for esbuild update (#44830)
+Previously with ESBuild 0.14.11, when a file had dynamic requires to
+builtin NodeJS modules like `url`, the resolution completed successfully
+regardless of `--platform browser`. This seems to be fixed in ESBuild now.
+This unveiled some resolution errors with our Saucelabs bundle generation
+because the framework code sometimes switches dynamically to `require('url')`
+if `window.URL` is not defined. Previously this just didn't matter, but now
+the `require('url')` is checked and a module resolution error is reported given
+`url` not being available in the browser as a builtin module.
+We fix this by marking the module as external. We will not hit this code path
+anyway in the browser saucelabs code. Similarly we exclude all platform-server
+files from the bundle. This is not strictly needed after the `url` module being
+marked as external, but the issue showed that lots of unnecessary code for the
+server platform is included. This can be omitted (unfortunately not from the TS
+compilation without over-complicating things significantly more; experimented with
+that).
+PR Close #44830",No
+287,"build: update postinstall patch to account for benchmark macro changes (#44830)
+Updates the postinstall patch for the benchmark macro rule from dev-infra.
+We moved the ZoneJS setup to the bundler. This was necessary in order to
+switch away from the Go-based (windows-incompatible, m1-incompatible)
+concatjs devserver to a rather basic HTTP server (also provided by dev-infra now).
+PR Close #44830",No
+288,"build: update angular (#44830)
+PR Close #44830",No
+289,"fix(forms): Update the typed forms migration schematic to find all files. (#44881)
+We were breaking out of the loop that walks the source tree due to an incorrect return.
+PR Close #44881",Yes, there is a reason in the text for the described change.
+290,"build: bump version for `@angular/benchpress` to v0.2.2 (#44879)
+Bumps the version for benchpress to v0.2.2 so that a new version
+is available on NPM with Angular v13 support. This would be needed
+for dev-infra which exposes tooling for benchmarks relying on the
+Angular benchpress NPM package.
+PR Close #44879",Yes.
+291,"fix(docs-infra): content overflow in mobile (#44851)
+When reading the docs page on mobile, some page tend to scroll in horizontal direction quite a lot which is unpleasant
+Fixes #44850
+PR Close #44851",Yes, the reason for the change is that some pages scroll horizontally on mobile devices, which is unpleasant.
+292,"docs: fix typo in update guide (#44853)
+PR Close #44853",No
+293,"feat(forms): support negative indices in FormArray methods. (#44848)
+This new feature allows negative indices to wrap around from the back, just like ES2021 `Array.at`. In particular, the following methods accept negative indices, and behave like corresponding Array methods:
+* `FormArray.at(index)`: behaves the same as `Array.at(index)`
+* `FormArray.insert(index, control)`: behaves the same as `Array.splice(index, 0, control)`
+* `FormArray.setControl(index, control)`: behaves the same as `Array.splice(index, 1, control)`
+* `FormArray.removeAt(index, control)`: behaves the same as `Array.splice(index, 1)`
+Previous work in #44746 and #44631 (by @amitbeck).
+Issue #44642.
+Co-authored-by: Amit Beckenstein <amitbeck@gmail.com>
+PR Close #44848",No
+294,"docs: fix GitHub broken link in update guide (#44875)
+PR Close #44875",No
+295,"fix(docs-infra): fix links to CLI commands source code (#44835)
+Recently, the [CLI repository][1] switched to not prefixing tag names
+with a `v`. Update the `versionInfo` generated for CLI commands docs, so
+that the links to the source code (which include the tag name) are
+correct.
+Fixes #44822
+[1]: https://github.com/angular/angular-cli
+PR Close #44835",Yes, the reason for the change is that the CLI repository switched to not prefixing tag names with a `v`.
+296,"refactor(forms): remove dead code (#37614)
+This functionally dead code was originally introduced via pull request
+were added to verify the fix, and the many comments on that issue after
+it was closed indicate that it wasn't actually resolved.
+In fact, setting `selectedIndex` does absolutely nothing here, since
+the selected index is immediately overridden by setting the `value`
+property. A working fix (with tests) for the IE/Safari bug is in pull
+request #23784. Originally this dead code was removed as part of that PR,
+but @AndrewKushnir recommended creating a separate PR for the cleanup.
+PR Close #37614",No
+297,"docs(core): edit and add docs for ng-container (#44762)
+PR Close #44762",No
+298,"feat(router): Add `Route.title` with a configurable `TitleStrategy` (#43307)
+This commit provides a service, `PageTitleStrategy` for setting
+the document page title after a successful router navigation.
+Users can provide custom strategies by extending `TitleStrategy` and
+adding a provider which overrides it.
+The strategy takes advantage of the pre-existing `data` and `resolve` concepts
+in the Router implementation:
+We can copy the `Route.title` into `data`/`resolve` in a
+non-breaking way by using a `symbol` as the key. This ensures that we
+do not have any collisions with pre-existing property names. By using
+`data` and `resolve`, we do not have to add anything more to
+the router navigation pipeline to support this feature.
+resolves #7630
+PR Close #43307",Yes
+299,"docs: update survey id (#44865)
+The survey id is used as a key in the local storage to keep the state (don't show the message again). Reusing this survey id will make the message invisible to some users who already have that key in local storage.
+PR Close #44865",Yes, the survey id is used as a key in the local storage to keep the state (don't show the message again). Reusing this survey id will make the message invisible to some users who already have that key in local storage.
+300,"refactor: fix type checking error with devtools state-serializer spec (#44735)
+Fixes an error in the satte-serializer spec:
+```
+devtools/projects/ng-devtools-backend/src/lib/state-serializer/state-serializer.spec.ts:103:60 - error TS2345: Argument of type '{ name: string; children: { name: string; children: { name: number; children: { name: number; children: { name: string; }[]; }[]; }[]; }[]; }[]' is not assignable to parameter of type 'NestedProp[]'.
+Type '{ name: string; children: { name: string; children: { name: number; children: { name: number; children: { name: string; }[]; }[]; }[]; }[]; }' is not assignable to type 'NestedProp'.
+Types of property 'children' are incompatible.
+Type '{ name: string; children: { name: number; children: { name: number; children: { name: string; }[]; }[]; }[]; }[]' is not assignable to type 'NestedProp[]'.
+Type '{ name: string; children: { name: number; children: { name: number; children: { name: string; }[]; }[]; }[]; }' is not assignable to type 'NestedProp'.
+Types of property 'children' are incompatible.
+Type '{ name: number; children: { name: number; children: { name: string; }[]; }[]; }[]' is not assignable to type 'NestedProp[]'.
+Type '{ name: number; children: { name: number; children: { name: string; }[]; }[]; }' is not assignable to type 'NestedProp'.
+Types of property 'children' are incompatible.
+Type '{ name: number; children: { name: string; }[]; }[]' is not assignable to type 'NestedProp[]'.
+Type '{ name: number; children: { name: string; }[]; }' is not assignable to type 'NestedProp'.
+Types of property 'children' are incompatible.
+Type '{ name: string; }[]' is not assignable to type 'NestedProp[]'.
+Property 'children' is missing in type '{ name: string; }' but required in type 'NestedProp'.
+103     const result = deeplySerializeSelectedProperties(dir1, QUERY_1_2);
+```
+PR Close #44735",Yes
+301,"test(docs-infra): fix type checking errors with new jasmine types (#44735)
+The jasmine types for `spyObj.calls().all()` seem to be more specific,
+relying on `ThisType<Fn>` to determine the context/receiver for an invoked
+spy. This type does not work as expected with class members as it seems.
+This commit fixes three of these type checking failures by explicitly casting
+the spy context to the actual class owning the method member.
+PR Close #44735",No
+302,"build: update angular (#44735)
+PR Close #44735",No
+303,"build: lock file maintenance (#44735)
+PR Close #44735",No
+304,"docs: enable the survey banner (#44861)
+PR Close #44861",No
+305,"ci: only build test targets for components repo unit test job (#44832)
+To speed up the components CI job (avoiding it being a bottleneck in FW),
+we will stop building everything in `src/...`, but rather only build targets
+which are needed to run all tests within `src/...`.
+This notably should avoid unnecessary NPM package building. Arguably that
+part would also be valuable to have, but we already test the `ng_package`
+rule in FW itself, plus we run snapshot tests in the components repo as well.
+PR Close #44832",No
+306,"ci: re-enable components repo unit tests job (#44832)
+Re-enables the components-repo unit tests job that we previously
+disabled due to the devmode target change that caused conflicts
+with `angular/components` patching `ng_module.bzl` of `@angular/bazel`.
+PR Close #44832",Yes, the reason for the change is given in the text.
+307,"refactor(compiler-cli): Tolerate source span errors in indexer (#44825)
+When the indexer encounters a location where the source span doesn't
+match up with the expected identifier, the current visitor code throws
+an error. Instead, this change creates an error and moves on to the next
+template item. This allows the indexer to continue analysis even when
+there are errors in the source mapping. In addition, it still allows callers
+to surface those errors in their own way while still providing as much indexed
+information as possible about a node.
+PR Close #44825",Yes, the reason for the change is described in the text.
+308,"build: update dependency globby to v13 (#44801)
+PR Close #44801",No
+309,"build: update dependency rules_pkg to v0.6.0 (#44818)
+PR Close #44818",No
+310,"Revert ""refactor(forms): Temporarily disable the typed forms migration. (#44828) (#44834)
+This reverts commit 894fa759f1eba6de1960b08d511ce4332a423ae5. In that commit, the migration was completely diabled in order to prevent users from selecting it for the 13.2 release. This revert commit restores the migration to its previous (fully optional) state, in order to continue migration-focused work.
+PR Close #44834",No
+311,"ci: reenable CI checks for commit message validation and rebasing on target branch (#44845)
+These checks were temporarily disabled in order to support the angular devtools migration to the angular/angular repo. Now that devtools was merged, we can safely enable these checks again.
+PR Close #44845",Yes.
+312,"docs(devtools): update comment to better reflect what angular version is running in g3.
+PR Close #43473",No
+313,"refactor(devtools): remove LICENSE file in the devtools directory
+This file was carried over from the original angular devtools repo. Now that devtools has been merged into angular/angular, this file is no longer necessary, because the root of this repo has its own LICENSE file.",Yes.
+314,"ci: sort devtools pullapprove reviewers in alphabetical order
+Previously this list was not in any order. This commit puts the reviewer list in alphabetical order to be consistent with how other groups order reviewers",Yes, the reason for the change is to make the reviewer list consistent with how other groups order reviewers.
+315,"refactor(devtools): disable cypress and remove dependencies
+Previously we were running Cypress in CI. Since cypress needs to be installed to run these tests, it was decided that we would not run devtools' cypress tests until a decision could be made on an e2e testing solution.
+This commit removes all package scripts, dependencies, and CI commands that reference cypress. Notably it leaves the actual tests in the devtools directory intact, so that they can be referenced later once a decision is made.",Yes, the reason for the change is described in the text.
+316,"refactor(devtools): bring the angular devtools directory into the root bazel workspace
+Previously devtools used a nested workspace for its bazel configurations. This meant framework dependencies were consumed via npm.
+Now devtools is part of the root bazel directory that all other files in this codebase fall under. This allows us to build devtools using local angular packages, removing the need to consume these dependencies with npn. This is useful because we no longer have to update these dependencies with an automated tool like renovate, and our CI tests will always run against the most up to date framework packages.",Yes. The reason for the change is that it allows devtools to be built using local angular packages, which is more efficient.
+317,"refactor(devtools): add override to classes that extend abstract classes in the devtools directory
+Previously the typescript override keyword was not on these methods. Now that devtools uses the tslint config in angular/angular (because of the no-implicit-override-abstract rule) we need to add these key words explicitly to method overrides. That is what this commit does.",Yes.
+318,"refactor(devtools): remove rules_sass patch
+Previously a workaround patch was needed because rules_sass didn't support v4 of rules_nodejs. This commit updates rules_sass to a version that does and removes the patch.",Yes.
+319,"refactor(devtools): run tslint --fix on devtools codebase
+This commit runs tslint --fix with the angular/angular tslint configuration on the files inside the devtools codebase.
+Notably, the file-header rule in `tslint.json` was missing a default attribute. This commit adds that default attribute and sets it to the
+license header that is present in all files in this repo. After running tslint --fix with this default added, this commit added the license header to all files in the devtools directory. Note for the reviewer: the automatically added license headers were added as comments with the ""/*!"" prefix. Since we want these comments removed in builds, and the rest of the codebase uses ""/**"", a simple find and replace was performed on the devtools directory to change these prefixes to ""/**"".",Yes.
+320,"ci: change the devtools test executor to test-browser-executor and remove tasks in the test_angular_devtools job that installed test dependencies manually
+This commit also disables cypress' video recording feature to save time on running Cypress tasks in CI.",No
+321,"refactor(devtools): make bazel labels follow snake case convention
+Previously, camel case was used for bazel labels in the devtools directory. This commit changes these labels to snake case except in the case where the label is identical to the directory name that the BUILD file is in.",Yes. The reason for the change is that previously, camel case was used for bazel labels in the devtools directory, and this commit changes these labels to snake case except in the case where the label is identical to the directory name that the BUILD file is in.
+322,"refactor(devtools): remove inaccurate comment in bazelrc and defaults.bzl
+Both of these comments were included accidentally after porting over bazel code from angular/angular and angular/components to devtools.
+They are not relevant to devtools so this commit removes them.",No
+323,"refactor(devtools): clean up some of tooling brought in from angular/components
+Removes MDC constants and unneeded angular package configs from packages.bzl.
+Removes partial-compilation-integration from the karma web test tags because we don't perform any of partial compilation integration tests for devtools.",No
+324,"refactor(devtools): remove unneeded tsconfig keyword args for ts_project
+These keyword args are not needed because `ts_project` and `ng_ts_project` already default to the tsconfig at the root of the devtools directory.
+This commit removes these key word args from places where tsconfig was used as a keyword arg with the root level tsconfig as the target.",No
+325,"refactor(devtools): remove redundant project files
+Previously angular devtools was in its own repository and so it had some project files related to github workflows, vscode settings, prettier configurations, etc.
+Now, after devtools has been transfered to angular/angular, these files are redundant, and so this commit removes them.",Yes.
+326,"refactor(devtools): run ng-dev format on angular devtools files
+Formats the entire devtools directory with the ng-dev formatting tool. Previously we relied on prettier, so this commit also remove prettier from devtools' dependencies.",Yes.
+327,"ci: add aleksanderbodurri to angular devtools pullapprove reviewers
+",No
+328,"test(devtools): fix some flakey cypress tests
+Uses `cy.contains` as one command to optimize cypress' retry-ability mechanism
+Affected tests are in:
+`property-update.e2e.js` and `view-component-metadata.e2e.js`",Yes.
+329,"ci: add angular devtools to the renovate configuration
+Previously angular devtools was using its own renovate configuration to keep up to date. After transfering to angular/angular, we can use the renovate configuration in angular/angular to update our dependencies. In an end state we would build devtools with local Angular packages.",Yes
+330,"build(devtools): use ng-dev stamp tooling to stamp the latest git SHA in devtools
+Previously, we were using ngx-build-plus with a custom webpack config to determine the git SHA at runtime.
+Now, after migrating to bazel and transfering to angular/angular, this commit uses ng-dev to stamp the latest git SHA directly in angular devtools' application environment.
+This commit also removes the old webpack configs.",Yes.
+331,"ci: add labels to angular devtools ci tasks
+This commit also cleans up the .bazelrc file in the devtools directory",No
+332,"refactor(devtools): dedupe some bazel tooling brought in from angular/components
+Some tooling was brought in from angular/components to help with bundling spec files for Karma. This tooling has since been ported over to the dev-infra repo. This commit dedupes the tooling and instead depends on the angular/dev-infra-private repo.",No
+333,"ci: remove bazel cypress tests
+Previously we were running Cypress with bazel in an effort to save on CI time when devtools dependencies did not change. This commit reverts to running Cypress manually, until we can revisit building devtools with local Angular packages to save CI time.",No
+334,"build: configure circleci for angular devtools ci
+Sets up commands in circleci config to test angular devtools.",No
+335,"ci: disable commit message validation because commits from angular devtools don't have commit bodies
+Commit messages from angular devtools did not follow the 20 char minimum limit for commit bodies rule. This commit disables the CI check for this so that the rest of CI can be validated. Will reenable once that is done.",Yes, there is a reason in the text for the described change.
+336,"ci: add angular devtools to pullapprove config
+Creates new section in pullapprove for angular devtools",Yes
+337,"refactor(devtools): run ng-dev format on bazel files in devtools directory
+",No
+338,"build(devtools): disable the ""Rebase PR on target branch"" circleci job so that the PR that merges the unrelated history of rangle/angular-devtools can be successfully merged into angular/angular
+Usually this job would ensure that all PRs in angular/angular are running against the latest changes to angular/angular. In order to merge the unrelated history of the commits in the rangle/angular-devtools repo into angular/angular, we must temporarily disable this job.",Yes.
+339,"refactor(devtools): merge rangle/angular-devtools into angular/angular
+This is a merge commit that acts at the only common child of commits from the rangle/angular-devtools codebase and the angular/angular codebase.
+This commit was created as the result of running `git merge` with the `--allow-unrelated-histories` flag.",No
+340,"test(animations): Add bundling size regression test for animations package (#44826)
+This adds a size regression test for the animations package to the test suite.
+PR Close #44826",No
+341,"docs: cleanup CHANGELOG.md file (#44841)
+PR Close #44841",No
+342,"release: cut the v14.0.0-next.0 release (#44840)
+",No
+343,"docs: release notes for the v13.2.0 release (#44839)
+",No
+344,"release: update version to 14.0.0-next.0 (#44837)
+PR Close #44837",No
+345,"refactor(forms): Temporarily disable the typed forms migration. (#44828)
+It's best to disable this optional migration in the minor release, although it shouldn't run anyway -- we don't want people accidentally running it.
+This PR will be rolled back after the minor is out.
+PR Close #44828",No
+346,"fix(compiler-cli): Handle `ng-template` with structural directive in indexer (#44788)
+An `ng-template` with an inline template (i.e. has a structural
+directive) would previously not get an `undefined` `tagName` because the
+logic assumed the element would be `t.Element` or `t.Content` and read
+the tag name from the `name` property. For a `t.Template`, this exists
+instead on the `t.tagName`. The final result would be an `tagName` of `undefined`
+for the parent `t.Template`, causing failures in the indexer downstream.
+This `undefined` value is actually expected in the renderer code, even
+though the type does not specify this possibility. This change updates
+the type of `tagName` to be `string|null` and explicitly handles the
+case where there is a structural directive on an `ng-template`. You can
+see how the two are differentiated in the compliance code that was
+modified in this commit.
+PR Close #44788",No
